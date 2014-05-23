@@ -1,0 +1,23 @@
+>>>SummaryInfo
+              Name          SummaryInfo
+              Owner         admin
+              UserName      admin
+              Permissions    1048575 
+              AllPermissions               1048575 
+              Container     Databases
+              DateCreated   8/23/2009 12:08:57 AM 
+              LastUpdated   8/23/2009 12:08:57 AM 
+              Title         OGLDemo
+              Author        Sascha
+              Company        
+>>>UserDefined
+              Name          UserDefined
+              Owner         admin
+              UserName      admin
+              Permissions    1048575 
+              AllPermissions               1048575 
+              Container     Databases
+              DateCreated   8/23/2009 12:08:57 AM 
+              LastUpdated   8/23/2009 12:08:57 AM 
+              ReplicateProject            True
+              DisplayAllViewsOnSharePointSite            1 

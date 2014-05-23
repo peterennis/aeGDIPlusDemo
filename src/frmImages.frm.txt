@@ -1,0 +1,468 @@
+Version =20
+VersionRequired =20
+Begin Form
+    RecordSelectors = NotDefault
+    AutoCenter = NotDefault
+    AllowDeletions = NotDefault
+    DividingLines = NotDefault
+    AllowEdits = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =8505
+    DatasheetFontHeight =11
+    ItemSuffix =12
+    Right =15975
+    Bottom =11805
+    OnUnload ="[Event Procedure]"
+    RecSrcDt = Begin
+        0xd588738f018ee340
+    End
+    GUID = Begin
+        0xd34b4bd5b79c2b43b9ff1ec686b85e7d
+    End
+    RecordSource ="SELECT tblImages.ID, tblImages.Image, tblImages.Image.FileName AS ImageName FROM"
+        " tblImages WHERE (((tblImages.ID)>9));"
+    Caption ="Bilder aus Anlagefeldern"
+    OnCurrent ="[Event Procedure]"
+    DatasheetFontName ="Calibri"
+    PrtMip = Begin
+    End
+    PrtDevMode = Begin
+    End
+    PrtDevNames = Begin
+    End
+    OnLoad ="[Event Procedure]"
+    AllowDatasheetView =0
+    AllowPivotTableView =0
+    AllowPivotChartView =0
+    AllowPivotChartView =0
+    FilterOnLoad =0
+    OrderByOnLoad =0
+    OrderByOnLoad =0
+    DatasheetBackColor12 =16777215
+    ShowPageMargins =0
+    DisplayOnSharePointSite =1
+    AllowLayoutView =0
+    DatasheetAlternateBackColor =16053492
+    DatasheetGridlinesColor12 =15062992
+    FitToScreen =1
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontSize =11
+            FontName ="Calibri"
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =0
+            SizeMode =3
+            PictureAlignment =2
+            Width =1701
+            Height =1701
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+        End
+        Begin CommandButton
+            Width =1701
+            Height =283
+            FontSize =11
+            FontWeight =400
+            ForeColor =-2147483630
+            FontName ="Calibri"
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            BorderColor =12632256
+            FontName ="Calibri"
+            AsianLineBreak =1
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+            ShowDatePicker =1
+        End
+        Begin UnboundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =1
+            Width =4536
+            Height =2835
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+        End
+        Begin CustomControl
+            SpecialEffect =2
+            Width =4536
+            Height =2835
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+        End
+        Begin Attachment
+            BackStyle =0
+            PictureSizeMode =3
+            Width =1701
+            Height =1701
+            BorderColor =12632256
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+            LabelX =-1701
+        End
+        Begin Section
+            Height =5145
+            Name ="Detailbereich"
+            GUID = Begin
+                0x916c07c120389245bf8c797caf4ff167
+            End
+            Begin
+                Begin CustomControl
+                    Enabled = NotDefault
+                    TabStop = NotDefault
+                    SizeMode =1
+                    SpecialEffect =0
+                    OverlapFlags =85
+                    Left =4545
+                    Top =675
+                    Width =3402
+                    Height =3402
+                    AutoActivate =1
+                    TabIndex =1
+                    Name ="ctlImg2"
+                    OleData = Begin
+                    End
+                    OLEClass ="Microsoft Forms 2.0"
+                    Class ="Forms.Image.1"
+                    GUID = Begin
+                        0x5957a9286e32c34f8b2ec65abd683449
+                    End
+
+                    LayoutCachedLeft =4545
+                    LayoutCachedTop =675
+                    LayoutCachedWidth =7947
+                    LayoutCachedHeight =4077
+                End
+                Begin CustomControl
+                    Enabled = NotDefault
+                    TabStop = NotDefault
+                    SizeMode =1
+                    SpecialEffect =0
+                    OverlapFlags =93
+                    Left =570
+                    Top =675
+                    Width =3402
+                    Height =3402
+                    AutoActivate =1
+                    Name ="ctlImg"
+                    OleData = Begin
+                    End
+                    OLEClass ="Microsoft Forms 2.0"
+                    Class ="Forms.Image.1"
+                    GUID = Begin
+                        0xdf28f42dc80bb441bd231a2e2c37e3f4
+                    End
+
+                    LayoutCachedLeft =570
+                    LayoutCachedTop =675
+                    LayoutCachedWidth =3972
+                    LayoutCachedHeight =4077
+                End
+                Begin CustomControl
+                    Visible = NotDefault
+                    Enabled = NotDefault
+                    SizeMode =1
+                    SpecialEffect =0
+                    OverlapFlags =247
+                    Left =570
+                    Top =675
+                    Width =3405
+                    Height =3405
+                    AutoActivate =1
+                    TabIndex =2
+                    Name ="ctlList"
+                    OleData = Begin
+                    End
+                    OLEClass ="ListViewCtrl"
+                    Class ="MSComctlLib.ListViewCtrl.2"
+                    GUID = Begin
+                        0xd655b66ca092924e8851b7ff5262c4ba
+                    End
+
+                    LayoutCachedLeft =570
+                    LayoutCachedTop =675
+                    LayoutCachedWidth =3975
+                    LayoutCachedHeight =4080
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =85
+                    TextAlign =2
+                    Left =570
+                    Top =4140
+                    Width =3405
+                    Height =285
+                    Name ="LblDrop"
+                    Caption ="Eine Bilddatei ins Feld  ziehen"
+                    GUID = Begin
+                        0xb6d6f029331d0948bac0c546d77fa04f
+                    End
+                    LayoutCachedLeft =570
+                    LayoutCachedTop =4140
+                    LayoutCachedWidth =3975
+                    LayoutCachedHeight =4425
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =570
+                    Top =360
+                    Width =3405
+                    Height =270
+                    Name ="LblInfo"
+                    Caption ="Größe"
+                    GUID = Begin
+                        0xd25efa4394cad14bbfdfd5b3d91349a7
+                    End
+                    LayoutCachedLeft =570
+                    LayoutCachedTop =360
+                    LayoutCachedWidth =3975
+                    LayoutCachedHeight =630
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    PictureType =1
+                    Left =585
+                    Top =4620
+                    Width =1275
+                    Height =435
+                    TabIndex =3
+                    Name ="cmd1"
+                    Caption ="Button 1"
+                    GUID = Begin
+                        0x034560e1dcd6844aa5d2f7ea957769cc
+                    End
+
+                    LayoutCachedLeft =585
+                    LayoutCachedTop =4620
+                    LayoutCachedWidth =1860
+                    LayoutCachedHeight =5055
+                    PictureCaptionArrangement =5
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    PictureType =1
+                    Left =2615
+                    Top =4620
+                    Width =1275
+                    Height =435
+                    TabIndex =4
+                    Name ="cmd2"
+                    Caption ="Button 2"
+                    GUID = Begin
+                        0xf3f895d2ae163349a7f9a50312a039da
+                    End
+
+                    LayoutCachedLeft =2615
+                    LayoutCachedTop =4620
+                    LayoutCachedWidth =3890
+                    LayoutCachedHeight =5055
+                    PictureCaptionArrangement =5
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    PictureType =1
+                    Left =4645
+                    Top =4620
+                    Width =1275
+                    Height =435
+                    TabIndex =5
+                    Name ="cmd3"
+                    Caption ="Button 3"
+                    GUID = Begin
+                        0x63b44f9b504bba48b62202f00ee202a9
+                    End
+
+                    LayoutCachedLeft =4645
+                    LayoutCachedTop =4620
+                    LayoutCachedWidth =5920
+                    LayoutCachedHeight =5055
+                    PictureCaptionArrangement =5
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    PictureType =1
+                    Left =6675
+                    Top =4620
+                    Width =1275
+                    Height =435
+                    TabIndex =6
+                    Name ="cmd4"
+                    Caption ="Button 4"
+                    GUID = Begin
+                        0xbef56ff166628544936c75043daf69f7
+                    End
+
+                    LayoutCachedLeft =6675
+                    LayoutCachedTop =4620
+                    LayoutCachedWidth =7950
+                    LayoutCachedHeight =5055
+                    PictureCaptionArrangement =5
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+
+Private bNew As Boolean
+
+Private Sub Form_Load()
+    Dim i As Long
+    Dim arrImageMso As Variant
+    Dim oPic As StdPicture
+    
+    arrImageMso = Array("FileSave", "Zoom100", "HappyFace", "TrustCenter")
+    For i = 1 To 4
+        Set oPic = CommandBars.GetImageMso(arrImageMso(i - 1), 16, 16)
+        Me.Controls("cmd" & CStr(i)).PictureData = ArrayFromPicture(oPic, pictypePNG)    'OGL-Funktion
+    Next i
+    
+    Set oPic = Nothing
+    
+End Sub
+
+
+Private Sub Form_Current()
+    Dim PicSize As mdlOGL0710.TSize
+    
+    If bNew Then Exit Sub
+    
+    Set Me!ctlImg.Object.Picture = Nothing
+    Set Me!ctlImg2.Object.Picture = Nothing
+    Me!LblInfo.Caption = ""
+    
+    If Me.NewRecord Then
+        Me!ctlList.Visible = True
+        Me!LblDrop.Visible = True
+        Exit Sub
+    Else
+        Me!ctlList.Visible = False
+        Me!LblDrop.Visible = False
+    End If
+    
+    Set Me!ctlImg.Object.Picture = AttachmentToPicture("tblImages", "Image", Me!ImageName)  'OGL-Funktion
+    PicSize = GetDimensionsGDIP(Me!ctlImg.Object.Picture)   'OGL-Funktion
+    Me!LblInfo.Caption = PicSize.X & " x " & PicSize.Y
+    Set Me!ctlImg2.Object.Picture = ResampleGDIP(Me!ctlImg.Object.Picture, 100, 100, True)  'OGL-Funktion
+
+End Sub
+
+
+Private Sub Form_Unload(Cancel As Integer)
+    ShutDownGDIP
+End Sub
+
+Private Sub ctlList_OLEDragDrop(Data As Object, Effect As Long, _
+                                Button As Integer, Shift As Integer, X As Single, Y As Single)
+    Dim oPic As StdPicture
+    Dim rst As Recordset2
+    
+    Set oPic = LoadPictureGDIP(Data.Files(1))   'OGL-Funktion
+    If Not oPic Is Nothing Then
+        Set oPic = Nothing
+        Me.Recordset.AddNew
+        Set rst = Me.Recordset!Image.Value
+        rst.AddNew
+        rst.Fields(0).LoadFromFile Data.Files(1)
+        rst.Update
+        Set rst = Nothing
+        Me.Recordset.Update
+        bNew = True
+        Me.Requery
+        bNew = False
+        DoCmd.GoToRecord acDataForm, Me.Name, acLast
+    Else
+        MsgBox "Ungültige Bilddatei"
+    End If
+End Sub

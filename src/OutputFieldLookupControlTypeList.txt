@@ -1,0 +1,18 @@
+tblImages
+              ID             0            
+              Image          126          
+tblOLE
+              ID             126          
+              ImageName      109          TextBox
+              BLOB           109          TextBox
+USysRibbons
+              ID             109          TextBox
+              RibbonName     109          TextBox
+              RibbonXML      109          TextBox
+Count of Check box = 0
+Count of Text box  = 5
+Count of List box  = 0
+Count of Combo box = 0
+Count of Else      = 3
+Count of Display Controls = 5
+Count of All Fields = 5

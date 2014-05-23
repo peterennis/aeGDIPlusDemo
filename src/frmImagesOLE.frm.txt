@@ -1,0 +1,346 @@
+Version =20
+VersionRequired =20
+Begin Form
+    RecordSelectors = NotDefault
+    AutoCenter = NotDefault
+    AllowDeletions = NotDefault
+    DividingLines = NotDefault
+    AllowEdits = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridY =10
+    Width =8505
+    DatasheetFontHeight =11
+    ItemSuffix =9
+    Right =15720
+    Bottom =11835
+    OnUnload ="[Event Procedure]"
+    RecSrcDt = Begin
+        0xb950e554028ee340
+    End
+    GUID = Begin
+        0xd34b4bd5b79c2b43b9ff1ec686b85e7d
+    End
+    RecordSource ="tblOLE"
+    Caption ="Bilder aus OLE-BLOBs"
+    OnCurrent ="[Event Procedure]"
+    DatasheetFontName ="Calibri"
+    PrtMip = Begin
+    End
+    PrtDevMode = Begin
+    End
+    PrtDevNames = Begin
+    End
+    AllowDatasheetView =0
+    AllowPivotTableView =0
+    AllowPivotChartView =0
+    AllowPivotChartView =0
+    FilterOnLoad =0
+    OrderByOnLoad =0
+    OrderByOnLoad =0
+    DatasheetBackColor12 =16777215
+    ShowPageMargins =0
+    DisplayOnSharePointSite =1
+    AllowLayoutView =0
+    DatasheetAlternateBackColor =16053492
+    DatasheetGridlinesColor12 =15062992
+    FitToScreen =1
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontSize =11
+            FontName ="Calibri"
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+        End
+        Begin Image
+            BackStyle =0
+            OldBorderStyle =0
+            SizeMode =3
+            PictureAlignment =2
+            Width =1701
+            Height =1701
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+        End
+        Begin TextBox
+            FELineBreak = NotDefault
+            Width =1701
+            LabelX =-1701
+            FontSize =11
+            BorderColor =12632256
+            FontName ="Calibri"
+            AsianLineBreak =1
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+            ShowDatePicker =1
+        End
+        Begin UnboundObjectFrame
+            SpecialEffect =2
+            OldBorderStyle =1
+            Width =4536
+            Height =2835
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+        End
+        Begin CustomControl
+            SpecialEffect =2
+            Width =4536
+            Height =2835
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+        End
+        Begin Attachment
+            BackStyle =0
+            PictureSizeMode =3
+            Width =1701
+            Height =1701
+            BorderColor =12632256
+            LeftPadding =30
+            TopPadding =30
+            RightPadding =30
+            BottomPadding =30
+            GridlineStyleLeft =0
+            GridlineStyleTop =0
+            GridlineStyleRight =0
+            GridlineStyleBottom =0
+            GridlineWidthLeft =1
+            GridlineWidthTop =1
+            GridlineWidthRight =1
+            GridlineWidthBottom =1
+            LabelX =-1701
+        End
+        Begin Section
+            Height =4845
+            Name ="Detailbereich"
+            GUID = Begin
+                0x916c07c120389245bf8c797caf4ff167
+            End
+            Begin
+                Begin CustomControl
+                    Enabled = NotDefault
+                    TabStop = NotDefault
+                    SizeMode =1
+                    SpecialEffect =0
+                    OverlapFlags =85
+                    Left =4545
+                    Top =675
+                    Width =3402
+                    Height =3402
+                    AutoActivate =1
+                    TabIndex =1
+                    Name ="ctlImg2"
+                    OleData = Begin
+                    End
+                    OLEClass ="Microsoft Forms 2.0"
+                    Class ="Forms.Image.1"
+                    GUID = Begin
+                        0x5957a9286e32c34f8b2ec65abd683449
+                    End
+
+                    LayoutCachedLeft =4545
+                    LayoutCachedTop =675
+                    LayoutCachedWidth =7947
+                    LayoutCachedHeight =4077
+                End
+                Begin CustomControl
+                    Enabled = NotDefault
+                    TabStop = NotDefault
+                    SizeMode =1
+                    SpecialEffect =0
+                    OverlapFlags =93
+                    Left =570
+                    Top =675
+                    Width =3402
+                    Height =3402
+                    AutoActivate =1
+                    Name ="ctlImg"
+                    OleData = Begin
+                    End
+                    OLEClass ="Microsoft Forms 2.0"
+                    Class ="Forms.Image.1"
+                    GUID = Begin
+                        0xdf28f42dc80bb441bd231a2e2c37e3f4
+                    End
+
+                    LayoutCachedLeft =570
+                    LayoutCachedTop =675
+                    LayoutCachedWidth =3972
+                    LayoutCachedHeight =4077
+                End
+                Begin CustomControl
+                    Visible = NotDefault
+                    Enabled = NotDefault
+                    SizeMode =1
+                    SpecialEffect =0
+                    OverlapFlags =247
+                    Left =570
+                    Top =675
+                    Width =3405
+                    Height =3405
+                    AutoActivate =1
+                    TabIndex =2
+                    Name ="ctlList"
+                    OleData = Begin
+                    End
+                    OLEClass ="ListViewCtrl"
+                    Class ="MSComctlLib.ListViewCtrl.2"
+                    GUID = Begin
+                        0xd655b66ca092924e8851b7ff5262c4ba
+                    End
+
+                    LayoutCachedLeft =570
+                    LayoutCachedTop =675
+                    LayoutCachedWidth =3975
+                    LayoutCachedHeight =4080
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =85
+                    TextAlign =2
+                    Left =570
+                    Top =4140
+                    Width =3405
+                    Height =285
+                    Name ="LblDrop"
+                    Caption ="Eine Bilddatei ins Feld  ziehen"
+                    GUID = Begin
+                        0xb6d6f029331d0948bac0c546d77fa04f
+                    End
+                    LayoutCachedLeft =570
+                    LayoutCachedTop =4140
+                    LayoutCachedWidth =3975
+                    LayoutCachedHeight =4425
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =570
+                    Top =360
+                    Width =3405
+                    Height =270
+                    Name ="LblInfo"
+                    Caption ="Größe"
+                    GUID = Begin
+                        0x7b571d914e80374ea885915708ab0dff
+                    End
+                    LayoutCachedLeft =570
+                    LayoutCachedTop =360
+                    LayoutCachedWidth =3975
+                    LayoutCachedHeight =630
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+
+Private bNew As Boolean
+
+Private Sub Form_Current()
+    Dim PicSize As mdlOGL0710.TSize
+    
+    If bNew Then Exit Sub
+    
+    Set Me!ctlImg.Object.Picture = Nothing
+    Set Me!ctlImg2.Object.Picture = Nothing
+    Me!LblInfo.Caption = ""
+    
+    If Me.NewRecord Then
+        Me!ctlList.Visible = True
+        Me!LblDrop.Visible = True
+        Exit Sub
+    Else
+        Me!ctlList.Visible = False
+        Me!LblDrop.Visible = False
+    End If
+    
+    Set Me!ctlImg.Object.Picture = OLEFieldToPicture("tblOLE", "ImageName", Me!ImageName, "BLOB")   'OGL-Funktion
+    PicSize = GetDimensionsGDIP(Me!ctlImg.Object.Picture)   'OGL-Funktion
+    Me!LblInfo.Caption = PicSize.X & " x " & PicSize.Y
+    Set Me!ctlImg2.Object.Picture = ResampleGDIP(Me!ctlImg.Object.Picture, 100, 100, True)  'OGL-Funktion
+
+End Sub
+
+Private Sub Form_Unload(Cancel As Integer)
+    ShutDownGDIP
+End Sub
+
+Private Sub ctlList_OLEDragDrop(Data As Object, Effect As Long, _
+                                Button As Integer, Shift As Integer, X As Single, Y As Single)
+    Dim oPic As StdPicture
+    Dim sFile As String
+        
+    sFile = Data.Files(1)
+    Set oPic = LoadPictureGDIP(sFile)   'OGL-Funktion
+    If Not oPic Is Nothing Then
+        Me!ImageName = Mid(sFile, InStrRev(sFile, "\") + 1)
+        Me!BLOB.Value = ArrayFromPicture(oPic, pictypePNG)  'OGL-Funktion
+        Me.Dirty = False
+        Set oPic = Nothing
+        bNew = True
+        Me.Requery
+        bNew = False
+        DoCmd.GoToRecord acDataForm, Me.Name, acLast
+    Else
+        MsgBox "Ungültige Bilddatei"
+    End If
+End Sub

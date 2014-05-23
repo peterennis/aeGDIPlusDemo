@@ -1,0 +1,29 @@
+----------------
+TABLE: tblImages
+----------------
+FIELD NAME     FIELD TYPE    SIZE    DESCRIPTION
+===========    ==========    ====    ===========
+ID             AutoNumber    4                  
+Image          Attachment    4                  
+
+
+-------------
+TABLE: tblOLE
+-------------
+FIELD NAME     FIELD TYPE    SIZE    DESCRIPTION
+===========    ==========    ====    ===========
+ID             AutoNumber    4                  
+ImageName      Text          255                
+BLOB           OLE Object    0                  
+
+
+------------------
+TABLE: USysRibbons
+------------------
+FIELD NAME     FIELD TYPE    SIZE    DESCRIPTION
+===========    ==========    ====    ===========
+ID             AutoNumber    4                  
+RibbonName     Text          255                
+RibbonXML      Memo          0                  
+
+
