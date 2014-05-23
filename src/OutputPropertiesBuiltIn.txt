@@ -220,7 +220,7 @@ Inherited: False;
 ---
 Name: Show Navigation Pane Search Bar
 Type: dbLong
-Value: 0
+Value: 1
 Inherited: False;
 ---
 Name: Theme Resource Name

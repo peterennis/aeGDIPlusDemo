@@ -7,6 +7,16 @@ ID             AutoNumber    4
 Image          Attachment    4                  
 
 
+------------------
+TABLE: tblLanguage
+------------------
+FIELD NAME     FIELD TYPE    SIZE    DESCRIPTION
+===========    ==========    ====    ===========
+ID             Text          255                
+DE             Text          255                
+EN             Text          255                
+
+
 -------------
 TABLE: tblOLE
 -------------

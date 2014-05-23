@@ -16,6 +16,17 @@ Currentdb.Execute strSQL
 
 'Local Table
 
+strSQL="CREATE TABLE [tblLanguage] ([ID] Text (255),[DE] Text (255),[EN] Text (255) )"
+Currentdb.Execute strSQL
+
+strSQL="CREATE INDEX [ID] ON [tblLanguage] ([EN]) "
+Currentdb.Execute strSQL
+
+strSQL="CREATE UNIQUE INDEX [PrimaryKey] ON [tblLanguage] ([EN])  WITH PRIMARY DISALLOW NULL "
+Currentdb.Execute strSQL
+
+'Local Table
+
 strSQL="CREATE TABLE [tblOLE] ([ID] Counter,[ImageName] Text (255),[BLOB] OLE Object )"
 Currentdb.Execute strSQL
 

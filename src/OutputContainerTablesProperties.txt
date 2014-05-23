@@ -16,6 +16,33 @@
               FilterOnLoad  False
               OrderByOnLoad True
               HideNewField  False
+>>>tblLanguage
+              Name          tblLanguage
+              Owner         admin
+              UserName      admin
+              Permissions    1048319 
+              AllPermissions               1048319 
+              Container     Tables
+              DateCreated   5/23/2014 4:17:09 PM 
+              LastUpdated   5/23/2014 4:24:29 PM 
+              Orientation    0 
+              OrderByOn     False
+              DefaultView    2 
+              GUID          C0-9B-A9-EC-B1-94-4A-98
+              DisplayViewsOnSharePointSite               1 
+              TotalsRow     False
+              FilterOnLoad  False
+              OrderByOnLoad True
+              HideNewField  False
+              BackTint       100 
+              BackShade      100 
+              ThemeFontIndex               1 
+              AlternateBackThemeColorIndex               1 
+              AlternateBackTint            100 
+              AlternateBackShade           95 
+              DatasheetGridlinesThemeColorIndex          3 
+              DatasheetForeThemeColorIndex               0 
+              PublishToWeb   1 
 >>>tblOLE
               Name          tblOLE
               Owner         admin

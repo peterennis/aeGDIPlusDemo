@@ -1,8 +1,12 @@
 tblImages
               ID             0            
               Image          126          
+tblLanguage
+              ID             109          TextBox
+              DE             109          TextBox
+              EN             109          TextBox
 tblOLE
-              ID             126          
+              ID             109          TextBox
               ImageName      109          TextBox
               BLOB           109          TextBox
 USysRibbons
@@ -10,9 +14,9 @@ USysRibbons
               RibbonName     109          TextBox
               RibbonXML      109          TextBox
 Count of Check box = 0
-Count of Text box  = 5
+Count of Text box  = 9
 Count of List box  = 0
 Count of Combo box = 0
-Count of Else      = 3
-Count of Display Controls = 5
-Count of All Fields = 5
+Count of Else      = 2
+Count of Display Controls = 9
+Count of All Fields = 9
