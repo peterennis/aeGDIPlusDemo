@@ -47,3 +47,4 @@ Show Navigation Pane Search Bar: 1, 4, False
 Theme Resource Name: Office Theme, 10, False
 WebDesignMode: 0, 2, False
 AppIcon: C:\ae\aeGDIPlusDemo\aeicon.ico, 10, False
+Perform Name AutoCorrect: 0, 4, False

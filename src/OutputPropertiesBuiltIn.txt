@@ -238,3 +238,8 @@ Type: dbText
 Value: C:\ae\aeGDIPlusDemo\aeicon.ico
 Inherited: False;
 ---
+Name: Perform Name AutoCorrect
+Type: dbLong
+Value: 0
+Inherited: False;
+---

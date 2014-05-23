@@ -28,7 +28,7 @@
               XP, 2003      Four-Digit Year Formatting                 0 
               XP, 2003      Four-Digit Year Formatting All Databases   0 
               XP, 2003      Track Name AutoCorrect Info                0 
-              XP, 2003      Perform Name AutoCorrect                  -1 
+              XP, 2003      Perform Name AutoCorrect                   0 
               XP, 2003      Log Name AutoCorrect Changes               0 
               XP, 2003      Enable MRU File List                      -1 
               XP, 2003      Size of MRU File List                      5 
@@ -155,7 +155,7 @@
               2007, 2010, 2013            Picture Property Storage Format            0 
    >>>Name AutoCorrect Options section
               2007, 2010, 2013            Track Name AutoCorrect Info                0 
-              2007, 2010, 2013            Perform Name AutoCorrect                  -1 
+              2007, 2010, 2013            Perform Name AutoCorrect                   0 
               2007, 2010, 2013            Log Name AutoCorrect Changes               0 
    >>>Filter Lookup options for <Database Name> Database section
               2007, 2010, 2013            Show Values in Indexed      -1 

@@ -1,6 +1,6 @@
 Version =20
 VersionRequired =20
-Checksum =63058931
+Checksum =838791837
 Begin Form
     RecordSelectors = NotDefault
     AutoCenter = NotDefault
@@ -17,15 +17,25 @@ Begin Form
     ItemSuffix =12
     Right =15975
     Bottom =11805
+    DatasheetGridlinesColor =15062992
     OnUnload ="[Event Procedure]"
     RecSrcDt = Begin
-        0xd588738f018ee340
+        0x41ead8f5d566e440
     End
     GUID = Begin
-        0xd34b4bd5b79c2b43b9ff1ec686b85e7d
+        0x5096ca3de77e894089508d96e357a9ea
+    End
+    NameMap = Begin
+        0x0acc0e5500000000045bd69e9da34a4b9e1955cf72c8ba1f000000002ab4d4f9 ,
+        0xd566e4400000000000000000740062006c0049006d0061006700650073000000 ,
+        0x00000000110c6ae98f0af447a299a219892fb50c07000000045bd69e9da34a4b ,
+        0x9e1955cf72c8ba1f490044000000000000003d045e58ec4c0f49831898cb6f7a ,
+        0xe19707000000045bd69e9da34a4b9e1955cf72c8ba1f49006d00610067006500 ,
+        0x000000000000000000000000000000000000000000000c000000050000000000 ,
+        0x000000000000000000000000
     End
     RecordSource ="SELECT tblImages.ID, tblImages.Image, tblImages.Image.FileName AS ImageName FROM"
-        " tblImages WHERE (((tblImages.ID)>9));"
+        " tblImages WHERE (((tblImages.ID)>9)); "
     Caption ="Bilder aus Anlagefeldern"
     OnCurrent ="[Event Procedure]"
     DatasheetFontName ="Calibri"
@@ -34,10 +44,10 @@ Begin Form
         0x010000006801000000000000a10700000100000001000000
     End
     PrtDevMode = Begin
-        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000002867db004067dbb4 ,
         0x010400069c008c0443ef8007010009009a0b3408640001000f00580201000100 ,
-        0x5802020001004134000000000000000000000000000000000000000000000000 ,
-        0x0000000000000000000000000000000000000000010000000000000001000000 ,
+        0x580202000100413400401b0030109b861d9a1100100000008b35220010049087 ,
+        0x3b81000000000000000000000000000000000000010000000000000001000000 ,
         0x0200000001000000ffffffff0000000000000000000000000000000044494e55 ,
         0x220050018c0300010369bd4f0000000000000000000000000000000000000000 ,
         0x00000000000000000d0000000000000000000000000000000100000004000000 ,
@@ -79,61 +89,87 @@ Begin Form
     End
     PrtDevNames = Begin
         0x08001e0034000100000000000000000000000000000000000000000000000000 ,
-        0x000000000000000000000000000000000000000055534230303100
+        0x0000000000000000000000000000000000000000555342303031000000000000 ,
+        0x000000
     End
     OnLoad ="[Event Procedure]"
     AllowDatasheetView =0
-    AllowPivotTableView =0
-    AllowPivotChartView =0
-    AllowPivotChartView =0
     FilterOnLoad =0
     OrderByOnLoad =0
     OrderByOnLoad =0
-    DatasheetBackColor12 =16777215
     ShowPageMargins =0
     DisplayOnSharePointSite =1
     AllowLayoutView =0
     DatasheetAlternateBackColor =16053492
     DatasheetGridlinesColor12 =15062992
     FitToScreen =1
+    PrtDevModeW = Begin
+        0x0000000010fefffff60100f730b71a0100000000b0adab1630b71a017f000000 ,
+        0xb8c1bb010000221ef60100007f000000c000221e0000221ef0010000c000221e ,
+        0x01040006dc008c0443ef8007010009009a0b3408640001000f00580201000100 ,
+        0x5802020001004100340000007f000000304dba160600000024c4150101000000 ,
+        0x000000003010221e830200813430d4003010221e080000000a0000003810221e ,
+        0x6002221ef0010000000000000000000000000000010000000000000001000000 ,
+        0x0200000001000000ffffffff0000000000000000000000000000000044494e55 ,
+        0x220050018c0300010369bd4f0000000000000000000000000000000000000000 ,
+        0x00000000000000000d0000000000000000000000000000000100000004000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000001000000000000000000000050010000534d544a ,
+        0x0000000010004001420072006f00740068006500720020004d00460043002d00 ,
+        0x37003800320030004e0020005500530042000000496e70757442696e00464f52 ,
+        0x4d534f5552434500524553444c4c00556e69726573444c4c0042725f50726f70 ,
+        0x73686565740048696465004d6564696154797065005354414e44415244004272 ,
+        0x5f546f6e657273617665004f46460042725f44656e73697479004f7074696f6e ,
+        0x31005265736f6c7574696f6e004f7074696f6e32004f7269656e746174696f6e ,
+        0x00504f52545241495400506170657253697a6500413400427250434c4d656469 ,
+        0x615479706500310048616c66746f6e650048545f50415453495a455f4155544f ,
+        0x0042725f4a6f624e616d65004f66660042725f456e644a6f624e616d65004f66 ,
+        0x6600000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000100004c48554200000001000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000005361736368610000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x00000000000000000000000000000000000000000000000056495354414d4f53 ,
+        0x530000000000000000000100ffff0001ffff0000000000000000000000000000 ,
+        0x0000000000000000
+    End
+    PrtDevNamesW = Begin
+        0x04001a0030000100000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x0000000000000000000000000000000000000000000000000000000000000000 ,
+        0x550053004200300030003100000000000000000000000000000000000000
+    End
     NoSaveCTIWhenDisabled =1
     Begin
         Begin Label
             BackStyle =0
             FontSize =11
             FontName ="Calibri"
-            LeftPadding =30
-            TopPadding =30
-            RightPadding =30
-            BottomPadding =30
-            GridlineStyleLeft =0
-            GridlineStyleTop =0
-            GridlineStyleRight =0
-            GridlineStyleBottom =0
-            GridlineWidthLeft =1
-            GridlineWidthTop =1
-            GridlineWidthRight =1
-            GridlineWidthBottom =1
         End
         Begin Image
             BackStyle =0
             OldBorderStyle =0
+            BorderLineStyle =0
             SizeMode =3
             PictureAlignment =2
             Width =1701
             Height =1701
-            LeftPadding =30
-            TopPadding =30
-            RightPadding =30
-            BottomPadding =30
-            GridlineStyleLeft =0
-            GridlineStyleTop =0
-            GridlineStyleRight =0
-            GridlineStyleBottom =0
-            GridlineWidthLeft =1
-            GridlineWidthTop =1
-            GridlineWidthRight =1
-            GridlineWidthBottom =1
         End
         Begin CommandButton
             Width =1701
@@ -142,101 +178,43 @@ Begin Form
             FontWeight =400
             ForeColor =-2147483630
             FontName ="Calibri"
-            LeftPadding =30
-            TopPadding =30
-            RightPadding =30
-            BottomPadding =30
-            GridlineStyleLeft =0
-            GridlineStyleTop =0
-            GridlineStyleRight =0
-            GridlineStyleBottom =0
-            GridlineWidthLeft =1
-            GridlineWidthTop =1
-            GridlineWidthRight =1
-            GridlineWidthBottom =1
+            BorderLineStyle =0
         End
         Begin TextBox
             FELineBreak = NotDefault
+            BorderLineStyle =0
             Width =1701
             LabelX =-1701
             FontSize =11
             BorderColor =12632256
             FontName ="Calibri"
             AsianLineBreak =1
-            LeftPadding =30
-            TopPadding =30
-            RightPadding =30
-            BottomPadding =30
-            GridlineStyleLeft =0
-            GridlineStyleTop =0
-            GridlineStyleRight =0
-            GridlineStyleBottom =0
-            GridlineWidthLeft =1
-            GridlineWidthTop =1
-            GridlineWidthRight =1
-            GridlineWidthBottom =1
-            ShowDatePicker =1
         End
         Begin UnboundObjectFrame
             SpecialEffect =2
             OldBorderStyle =1
             Width =4536
             Height =2835
-            LeftPadding =30
-            TopPadding =30
-            RightPadding =30
-            BottomPadding =30
-            GridlineStyleLeft =0
-            GridlineStyleTop =0
-            GridlineStyleRight =0
-            GridlineStyleBottom =0
-            GridlineWidthLeft =1
-            GridlineWidthTop =1
-            GridlineWidthRight =1
-            GridlineWidthBottom =1
         End
         Begin CustomControl
             SpecialEffect =2
             Width =4536
             Height =2835
-            LeftPadding =30
-            TopPadding =30
-            RightPadding =30
-            BottomPadding =30
-            GridlineStyleLeft =0
-            GridlineStyleTop =0
-            GridlineStyleRight =0
-            GridlineStyleBottom =0
-            GridlineWidthLeft =1
-            GridlineWidthTop =1
-            GridlineWidthRight =1
-            GridlineWidthBottom =1
         End
         Begin Attachment
             BackStyle =0
+            BorderLineStyle =0
             PictureSizeMode =3
             Width =1701
             Height =1701
             BorderColor =12632256
-            LeftPadding =30
-            TopPadding =30
-            RightPadding =30
-            BottomPadding =30
-            GridlineStyleLeft =0
-            GridlineStyleTop =0
-            GridlineStyleRight =0
-            GridlineStyleBottom =0
-            GridlineWidthLeft =1
-            GridlineWidthTop =1
-            GridlineWidthRight =1
-            GridlineWidthBottom =1
             LabelX =-1701
         End
         Begin Section
             Height =5145
             Name ="Detailbereich"
             GUID = Begin
-                0x916c07c120389245bf8c797caf4ff167
+                0x75d6e24ea007e4448578733c2dfa17d4
             End
             Begin
                 Begin CustomControl
@@ -402,7 +380,7 @@ Begin Form
                     OLEClass ="Microsoft Forms 2.0"
                     Class ="Forms.Image.1"
                     GUID = Begin
-                        0x5957a9286e32c34f8b2ec65abd683449
+                        0xc9884716c650344183b9b0309a34a22d
                     End
 
                     LayoutCachedLeft =4545
@@ -572,7 +550,7 @@ Begin Form
                     OLEClass ="Microsoft Forms 2.0"
                     Class ="Forms.Image.1"
                     GUID = Begin
-                        0xdf28f42dc80bb441bd231a2e2c37e3f4
+                        0x19571a015152aa4e9f45def2f14deb5b
                     End
 
                     LayoutCachedLeft =570
@@ -743,7 +721,7 @@ Begin Form
                     OLEClass ="ListViewCtrl"
                     Class ="MSComctlLib.ListViewCtrl.2"
                     GUID = Begin
-                        0xd655b66ca092924e8851b7ff5262c4ba
+                        0xb9d91572e8297546ab458497a38ac0f9
                     End
 
                     LayoutCachedLeft =570
@@ -762,7 +740,7 @@ Begin Form
                     Name ="LblDrop"
                     Caption ="Eine Bilddatei ins Feld  ziehen"
                     GUID = Begin
-                        0xb6d6f029331d0948bac0c546d77fa04f
+                        0xcaa1ee4a7ceff34396910d55ddb9eafc
                     End
                     LayoutCachedLeft =570
                     LayoutCachedTop =4140
@@ -778,7 +756,7 @@ Begin Form
                     Name ="LblInfo"
                     Caption ="Größe"
                     GUID = Begin
-                        0xd25efa4394cad14bbfdfd5b3d91349a7
+                        0xc8c6b8936dfb1443aa9353366221e5ec
                     End
                     LayoutCachedLeft =570
                     LayoutCachedTop =360
@@ -796,7 +774,7 @@ Begin Form
                     Name ="cmd1"
                     Caption ="Button 1"
                     GUID = Begin
-                        0x034560e1dcd6844aa5d2f7ea957769cc
+                        0x259469ae914b4940b4528aca2e48f000
                     End
 
                     LayoutCachedLeft =585
@@ -804,6 +782,10 @@ Begin Form
                     LayoutCachedWidth =1860
                     LayoutCachedHeight =5055
                     PictureCaptionArrangement =5
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
                 End
                 Begin CommandButton
                     OverlapFlags =85
@@ -816,7 +798,7 @@ Begin Form
                     Name ="cmd2"
                     Caption ="Button 2"
                     GUID = Begin
-                        0xf3f895d2ae163349a7f9a50312a039da
+                        0xc40c82c7327b4d479be89e5090cb170c
                     End
 
                     LayoutCachedLeft =2615
@@ -824,6 +806,10 @@ Begin Form
                     LayoutCachedWidth =3890
                     LayoutCachedHeight =5055
                     PictureCaptionArrangement =5
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
                 End
                 Begin CommandButton
                     OverlapFlags =85
@@ -836,7 +822,7 @@ Begin Form
                     Name ="cmd3"
                     Caption ="Button 3"
                     GUID = Begin
-                        0x63b44f9b504bba48b62202f00ee202a9
+                        0x01a8f436d5fae94899a75dfbb41f483c
                     End
 
                     LayoutCachedLeft =4645
@@ -844,6 +830,10 @@ Begin Form
                     LayoutCachedWidth =5920
                     LayoutCachedHeight =5055
                     PictureCaptionArrangement =5
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
                 End
                 Begin CommandButton
                     OverlapFlags =85
@@ -856,7 +846,7 @@ Begin Form
                     Name ="cmd4"
                     Caption ="Button 4"
                     GUID = Begin
-                        0xbef56ff166628544936c75043daf69f7
+                        0x607e3c8fd9190745b82f4d8c6d9b0431
                     End
 
                     LayoutCachedLeft =6675
@@ -864,6 +854,10 @@ Begin Form
                     LayoutCachedWidth =7950
                     LayoutCachedHeight =5055
                     PictureCaptionArrangement =5
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
                 End
             End
         End
