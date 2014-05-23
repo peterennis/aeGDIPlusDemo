@@ -21,7 +21,7 @@ UseMDIMode: 0, 2, False
 ShowDocumentTabs: True, 1, False
 Picture Property Storage Format: 0, 4, False
 CheckTruncatedNumFields: 1, 4, False
-AppTitle: OGLDemo, 10, False
+AppTitle: GDIPlusDemo, 10, False
 StartUpShowDBWindow: True, 1, False
 StartUpShowStatusBar: True, 1, False
 AllowShortcutMenus: True, 1, False
@@ -29,7 +29,7 @@ AllowFullMenus: True, 1, False
 AllowBuiltInToolbars: True, 1, False
 AllowToolbarChanges: True, 1, False
 AllowSpecialKeys: True, 1, False
-UseAppIconForFrmRpt: False, 1, False
+UseAppIconForFrmRpt: True, 1, False
 AllowDatasheetSchema: False, 1, False
 Show Values Limit: 1000, 4, False
 Show Values in Indexed: 1, 4, False
@@ -37,13 +37,13 @@ Show Values in Non-Indexed: 1, 4, False
 Show Values in Remote: 0, 4, False
 Auto Compact: 0, 4, False
 Track Name AutoCorrect Info: 0, 4, False
-DesignWithData: 0, 4, False
+DesignWithData: False, 1, False
 NavPane Closed: 0, 4, False
 NavPane Width: 215, 4, False
 NavPane View By: 0, 4, False
 NavPane Sort By: 1, 4, False
 Property Sheet Label Width: 3435, 4, False
-CustomRibbonID: OGLDemo, 10, False
 Show Navigation Pane Search Bar: 0, 4, False
 Theme Resource Name: Office Theme, 10, False
 WebDesignMode: 0, 2, False
+AppIcon: C:\ae\aeGDIPlusDemo\aeicon.ico, 10, False

@@ -110,7 +110,7 @@ Inherited: False;
 ---
 Name: AppTitle
 Type: dbText
-Value: OGLDemo
+Value: GDIPlusDemo
 Inherited: False;
 ---
 Name: StartUpShowDBWindow
@@ -150,7 +150,7 @@ Inherited: False;
 ---
 Name: UseAppIconForFrmRpt
 Type: dbBoolean
-Value: False
+Value: True
 Inherited: False;
 ---
 Name: AllowDatasheetSchema
@@ -189,8 +189,8 @@ Value: 0
 Inherited: False;
 ---
 Name: DesignWithData
-Type: dbLong
-Value: 0
+Type: dbBoolean
+Value: False
 Inherited: False;
 ---
 Name: NavPane Closed
@@ -218,11 +218,6 @@ Type: dbLong
 Value: 3435
 Inherited: False;
 ---
-Name: CustomRibbonID
-Type: dbText
-Value: OGLDemo
-Inherited: False;
----
 Name: Show Navigation Pane Search Bar
 Type: dbLong
 Value: 0
@@ -236,5 +231,10 @@ Inherited: False;
 Name: WebDesignMode
 Type: dbByte
 Value: 0
+Inherited: False;
+---
+Name: AppIcon
+Type: dbText
+Value: C:\ae\aeGDIPlusDemo\aeicon.ico
 Inherited: False;
 ---

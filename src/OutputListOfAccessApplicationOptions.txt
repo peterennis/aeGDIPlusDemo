@@ -1,5 +1,6 @@
 >>>Standard Options
-              2000          AppTitle                    OGLDemo
+              2000          AppTitle                    GDIPlusDemo
+              2000          AppIcon                     C:\ae\aeGDIPlusDemo\aeicon.ico
               2000          AllowFullMenus              True
               2000          AllowShortcutMenus          True
               2000          StartupShowDBWindow         True
