@@ -1,4 +1,4 @@
-Version =20
+ÿþVersion =20
 VersionRequired =20
 Begin Form
     RecordSelectors = NotDefault
