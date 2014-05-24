@@ -1,6 +1,6 @@
 Name: Name
 Type: dbMemo
-Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo_v003_20130523.accdb
+Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo_v004_20130523 - Copy.accdb
 Inherited: False;
 ---
 Name: Connect
