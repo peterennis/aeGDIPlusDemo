@@ -14,8 +14,8 @@ Begin Form
     Width =8505
     DatasheetFontHeight =11
     ItemSuffix =12
-    Right =15975
-    Bottom =11805
+    Right =14160
+    Bottom =10455
     DatasheetGridlinesColor =15062992
     OnUnload ="[Event Procedure]"
     RecSrcDt = Begin
@@ -23,8 +23,6 @@ Begin Form
     End
     GUID = Begin
         0x5096ca3de77e894089508d96e357a9ea
-    End
-    NameMap = Begin
     End
     RecordSource ="SELECT tblImages.ID, tblImages.Image, tblImages.Image.FileName AS ImageName FROM"
         " tblImages WHERE (((tblImages.ID)>9)); "
@@ -352,8 +350,8 @@ End Sub
 
 
 Private Sub Form_Current()
-    Dim PicSize As mdlOGL0710.TSize
-    
+    Dim PicSize As basGDIPlus2013.TSize
+
     If bNew Then Exit Sub
     
     Set Me!ctlImg.Object.Picture = Nothing

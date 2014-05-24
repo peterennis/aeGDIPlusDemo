@@ -45,6 +45,7 @@ End Sub
 
 '20140523 - v003 - Bump, fix Project Name
     ' Create tblLanguage, show USysRibbons table
+    ' Rename modules
 '20140523 - v002 - First commit
     ' Load aegit exp and imp classes
     ' Configure system for export

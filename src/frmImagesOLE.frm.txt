@@ -14,8 +14,8 @@ Begin Form
     Width =8505
     DatasheetFontHeight =11
     ItemSuffix =9
-    Right =15720
-    Bottom =11835
+    Right =14160
+    Bottom =10455
     DatasheetGridlinesColor =15062992
     OnUnload ="[Event Procedure]"
     RecSrcDt = Begin
@@ -23,8 +23,6 @@ Begin Form
     End
     GUID = Begin
         0x5ea28804a2d0524e963b868579a7fd93
-    End
-    NameMap = Begin
     End
     RecordSource ="tblOLE"
     Caption ="Bilder aus OLE-BLOBs"
@@ -229,7 +227,7 @@ Option Explicit
 Private bNew As Boolean
 
 Private Sub Form_Current()
-    Dim PicSize As mdlOGL0710.TSize
+    Dim PicSize As basGDIPlus2013.TSize
     
     If bNew Then Exit Sub
     
