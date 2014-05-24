@@ -2,7 +2,7 @@ Option Compare Database
 Option Explicit
 
 Public Const gstrDATE_GDIPlus As String = "May 23, 2014"
-Public Const gstrVERSION_GDIPlus As String = "0.9.8"
+Public Const gstrVERSION_GDIPlus As String = "0.0.3"
 Public Const gstrPROJECT_GDIPlus As String = "GDIPlusDemo"
 Public Const gblnTEST_GDIPlus As Boolean = False
 
