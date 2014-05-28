@@ -473,7 +473,7 @@ Public Function OLEFieldToPicture(strTable As String, _
                                   strOLEField As String) As StdPicture
     Dim rst As Recordset2
     
-    Set rst = CurrentDb.OpenRecordset("SELECT " & strOLEField & " FROM " & strTable & " WHERE " & strNameField & "='" & strName & "'", dbopendynaset)
+    Set rst = CurrentDb.OpenRecordset("SELECT " & strOLEField & " FROM " & strTable & " WHERE " & strNameField & "='" & strName & "'", dbOpenDynaset)
     If Not rst.EOF Then
         Set OLEFieldToPicture = ArrayToPicture(rst(strOLEField).Value)
     End If

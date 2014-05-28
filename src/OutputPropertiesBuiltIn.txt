@@ -1,6 +1,6 @@
 Name: Name
 Type: dbMemo
-Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo_v004_20130523 - Copy.accdb
+Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo_v004_20140528.accdb
 Inherited: False;
 ---
 Name: Connect
@@ -210,7 +210,7 @@ Inherited: False;
 ---
 Name: NavPane Sort By
 Type: dbLong
-Value: 1
+Value: 0
 Inherited: False;
 ---
 Name: Property Sheet Label Width

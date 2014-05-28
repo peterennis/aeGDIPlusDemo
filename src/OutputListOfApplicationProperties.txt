@@ -1,4 +1,4 @@
-Name: C:\ae\aeGDIPlusDemo\GDIPlusDemo_v004_20130523 - Copy.accdb, 12, False
+Name: C:\ae\aeGDIPlusDemo\GDIPlusDemo_v004_20140528.accdb, 12, False
 Connect: , 12, False
 Transactions: True, 1, False
 Updatable: True, 1, False
@@ -41,7 +41,7 @@ DesignWithData: False, 1, False
 NavPane Closed: 0, 4, False
 NavPane Width: 215, 4, False
 NavPane View By: 0, 4, False
-NavPane Sort By: 1, 4, False
+NavPane Sort By: 0, 4, False
 Property Sheet Label Width: 3435, 4, False
 Show Navigation Pane Search Bar: 1, 4, False
 Theme Resource Name: Office Theme, 10, False
