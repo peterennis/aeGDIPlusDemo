@@ -1,6 +1,6 @@
 Name: Name
 Type: dbMemo
-Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_v005_20140528.accdb
+Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_v006_20140528.accdb
 Inherited: False;
 ---
 Name: Connect
@@ -241,5 +241,10 @@ Inherited: False;
 Name: Perform Name AutoCorrect
 Type: dbLong
 Value: 0
+Inherited: False;
+---
+Name: CustomRibbonID
+Type: dbText
+Value: GDIPlusDemo2013
 Inherited: False;
 ---

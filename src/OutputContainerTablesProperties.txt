@@ -59,7 +59,7 @@
               AllPermissions               1048319 
               Container     Tables
               DateCreated   8/23/2009 12:20:50 AM 
-              LastUpdated   5/23/2014 4:28:55 PM 
+              LastUpdated   5/28/2014 3:49:52 PM 
               Orientation    0 
               OrderByOn     False
               DefaultView    2 
@@ -77,6 +77,7 @@
               AlternateBackShade           100 
               DatasheetGridlinesThemeColorIndex         -1 
               DatasheetForeThemeColorIndex              -1 
+              PublishToWeb   1 
 >>>USysRibbons
               Name          USysRibbons
               Owner         admin
