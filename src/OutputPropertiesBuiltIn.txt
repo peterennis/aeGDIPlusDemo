@@ -1,6 +1,6 @@
 Name: Name
 Type: dbMemo
-Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo_v005_20140528.accdb
+Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_v005_20140528.accdb
 Inherited: False;
 ---
 Name: Connect
@@ -110,7 +110,7 @@ Inherited: False;
 ---
 Name: AppTitle
 Type: dbText
-Value: GDIPlusDemo
+Value: GDIPlusDemo2013
 Inherited: False;
 ---
 Name: StartUpShowDBWindow
@@ -235,7 +235,7 @@ Inherited: False;
 ---
 Name: AppIcon
 Type: dbText
-Value: C:\ae\aeGDIPlusDemo\aeicon.ico
+Value: C:\ae\aeGDIPlusDemo\adaept_logo_16x16.ico
 Inherited: False;
 ---
 Name: Perform Name AutoCorrect

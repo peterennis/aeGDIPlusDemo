@@ -3,10 +3,11 @@ Option Explicit
 
 Public Const gstrDATE_GDIPlus As String = "May 28, 2014"
 Public Const gstrVERSION_GDIPlus As String = "0.0.5"
-Public Const gstrPROJECT_GDIPlus As String = "GDIPlusDemo"
+Public Const gstrPROJECT_GDIPlus As String = "GDIPlusDemo2013"
 Public Const gblnTEST_GDIPlus As Boolean = False
+'
 
-Public Sub GDIPlus_Export()
+Public Sub GDIPlusDemo2013_Export()
 
     Dim THE_SOURCE_FOLDER As String
     Dim THE_XML_FOLDER As String
