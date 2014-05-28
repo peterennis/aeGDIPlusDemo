@@ -1,11 +1,25 @@
 Option Compare Database
 Option Explicit
 
-Public Const gstrDATE_GDIPlus As String = "May 28, 2014"
-Public Const gstrVERSION_GDIPlus As String = "0.0.5"
+Private Const gstrVERSION_GDIPlus As String = "0.0.5"
+Private Const gstrDATE_GDIPlus As String = "May 28, 2014"
 Public Const gstrPROJECT_GDIPlus As String = "GDIPlusDemo2013"
-Public Const gblnTEST_GDIPlus As Boolean = False
 '
+
+Public Function getMyVersion() As String
+    On Error GoTo 0
+    getMyVersion = gstrVERSION_GDIPlus
+End Function
+
+Public Function getMyDate() As String
+    On Error GoTo 0
+    getMyDate = gstrDATE_GDIPlus
+End Function
+
+Public Function getMyProject() As String
+    On Error GoTo 0
+    getMyProject = gstrPROJECT_GDIPlus
+End Function
 
 Public Sub GDIPlusDemo2013_Export()
 
@@ -51,6 +65,7 @@ End Sub
     ' Also changed ogl.dll to gdiplus.dll
     ' Based on work from here:
     ' Ref: http://www.activevb.de/tipps/vb6tipps/tipp0644.html
+    ' Add version/date/project details to forms
 '20140527 - v004 - Fix IsQryHidden problem with export
 '20140523 - v003 - Bump, fix Project Name
     ' Create tblLanguage, show USysRibbons table

@@ -14,8 +14,8 @@ Begin Form
     Width =8505
     DatasheetFontHeight =11
     ItemSuffix =9
-    Right =14160
-    Bottom =10455
+    Right =19185
+    Bottom =12510
     DatasheetGridlinesColor =15062992
     OnUnload ="[Event Procedure]"
     RecSrcDt = Begin
@@ -95,7 +95,7 @@ Begin Form
             LabelX =-1701
         End
         Begin Section
-            Height =4845
+            Height =7200
             Name ="Detailbereich"
             GUID = Begin
                 0x44edf98b005e4b45a9dbc6c89266e08f
@@ -212,6 +212,126 @@ Begin Form
                     LayoutCachedWidth =3975
                     LayoutCachedHeight =630
                 End
+                Begin TextBox
+                    Enabled = NotDefault
+                    OverlapFlags =87
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =5757
+                    Top =5760
+                    Width =2160
+                    Height =285
+                    TabIndex =3
+                    Name ="txtVersion"
+                    ControlSource ="=getMyVersion()"
+                    GUID = Begin
+                        0xc51a71f605fe9a4bb05aef43305dd19d
+                    End
+
+                    LayoutCachedLeft =5757
+                    LayoutCachedTop =5760
+                    LayoutCachedWidth =7917
+                    LayoutCachedHeight =6045
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =3
+                            Left =4752
+                            Top =5760
+                            Width =1005
+                            Height =285
+                            Name ="Label13"
+                            Caption ="Version: "
+                            GUID = Begin
+                                0x808816f576eb1a46b3761bcf8db862c4
+                            End
+                            LayoutCachedLeft =4752
+                            LayoutCachedTop =5760
+                            LayoutCachedWidth =5757
+                            LayoutCachedHeight =6045
+                        End
+                    End
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    OverlapFlags =87
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =5757
+                    Top =6192
+                    Width =2160
+                    Height =285
+                    TabIndex =4
+                    Name ="txtDate"
+                    ControlSource ="=getMyDate()"
+                    GUID = Begin
+                        0x141ad3c25317eb4190ea4248fe10f1c9
+                    End
+
+                    LayoutCachedLeft =5757
+                    LayoutCachedTop =6192
+                    LayoutCachedWidth =7917
+                    LayoutCachedHeight =6477
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =3
+                            Left =4752
+                            Top =6192
+                            Width =1005
+                            Height =285
+                            Name ="Label15"
+                            Caption ="Date: "
+                            GUID = Begin
+                                0x6a13c22a7202444ea26a03ddd8d52894
+                            End
+                            LayoutCachedLeft =4752
+                            LayoutCachedTop =6192
+                            LayoutCachedWidth =5757
+                            LayoutCachedHeight =6477
+                        End
+                    End
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    OverlapFlags =87
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =5757
+                    Top =6624
+                    Width =2160
+                    Height =285
+                    TabIndex =5
+                    Name ="txtProject"
+                    ControlSource ="=getMyProject()"
+                    GUID = Begin
+                        0x18f6741b96ea6546a5fcb1d8c308da36
+                    End
+
+                    LayoutCachedLeft =5757
+                    LayoutCachedTop =6624
+                    LayoutCachedWidth =7917
+                    LayoutCachedHeight =6909
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =3
+                            Left =4752
+                            Top =6624
+                            Width =1005
+                            Height =285
+                            Name ="Label17"
+                            Caption ="Project: "
+                            GUID = Begin
+                                0xd4e92b7598170c40b157b6b2153ac365
+                            End
+                            LayoutCachedLeft =4752
+                            LayoutCachedTop =6624
+                            LayoutCachedWidth =5757
+                            LayoutCachedHeight =6909
+                        End
+                    End
+                End
             End
         End
     End
@@ -227,13 +347,14 @@ Option Explicit
 Private bNew As Boolean
 
 Private Sub Form_Current()
+    On Error GoTo 0
     Dim PicSize As basGDIPlus2013.TSize
     
     If bNew Then Exit Sub
     
     Set Me!ctlImg.Object.Picture = Nothing
     Set Me!ctlImg2.Object.Picture = Nothing
-    Me!LblInfo.Caption = ""
+    Me!LblInfo.Caption = vbNullString
     
     If Me.NewRecord Then
         Me!ctlList.Visible = True
@@ -252,18 +373,20 @@ Private Sub Form_Current()
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
+    On Error GoTo 0
     ShutDownGDIP
 End Sub
 
 Private Sub ctlList_OLEDragDrop(Data As Object, Effect As Long, _
                                 Button As Integer, Shift As Integer, X As Single, Y As Single)
+    On Error GoTo 0
     Dim oPic As StdPicture
     Dim sFile As String
         
     sFile = Data.Files(1)
     Set oPic = LoadPictureGDIP(sFile)   'OGL-Funktion
     If Not oPic Is Nothing Then
-        Me!ImageName = Mid(sFile, InStrRev(sFile, "\") + 1)
+        Me!ImageName = Mid$(sFile, InStrRev(sFile, "\") + 1)
         Me!BLOB.Value = ArrayFromPicture(oPic, pictypePNG)  'OGL-Funktion
         Me.Dirty = False
         Set oPic = Nothing

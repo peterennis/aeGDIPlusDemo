@@ -1,13 +1,15 @@
 Option Compare Database
 Option Explicit
 
-Dim oRibbon As IRibbonUI
+Public oRibbon As IRibbonUI
 
-Sub fuLoad(ribbon As IRibbonUI)
+Public Sub fuLoad(ByVal ribbon As IRibbonUI)
+    On Error GoTo 0
     Set oRibbon = ribbon
 End Sub
 
-Function fuImage(rcontrol As IRibbonControl, ByRef pic)
+Public Function fuImage(ByVal rcontrol As IRibbonControl, ByRef pic As Variant) As Boolean
+    On Error GoTo 0
     Select Case rcontrol.ID
         Case "btn1"
             Set pic = AttachmentToPicture("tblImages", "Image", "photo_sceneryA32.png")
@@ -18,7 +20,8 @@ Function fuImage(rcontrol As IRibbonControl, ByRef pic)
     End Select
 End Function
 
-Function fuBtnAction(rcontrol As IRibbonControl)
+Public Function fuBtnAction(ByVal rcontrol As IRibbonControl) As Boolean
+    On Error GoTo 0
     Select Case rcontrol.ID
         Case "btn1"
             DoCmd.OpenForm "frmImages"

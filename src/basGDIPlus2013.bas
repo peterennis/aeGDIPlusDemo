@@ -12,7 +12,7 @@ Option Explicit
 
 ' Reference to library "OLE Automation" (stdole) needed!
 
-Public Const GUID_IPicture = "{7BF80980-BF32-101A-8BBB-00AA00300CAB}"    ' IPicture
+Private Const GUID_IPicture As String = "{7BF80980-BF32-101A-8BBB-00AA00300CAB}"    ' IPicture
 
 ' User-defined types: ----------------------------------------------------------------------
 
@@ -35,12 +35,13 @@ Public Type TSize
     Y As Double
 End Type
 
-Public Type RECT
-    Bottom As Long
-    Left As Long
-    Right As Long
-    Top As Long
-End Type
+'''NOT USED
+'Public Type RECT
+'    Bottom As Long
+'    Left As Long
+'    Right As Long
+'    Top As Long
+'End Type
 
 Private Type PICTDESC
     cbSizeOfStruct As Long
@@ -256,10 +257,12 @@ End Function
 
 ' Scale picture with GDIP
 ' A Picture object is commited, also the return value
-' Width and Height of generatrix pictures in Width, Height
-' bSharpen: TRUE=Thumb is additional sharpened
-Public Function ResampleGDIP(ByVal Image As StdPicture, ByVal Width As Long, ByVal Height As Long, _
-                      Optional ByVal bSharpen As Boolean = True) As StdPicture
+' Width and Height of generated picture in Width, Height parameters
+' bSharpen: TRUE=Thumb is additionally sharpened
+Public Function ResampleGDIP(ByVal Image As StdPicture, _
+                                ByRef Width As Long, _
+                                ByRef Height As Long, _
+                                Optional ByVal bSharpen As Boolean = True) As StdPicture
     Dim lRes As Long
     Dim lBitmap As Long
 
@@ -309,8 +312,8 @@ Private Function CropImage(ByVal Image As StdPicture, _
     Dim sx As Long
     Dim sy As Long
     
-    Const PixelFormat32bppARGB = &H26200A
-    Const UnitPixel = 2
+    Const PixelFormat32bppARGB As Long = &H26200A
+    Const UnitPixel As Integer = 2
 
     On Error GoTo 0
 
@@ -389,6 +392,8 @@ Private Function SavePicGDIPlus(ByVal Image As StdPicture, ByVal sFile As String
                 sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
             Case pictypeJPG
                 sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
+            Case Else
+                MsgBox "Bad SavePicGDIPlus Case!"
         End Select
         CLSIDFromString StrPtr(sType), TEncoder
         If PicType = pictypeJPG Then
@@ -408,7 +413,7 @@ Private Function SavePicGDIPlus(ByVal Image As StdPicture, ByVal sFile As String
         GdipDisposeImage lBitmap
         DoEvents
         ' Function returns True, if generated file actually exists:
-        SavePicGDIPlus = (Dir(sFile) <> "")
+        SavePicGDIPlus = (Dir$(sFile) <> vbNullString)
     End If
 
 End Function
@@ -416,7 +421,9 @@ End Function
 ' This procedure is similar to the above (see Parameter), the different is,
 ' that nothing is stored as a file, but a conversion is executed
 ' using a OLE-Stream-Object to an Byte-Array .
-Public Function ArrayFromPicture(ByVal Image As Object, PicType As PicFileType, Optional Quality As Long = 80) As Byte()
+Public Function ArrayFromPicture(ByVal Image As Object, _
+                    ByVal PicType As PicFileType, _
+                    Optional ByVal Quality As Long = 80) As Byte()
 
     Dim lBitmap As Long
     Dim TEncoder As GUID
@@ -512,9 +519,9 @@ End Function
 ' strAttachmentField:    Name of the attachment column in the table
 ' strImage:              Name of the image to search in the attachment records
 ' ? AttachmentToPicture("tblImages","Image","check16.png").Width
-Public Function AttachmentToPicture(strTable As String, _
-                                    strAttachmentField As String, _
-                                    strImage As String) As StdPicture
+Public Function AttachmentToPicture(ByVal strTable As String, _
+                                    ByVal strAttachmentField As String, _
+                                    ByVal strImage As String) As StdPicture
     Dim strSQL As String
     Dim bin() As Byte
     Dim nOffset As Long
@@ -571,7 +578,8 @@ End Function
 
 ' Help function to get a OLE-Picture from Windows-Bitmap-Handle
 ' If bIsIcon = TRUE, an Icon-Handle is commited
-Private Function BitmapToPicture(ByVal hBmp As Long, Optional bIsIcon As Boolean = False) As StdPicture
+Private Function BitmapToPicture(ByVal hBmp As Long, _
+                    Optional ByVal bIsIcon As Boolean = False) As StdPicture
 
     On Error GoTo 0
 
