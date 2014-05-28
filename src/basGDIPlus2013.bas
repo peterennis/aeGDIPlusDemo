@@ -87,7 +87,7 @@ Private Declare Sub CopyMemory Lib "kernel32.dll" Alias "RtlMoveMemory" (ByRef D
 
 ' Modules API:
 Private Declare Function FreeLibrary Lib "kernel32.dll" (ByVal hLibModule As Long) As Long
-Private Declare Function LoadLibrary Lib "kernel32.dll" Alias "LoadLibraryA" (ByVal lpLibFileName As String) As Long
+'''NOT USED - Private Declare Function LoadLibrary Lib "kernel32.dll" Alias "LoadLibraryA" (ByVal lpLibFileName As String) As Long
 Private Declare Function GetModuleHandle Lib "kernel32.dll" Alias "GetModuleHandleA" (ByVal lpModuleName As String) As Long
 
 ' Timer API:
@@ -108,11 +108,11 @@ Private Declare Function GdiplusShutdown Lib "GDIPlus" (ByVal token As Long) As 
 ' Load GDIP-Image from file :
 Private Declare Function GdipCreateBitmapFromFile Lib "GDIPlus" (ByVal FileName As Long, BITMAP As Long) As Long
 ' Create GDIP- graphical area from Windows-DeviceContext:
-Private Declare Function GdipCreateFromHDC Lib "GDIPlus" (ByVal hdc As Long, GpGraphics As Long) As Long
+'''NOT USED - Private Declare Function GdipCreateFromHDC Lib "GDIPlus" (ByVal hdc As Long, GpGraphics As Long) As Long
 ' Delete GDIP graphical area :
 Private Declare Function GdipDeleteGraphics Lib "GDIPlus" (ByVal graphics As Long) As Long
 ' Copy GDIP-Image to graphical area:
-Private Declare Function GdipDrawImageRect Lib "GDIPlus" (ByVal graphics As Long, ByVal Image As Long, ByVal X As Single, ByVal Y As Single, ByVal Width As Single, ByVal Height As Single) As Long
+'''NOT USED - Private Declare Function GdipDrawImageRect Lib "GDIPlus" (ByVal graphics As Long, ByVal Image As Long, ByVal X As Single, ByVal Y As Single, ByVal Width As Single, ByVal Height As Single) As Long
 ' Clear allocated bitmap memory from GDIP :
 Private Declare Function GdipDisposeImage Lib "GDIPlus" (ByVal Image As Long) As Long
 ' Retrieve windows bitmap handle from GDIP-Image:
@@ -236,7 +236,7 @@ End Sub
 ' Load image file with GDIP
 ' It's equivalent to the method LoadPicture() in OLE-Automation library (stdole2.tlb)
 ' Allowed format: bmp, gif, jp(e)g, tif, png, wmf, emf, ico
-Public Function LoadPictureGDIP(sFileName As String) As StdPicture
+Public Function LoadPictureGDIP(ByVal sFileName As String) As StdPicture
 
     Dim hBmp As Long
     Dim hPic As Long
@@ -259,7 +259,7 @@ End Function
 ' Width and Height of generatrix pictures in Width, Height
 ' bSharpen: TRUE=Thumb is additional sharpened
 Public Function ResampleGDIP(ByVal Image As StdPicture, ByVal Width As Long, ByVal Height As Long, _
-                      Optional bSharpen As Boolean = True) As StdPicture
+                      Optional ByVal bSharpen As Boolean = True) As StdPicture
     Dim lRes As Long
     Dim lBitmap As Long
 
@@ -299,14 +299,15 @@ End Function
 ' Width, Height: Width and height of area to extract
 ' Return:        Image partly extracted
 Private Function CropImage(ByVal Image As StdPicture, _
-                   X As Long, Y As Long, _
-                   Width As Long, Height As Long) As StdPicture
+                   ByVal X As Long, ByVal Y As Long, _
+                   ByVal Width As Long, ByVal Height As Long) As StdPicture
     Dim ret As Long
     Dim lBitmap As Long
     Dim lBitmap2 As Long
     Dim lGraph As Long
     Dim hBitmap As Long
-    Dim sx As Long, sy As Long
+    Dim sx As Long
+    Dim sy As Long
     
     Const PixelFormat32bppARGB = &H26200A
     Const UnitPixel = 2
@@ -365,8 +366,8 @@ End Function
 ' PicType = pictypeBMP, pictypeGIF, pictypePNG oder pictypeJPG
 ' Quality: 0...100; (works only with pictypeJPG!)
 ' Returns TRUE if successful
-Private Function SavePicGDIPlus(ByVal Image As StdPicture, sFile As String, _
-                        PicType As PicFileType, Optional Quality As Long = 80) As Boolean
+Private Function SavePicGDIPlus(ByVal Image As StdPicture, ByVal sFile As String, _
+                        ByVal PicType As PicFileType, Optional ByVal Quality As Long = 80) As Boolean
 
     Dim lBitmap As Long
     Dim TEncoder As GUID
@@ -430,10 +431,16 @@ Public Function ArrayFromPicture(ByVal Image As Object, PicType As PicFileType, 
 
     If GdipCreateBitmapFromHBITMAP(Image.Handle, 0, lBitmap) = 0 Then
         Select Case PicType    ' Choose GDIP-Format-Encoders CLSID:
-        Case pictypeBMP: sType = "{557CF400-1A04-11D3-9A73-0000F81EF32E}"
-        Case pictypeGIF: sType = "{557CF402-1A04-11D3-9A73-0000F81EF32E}"
-        Case pictypePNG: sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
-        Case pictypeJPG: sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
+            Case pictypeBMP
+                sType = "{557CF400-1A04-11D3-9A73-0000F81EF32E}"
+            Case pictypeGIF
+                sType = "{557CF402-1A04-11D3-9A73-0000F81EF32E}"
+            Case pictypePNG
+                sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
+            Case pictypeJPG
+                sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
+            Case Else
+                MsgBox "Bad ArrayFromPicture Case!"
         End Select
         CLSIDFromString StrPtr(sType), TEncoder
 
@@ -483,10 +490,10 @@ End Function
 ' strName:               Unique name of the picture in Name field
 ' strOLEField:           Name of OLE field in table
 ' ? OLEFieldToPicture("tblOLE","ImageName","cloudy","Blob").Width
-Public Function OLEFieldToPicture(strTable As String, _
-                                  strNameField As String, _
-                                  strName As String, _
-                                  strOLEField As String) As StdPicture
+Public Function OLEFieldToPicture(ByVal strTable As String, _
+                                  ByVal strNameField As String, _
+                                  ByVal strName As String, _
+                                  ByVal strOLEField As String) As StdPicture
     On Error GoTo 0
 
     Dim rst As Recordset2
