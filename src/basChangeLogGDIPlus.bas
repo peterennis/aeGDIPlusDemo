@@ -2,7 +2,7 @@ Option Compare Database
 Option Explicit
 
 Public Const gstrDATE_GDIPlus As String = "May 28, 2014"
-Public Const gstrVERSION_GDIPlus As String = "0.0.4"
+Public Const gstrVERSION_GDIPlus As String = "0.0.5"
 Public Const gstrPROJECT_GDIPlus As String = "GDIPlusDemo"
 Public Const gblnTEST_GDIPlus As Boolean = False
 
@@ -43,6 +43,9 @@ End Sub
 '=============================================================================================================================
 
 
+'20140528 - v005 - Fixes using TM VBA-Inspector
+    ' Use a space before comments
+'20140527 - v004 - Fix IsQryHidden problem with export
 '20140523 - v003 - Bump, fix Project Name
     ' Create tblLanguage, show USysRibbons table
     ' Rename modules

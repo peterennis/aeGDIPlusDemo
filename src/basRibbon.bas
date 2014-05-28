@@ -13,6 +13,8 @@ Function fuImage(rcontrol As IRibbonControl, ByRef pic)
         Set pic = AttachmentToPicture("tblImages", "Image", "photo_sceneryA32.png")
     Case "btn2"
         Set pic = AttachmentToPicture("tblImages", "Image", "gear_refresh32.png")
+    Case Else
+        MsgBox "Bad fuImage case!"
     End Select
 End Function
 
