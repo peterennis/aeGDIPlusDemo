@@ -1,10 +1,5 @@
+Option Compare Database
 Option Explicit
-
-' Office 2013 - Ref: http://www.utteraccess.com/forum/Custom-Ribbon-Icon-Ogl-t2016045.html
-' s/ogl/GDIPlus/g will fix the demo to run in Access 2013
-' Based on work from here:
-' Ref: http://www.activevb.de/tipps/vb6tipps/tipp0644.html
-'
 
 '-------------------------------------------------
 '    Picture functions using GDIPlus-API (GDIP)   |
@@ -15,7 +10,7 @@ Option Explicit
 '    rev. 05/2014 Peter F. Ennis                  |
 '-------------------------------------------------
 
-'- Reference to library "OLE Automation" (stdole) needed!
+' Reference to library "OLE Automation" (stdole) needed!
 
 Public Const GUID_IPicture = "{7BF80980-BF32-101A-8BBB-00AA00300CAB}"    ' IPicture
 
@@ -82,13 +77,13 @@ Private Declare Function OleCreatePictureIndirect Lib "oleaut32.dll" (lpPictDesc
 Private Declare Function CLSIDFromString Lib "ole32" (ByVal lpsz As Any, pCLSID As GUID) As Long
 
 ' Memory functions:
-Private Declare Function GlobalAlloc Lib "kernel32" (ByVal uFlags As Long, ByVal dwBytes As Long) As Long
+'''NOT USED - Private Declare Function GlobalAlloc Lib "kernel32" (ByVal uFlags As Long, ByVal dwBytes As Long) As Long
 Private Declare Function GlobalSize Lib "kernel32.dll" (ByVal hMem As Long) As Long
 Private Declare Function GlobalLock Lib "kernel32.dll" (ByVal hMem As Long) As Long
 Private Declare Function GlobalUnlock Lib "kernel32.dll" (ByVal hMem As Long) As Long
-Private Declare Function GlobalFree Lib "kernel32" (ByVal hMem As Long) As Long
+'''NOT USED - Private Declare Function GlobalFree Lib "kernel32" (ByVal hMem As Long) As Long
 Private Declare Sub CopyMemory Lib "kernel32.dll" Alias "RtlMoveMemory" (ByRef Destination As Any, ByRef Source As Any, ByVal Length As Long)
-Private Declare Sub MoveMemory Lib "kernel32" Alias "RtlMoveMemory" (ByVal Destination As Long, ByRef Source As Byte, ByVal Length As Long)
+'''NOT USED - Private Declare Sub MoveMemory Lib "kernel32" Alias "RtlMoveMemory" (ByVal Destination As Long, ByRef Source As Byte, ByVal Length As Long)
 
 ' Modules API:
 Private Declare Function FreeLibrary Lib "kernel32.dll" (ByVal hLibModule As Long) As Long
@@ -99,13 +94,11 @@ Private Declare Function GetModuleHandle Lib "kernel32.dll" Alias "GetModuleHand
 Private Declare Function SetTimer Lib "user32" (ByVal hwnd As Long, ByVal nIDEvent As Long, ByVal uElapse As Long, ByVal lpTimerFunc As Long) As Long
 Private Declare Function KillTimer Lib "user32" (ByVal hwnd As Long, ByVal nIDEvent As Long) As Long
 
-
 ' OLE-Stream functions :
 Private Declare Function CreateStreamOnHGlobal Lib "ole32" (ByVal hGlobal As Long, ByVal fDeleteOnRelease As Long, ByRef ppstm As Any) As Long
 Private Declare Function GetHGlobalFromStream Lib "ole32.dll" (ByVal pstm As Any, ByRef phglobal As Long) As Long
 
 ' GDIPlus Flat-API declarations:
-
 ' *Remark: We use gdiplus.dll
 
 ' Initialization GDIP:
@@ -157,28 +150,32 @@ Private bSharedLoad As Boolean
 
 
 ' Initialize GDI+
-Function InitGDIP() As Boolean
+Private Function InitGDIP() As Boolean
 
     Dim TGDP As GDIPStartupInput
     Dim hMod As Long
-    
+
     On Error GoTo PROC_ERR
-    
+
     If lGDIP = 0 Then
         If IsNull(TempVars("GDIPlusHandle")) Then   ' If lGDIP is broken due to unhandled errors restore it from the Tempvars collection
             TGDP.GdiplusVersion = 1
-            hMod = GetModuleHandle("gdiplus.dll")   ' gdiplus.dll not yet loaded?
-            MsgBox "Val(Application.Version)=" & Val(Application.Version)
-            If hMod = 0 Then
-                If Val(Application.Version) = 14 Then   ' Distinguish between Office 12 (2007) and Office 14 (2010)
-                    hMod = LoadLibrary(Environ$("CommonProgramFiles") & "\Microsoft Shared\Office14\ogl.dll")
-                Else
-                    hMod = LoadLibrary(Environ$("CommonProgramFiles") & "\Microsoft Shared\Office12\ogl.dll")
-                End If
-                bSharedLoad = False
-            Else
-                bSharedLoad = True
+            'MsgBox "Val(Application.Version)=" & Val(Application.Version)
+            If Val(Application.Version) <> "15" Then
+                MsgBox "This demo is for Access 2013 only!", vbCritical, "GDIPlusDemo2013"
+                Stop
             End If
+            hMod = GetModuleHandle("gdiplus.dll")   ' gdiplus.dll not yet loaded?
+'            If hMod = 0 Then
+'                If Val(Application.Version) = 14 Then   ' Distinguish between Office 12 (2007) and Office 14 (2010)
+'                    hMod = LoadLibrary(Environ$("CommonProgramFiles") & "\Microsoft Shared\Office14\ogl.dll")
+'                Else
+'                    hMod = LoadLibrary(Environ$("CommonProgramFiles") & "\Microsoft Shared\Office12\ogl.dll")
+'                End If
+'                bSharedLoad = False
+'            Else
+                bSharedLoad = True
+'            End If
             GdiplusStartup lGDIP, TGDP  ' Get a personal instance of gdiplus
             TempVars("GDIPlusHandle") = lGDIP
         Else
@@ -218,6 +215,7 @@ End Sub
 
 ' Scheduled ShutDown of GDI+ handle to avoid memory leaks
 Private Sub AutoShutDown()
+    On Error GoTo 0
     ' Set to 5 seconds for next shutdown
     ' That's IMO appropriate for looped routines  - but configure for your own purposes
     If lGDIP <> 0 Then
@@ -227,6 +225,7 @@ End Sub
 
 ' Callback for AutoShutDown
 Private Sub TimerProc(ByVal hwnd As Long, ByVal uMsg As Long, ByVal idEvent As Long, ByVal dwTime As Long)
+    On Error GoTo 0
     Debug.Print "GDI+ AutoShutDown", idEvent
     If TempVars("TimerHandle") <> 0 Then
         If KillTimer(0&, CLng(TempVars("TimerHandle"))) Then TempVars("TimerHandle") = 0
@@ -238,8 +237,11 @@ End Sub
 ' It's equivalent to the method LoadPicture() in OLE-Automation library (stdole2.tlb)
 ' Allowed format: bmp, gif, jp(e)g, tif, png, wmf, emf, ico
 Public Function LoadPictureGDIP(sFileName As String) As StdPicture
+
     Dim hBmp As Long
     Dim hPic As Long
+
+    On Error GoTo 0
 
     If Not InitGDIP Then Exit Function
     If GdipCreateBitmapFromFile(StrPtr(sFileName), hPic) = 0 Then
@@ -256,10 +258,12 @@ End Function
 ' A Picture object is commited, also the return value
 ' Width and Height of generatrix pictures in Width, Height
 ' bSharpen: TRUE=Thumb is additional sharpened
-Function ResampleGDIP(ByVal Image As StdPicture, ByVal Width As Long, ByVal Height As Long, _
+Public Function ResampleGDIP(ByVal Image As StdPicture, ByVal Width As Long, ByVal Height As Long, _
                       Optional bSharpen As Boolean = True) As StdPicture
     Dim lRes As Long
     Dim lBitmap As Long
+
+    On Error GoTo 0
 
     If Not InitGDIP Then Exit Function
     
@@ -291,10 +295,10 @@ Function ResampleGDIP(ByVal Image As StdPicture, ByVal Width As Long, ByVal Heig
 End Function
 
 ' Extract a part of an image
-' x,y:   Left top corner of area to extract (pixel)
+' x,y:           Left top corner of area to extract (pixel)
 ' Width, Height: Width and height of area to extract
-' Return:    Image partly extracted
-Function CropImage(ByVal Image As StdPicture, _
+' Return:        Image partly extracted
+Private Function CropImage(ByVal Image As StdPicture, _
                    X As Long, Y As Long, _
                    Width As Long, Height As Long) As StdPicture
     Dim ret As Long
@@ -306,6 +310,8 @@ Function CropImage(ByVal Image As StdPicture, _
     
     Const PixelFormat32bppARGB = &H26200A
     Const UnitPixel = 2
+
+    On Error GoTo 0
 
     If Not InitGDIP Then Exit Function
     
@@ -332,10 +338,13 @@ End Function
 
 ' Retrieve Width and Height of a pictures in Pixel with GDIP
 ' Return value as user/defined type TSize (X/Y als Long)
-Function GetDimensionsGDIP(ByVal Image As StdPicture) As TSize
+Public Function GetDimensionsGDIP(ByVal Image As StdPicture) As TSize
+
     Dim lRes As Long
     Dim lBitmap As Long
     Dim X As Long, Y As Long
+
+    On Error GoTo 0
 
     If Not InitGDIP Then Exit Function
     If Image Is Nothing Then Exit Function
@@ -356,13 +365,16 @@ End Function
 ' PicType = pictypeBMP, pictypeGIF, pictypePNG oder pictypeJPG
 ' Quality: 0...100; (works only with pictypeJPG!)
 ' Returns TRUE if successful
-Function SavePicGDIPlus(ByVal Image As StdPicture, sFile As String, _
+Private Function SavePicGDIPlus(ByVal Image As StdPicture, sFile As String, _
                         PicType As PicFileType, Optional Quality As Long = 80) As Boolean
+
     Dim lBitmap As Long
     Dim TEncoder As GUID
     Dim ret As Long
     Dim TParams As EncoderParameters
     Dim sType As String
+
+    On Error GoTo 0
 
     If Not InitGDIP Then Exit Function
 
@@ -403,13 +415,16 @@ End Function
 ' This procedure is similar to the above (see Parameter), the different is,
 ' that nothing is stored as a file, but a conversion is executed
 ' using a OLE-Stream-Object to an Byte-Array .
-Function ArrayFromPicture(ByVal Image As Object, PicType As PicFileType, Optional Quality As Long = 80) As Byte()
+Public Function ArrayFromPicture(ByVal Image As Object, PicType As PicFileType, Optional Quality As Long = 80) As Byte()
+
     Dim lBitmap As Long
     Dim TEncoder As GUID
     Dim ret As Long
     Dim TParams As EncoderParameters
     Dim sType As String
     Dim IStm As IUnknown
+
+    On Error GoTo 0
 
     If Not InitGDIP Then Exit Function
 
@@ -472,9 +487,11 @@ Public Function OLEFieldToPicture(strTable As String, _
                                   strNameField As String, _
                                   strName As String, _
                                   strOLEField As String) As StdPicture
+    On Error GoTo 0
+
     Dim rst As Recordset2
-    
     Set rst = CurrentDb.OpenRecordset("SELECT " & strOLEField & " FROM " & strTable & " WHERE " & strNameField & "='" & strName & "'", dbOpenDynaset)
+
     If Not rst.EOF Then
         Set OLEFieldToPicture = ArrayToPicture(rst(strOLEField).Value)
     End If
@@ -495,7 +512,9 @@ Public Function AttachmentToPicture(strTable As String, _
     Dim bin() As Byte
     Dim nOffset As Long
     Dim nSize As Long
-    
+
+    On Error GoTo 0
+
     strSQL = "SELECT " & strTable & "." & strAttachmentField & ".FileData AS data " & _
              "FROM " & strTable & _
              " WHERE " & strTable & "." & strAttachmentField & ".FileName='" & strImage & "'"
@@ -515,10 +534,13 @@ End Function
 
 ' Create an OLE-Picture from Byte-Array PicBin()
 Public Function ArrayToPicture(ByRef PicBin() As Byte) As StdPicture
+
     Dim IStm As IUnknown
     Dim lBitmap As Long
     Dim hBmp As Long
     Dim ret As Long
+
+    On Error GoTo 0
 
     If Not InitGDIP Then Exit Function
 
@@ -543,6 +565,9 @@ End Function
 ' Help function to get a OLE-Picture from Windows-Bitmap-Handle
 ' If bIsIcon = TRUE, an Icon-Handle is commited
 Private Function BitmapToPicture(ByVal hBmp As Long, Optional bIsIcon As Boolean = False) As StdPicture
+
+    On Error GoTo 0
+
     Dim TPicConv As PICTDESC, UID As GUID
 
     With TPicConv

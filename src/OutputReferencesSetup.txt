@@ -1,5 +1,5 @@
 >==> The Project References >==>
-              vbaProj.Name = GDIPlusDemo
+              vbaProj.Name = GDIPlusDemo2013
               vbaProj.Type = '100'
               Access version = 15.0
               ADO (ActiveX Data Object) version = 6.3
