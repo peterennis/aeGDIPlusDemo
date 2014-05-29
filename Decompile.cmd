@@ -21,12 +21,12 @@ REM /* 12/27/2011 MDL        Updated to parse out the filesize and do the compar
 REM /* 07/03/2012 MDL        Update to make UserID independent                          */
 REM /* 01/21/2013 MDL        Pre request of April15Hater, updated to make safe for DB   */
 REM /*                       filenames containing space characters                      */
-REM /* 04/03/2014 PFE        Modified for aegit for testing #002                        */
+REM /* 05/29/2014 PFE        Modified for GDIPlusDemo2013 for testing                   */
 REM /************************************************************************************/
 
 REM Support for multiple database files within the one directory
 REM Simply unREM the correct LOC to decompile that database file
-SET DBfile=aezdb.accdb
+SET DBfile=GDIPlusDemo2013_v006_20140528.accdb
 
 ECHO.
 ECHO This script will Decompile the %DBfile% database.

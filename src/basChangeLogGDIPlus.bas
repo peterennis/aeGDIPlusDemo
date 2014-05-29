@@ -58,6 +58,14 @@ End Sub
 '=============================================================================================================================
 
 
+'20140629 - v006 - Windows 8 DLL File Information - GdiPlus.dll
+    ' Ref: http://www.nirsoft.net/dll_information/windows8/gdiplus_dll.html
+    ' Credit: mossSOFT, Entwicklung und Beratung, Sascha Alexander Trowitzsch
+    ' Use latest module from here:
+    ' Ref: http://www.mosstools.de/index.php?option=com_content&view=article&id=77&Itemid=76
+    ' Office 2013 Setup distributes neither ogl.dll nor gdiplus.dll. The prerequisites for O2013 are that you install it on a system already containing gdiplus 1.1. So there's no need to include it.
+    ' To workaround it use the latest version of the module and alter just one line in procedure GetGDIPVersion:
+    ' Change Case "11.0" 'A2003 -to- Case "11.0", "15.0" 'A2003, A2013
 '20140528 - v005 - Fixes using TM VBA-Inspector
     ' Use a space before comments
     ' Office 2013 - Ref: http://www.utteraccess.com/forum/Custom-Ribbon-Icon-Ogl-t2016045.html
@@ -66,6 +74,7 @@ End Sub
     ' Based on work from here:
     ' Ref: http://www.activevb.de/tipps/vb6tipps/tipp0644.html
     ' Add version/date/project details to forms
+    ' Use export modules only
 '20140527 - v004 - Fix IsQryHidden problem with export
 '20140523 - v003 - Bump, fix Project Name
     ' Create tblLanguage, show USysRibbons table

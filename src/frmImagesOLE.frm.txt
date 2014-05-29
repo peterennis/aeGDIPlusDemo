@@ -14,8 +14,8 @@ Begin Form
     Width =8505
     DatasheetFontHeight =11
     ItemSuffix =9
-    Right =19185
-    Bottom =12510
+    Right =14160
+    Bottom =10455
     DatasheetGridlinesColor =15062992
     OnUnload ="[Event Procedure]"
     RecSrcDt = Begin
@@ -349,9 +349,10 @@ Private bNew As Boolean
 Private Sub Form_Current()
     On Error GoTo 0
     Dim PicSize As basGDIPlus2013.TSize
-    
+
+    Debug.Print Me.Name, "Form_Current", "bNew=" & bNew
     If bNew Then Exit Sub
-    
+
     Set Me!ctlImg.Object.Picture = Nothing
     Set Me!ctlImg2.Object.Picture = Nothing
     Me!LblInfo.Caption = vbNullString
@@ -364,30 +365,33 @@ Private Sub Form_Current()
         Me!ctlList.Visible = False
         Me!LblDrop.Visible = False
     End If
-    
-    Set Me!ctlImg.Object.Picture = OLEFieldToPicture("tblOLE", "ImageName", Me!ImageName, "BLOB")   'OGL-Funktion
-    PicSize = GetDimensionsGDIP(Me!ctlImg.Object.Picture)   'OGL-Funktion
+
+    Set Me!ctlImg.Object.Picture = OLEFieldToPicture("tblOLE", "ImageName", Me!ImageName, "BLOB")
+    PicSize = GetDimensionsGDIP(Me!ctlImg.Object.Picture)
     Me!LblInfo.Caption = PicSize.X & " x " & PicSize.Y
-    Set Me!ctlImg2.Object.Picture = ResampleGDIP(Me!ctlImg.Object.Picture, 100, 100, True)  'OGL-Funktion
+    Set Me!ctlImg2.Object.Picture = ResampleGDIP(Me!ctlImg.Object.Picture, 100, 100)
 
 End Sub
 
-Private Sub Form_Unload(Cancel As Integer)
+Private Sub Form_Unload(ByRef Cancel As Integer)
     On Error GoTo 0
     ShutDownGDIP
 End Sub
 
-Private Sub ctlList_OLEDragDrop(Data As Object, Effect As Long, _
-                                Button As Integer, Shift As Integer, X As Single, Y As Single)
+Private Sub ctlList_OLEDragDrop(ByVal Data As Object, ByVal Effect As Long, _
+                                ByVal Button As Integer, ByVal Shift As Integer, _
+                                ByVal X As Single, ByVal Y As Single)
     On Error GoTo 0
     Dim oPic As StdPicture
     Dim sFile As String
-        
+
+    Debug.Print "ctlList_OLEDragDrop", "frmImagesOLE"
+
     sFile = Data.Files(1)
-    Set oPic = LoadPictureGDIP(sFile)   'OGL-Funktion
+    Set oPic = LoadPictureGDIP(sFile)
     If Not oPic Is Nothing Then
         Me!ImageName = Mid$(sFile, InStrRev(sFile, "\") + 1)
-        Me!BLOB.Value = ArrayFromPicture(oPic, pictypePNG)  'OGL-Funktion
+        Me!BLOB.Value = ArrayFromPicture(oPic, pictypePNG)
         Me.Dirty = False
         Set oPic = Nothing
         bNew = True
@@ -397,4 +401,5 @@ Private Sub ctlList_OLEDragDrop(Data As Object, Effect As Long, _
     Else
         MsgBox "Ungültige Bilddatei"
     End If
+
 End Sub
