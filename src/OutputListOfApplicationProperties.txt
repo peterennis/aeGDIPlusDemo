@@ -1,4 +1,4 @@
-Name: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_v006_20140529.accdb, 12, False
+Name: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_v006_20140529_fixed.accdb, 12, False
 Connect: , 12, False
 Transactions: True, 1, False
 Updatable: True, 1, False
@@ -14,7 +14,7 @@ ANSI Query Mode: 0, 4, False
 Themed Form Controls: 1, 4, False
 AccessVersion: 09.50, 10, False
 NavPane Category: 0, 4, False
-Build: 423, 4, False
+Build: 24, 4, False
 ProjVer: 140, 3, False
 HasOfflineLists: 70, 3, False
 UseMDIMode: 0, 2, False

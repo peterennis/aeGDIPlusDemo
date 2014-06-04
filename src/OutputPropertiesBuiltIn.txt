@@ -1,6 +1,6 @@
 Name: Name
 Type: dbMemo
-Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_v006_20140529.accdb
+Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_v006_20140529_fixed.accdb
 Inherited: False;
 ---
 Name: Connect
@@ -75,7 +75,7 @@ Inherited: False;
 ---
 Name: Build
 Type: dbLong
-Value: 423
+Value: 24
 Inherited: False;
 ---
 Name: ProjVer

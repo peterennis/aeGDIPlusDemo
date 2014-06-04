@@ -1,8 +1,8 @@
 Option Compare Database
 Option Explicit
 
-Private Const gstrVERSION_GDIPlus As String = "0.0.5"
-Private Const gstrDATE_GDIPlus As String = "May 28, 2014"
+Private Const gstrVERSION_GDIPlus As String = "0.0.7"
+Private Const gstrDATE_GDIPlus As String = "June 4, 2014"
 Public Const gstrPROJECT_GDIPlus As String = "GDIPlusDemo2013"
 '
 
@@ -58,7 +58,8 @@ End Sub
 '=============================================================================================================================
 
 
-'20140629 - v006 - Windows 8 DLL File Information - GdiPlus.dll
+'20140604 - v007 - Fixed error in GDIPlus from Sascha
+'20140529 - v006 - Windows 8 DLL File Information - GdiPlus.dll
     ' Ref: http://www.nirsoft.net/dll_information/windows8/gdiplus_dll.html
     ' Credit: mossSOFT, Entwicklung und Beratung, Sascha Alexander Trowitzsch
     ' Use latest module from here:

@@ -520,6 +520,7 @@ Function SavePicGDIPlus(ByVal Image As StdPicture, sFile As String, _
             Else
                 'Different numbers of parameter between GDI+ 1.0 and GDI+ 1.1 on GIFs!!
                 If (PicType = pictypeGIF) Then TParams.count = 1 Else TParams.count = 0
+                If (PicType = pictypePNG) And IsGDI11 Then TParams.count = 1
             End If
             'Save GDIP-Image to file :
             ret = GdipSaveImageToFile(lBitmap, StrPtr(sFile), TEncoder, TParams)
@@ -569,6 +570,8 @@ Function ArrayFromPicture(ByVal Image As Object, PicType As PicFileType, Optiona
             Else
                 'Different number of parameters between GDI+ 1.0 and GDI+ 1.1 on GIFs!!
                 If (PicType = pictypeGIF) Then TParams.count = 1 Else TParams.count = 0
+                'For PNGs and in case of GDIPlus1.1 there are two parameters required (bugfix) :
+                If (PicType = pictypePNG) And IsGDI11 Then TParams.count = 1
             End If
 
             ret = CreateStreamOnHGlobal(0&, 1, IStm)    'Create stream
@@ -933,6 +936,7 @@ Function SavePicGDIPlus_O(ByVal Image As StdPicture, sFile As String, _
             End With
         Else
             If (PicType = pictypeGIF) Then TParams.count = 1 Else TParams.count = 0
+            If (PicType = pictypePNG) And IsGDI11 Then TParams.count = 1
         End If
         ret = GdipSaveImageToFile_O(lBitmap, StrPtr(sFile), TEncoder, TParams)
         GdipDisposeImage_O lBitmap
@@ -971,6 +975,7 @@ Function ArrayFromPicture_O(ByVal Image As Object, PicType As PicFileType, Optio
             End With
         Else
             If (PicType = pictypeGIF) Then TParams.count = 1 Else TParams.count = 0
+            If (PicType = pictypePNG) And IsGDI11 Then TParams.count = 1
         End If
 
         ret = CreateStreamOnHGlobal(0&, 1, IStm)
