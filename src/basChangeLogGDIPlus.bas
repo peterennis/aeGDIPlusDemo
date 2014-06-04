@@ -48,7 +48,7 @@ End Sub
 ' %004 -
 ' %003 -
 ' %002 -
-' %001 -
+' %001 - GdiPlus leaks - Ref: http://blogs.msdn.com/b/dsui_team/archive/2013/04/23/debugging-a-gdi-resource-leak.aspx
 ' Issues:
 ' #005 -
 ' #004 -

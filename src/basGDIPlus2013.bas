@@ -1,8 +1,6 @@
 Option Compare Database
 Option Explicit
 
-' Größe = Size
-
 '-------------------------------------------------
 '    Picture functions using GDIPlus-API (GDIP)   |
 '-------------------------------------------------
