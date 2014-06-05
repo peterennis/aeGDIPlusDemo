@@ -1,7 +1,7 @@
 Option Compare Database
 Option Explicit
 
-Public Sub GDIPlusDemo2013_Export()
+Public Sub GDayClass_Export()
 
     Dim THE_SOURCE_FOLDER As String
     Dim THE_XML_FOLDER As String
@@ -17,7 +17,7 @@ PROC_EXIT:
     Exit Sub
 
 PROC_ERR:
-    MsgBox "Erl=" & Erl & " Error " & Err.Number & " (" & Err.Description & ") in procedure GDIPlus_Export"
+    MsgBox "Erl=" & Erl & " Error " & Err.Number & " (" & Err.Description & ") in procedure GDayClass_Export"
     Resume Next
 
 End Sub
@@ -38,6 +38,15 @@ End Sub
 '=============================================================================================================================
 
 
+'20140606 - v009 - GDay
+    ' GDIPlus Day - Start of GDIPlus class library development for O2013+ only
+    ' 2014/06/04 - "Concerning your other questions:
+    ' Yes, just do with the module or the demo database what you want. Remove all the OGL stuff and convert it to a class module.
+    ' Would be nice if you remain a link to me and mossTOOLs in the header comments (origination).
+    ' If this project is in a ready state you can give me the link and I'd like to take a look at it or do the german translation parts."
+    ' Cheers
+    ' Sascha
+    '
 '20140605 - v008 - Include basDemoVersion, move constants from change log
     ' GDIPlusDemo2013_fixed.zip (v007) includes solution for drag and drop error
     ' Add reference to MSCOMCTL.OCX, compile, remove reference - fixes ActiveX

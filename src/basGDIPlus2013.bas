@@ -3,11 +3,13 @@ Option Explicit
 
 '-------------------------------------------------
 '    Picture functions using GDIPlus-API (GDIP)   |
-'-------------------------------------------------
-'    *  Office 2003/2007/2010/2013 version  *     |
-'-------------------------------------------------
 '   (c) mossSOFT / Sascha Trowitzsch rev. 06/2013 |
+'             http://www.mosstools.de             |
 '-------------------------------------------------|
+'          *  Office 2013+ GDayClass  *           |
+'            (c) 2014 Peter F. Ennis              |
+'-------------------------------------------------|
+
 
 ' Reference to library "OLE Automation" (stdole) needed!
 
