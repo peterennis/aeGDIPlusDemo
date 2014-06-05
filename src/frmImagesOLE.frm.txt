@@ -14,8 +14,8 @@ Begin Form
     Width =8505
     DatasheetFontHeight =11
     ItemSuffix =9
-    Right =14160
-    Bottom =10455
+    Right =25320
+    Bottom =13515
     DatasheetGridlinesColor =15062992
     OnUnload ="[Event Procedure]"
     RecSrcDt = Begin
@@ -378,7 +378,9 @@ Private Sub Form_Unload(ByRef Cancel As Integer)
     ShutDownGDIP
 End Sub
 
-Private Sub ctlList_OLEDragDrop(ByVal Data As Object, ByVal Effect As Long, _
+'Fixed Declaration for MSCOMCTLLib 2.1:
+Private Sub ctlList_OLEDragDrop(Data As Object, Effect As Long, Button As Integer, Shift As Integer, X As Single, Y As Single)
+'Private Sub ctlList_OLEDragDrop(ByVal Data As Object, ByVal Effect As Long, _
                                 ByVal Button As Integer, ByVal Shift As Integer, _
                                 ByVal X As Single, ByVal Y As Single)
     On Error GoTo 0

@@ -6,7 +6,7 @@ Option Explicit
 '-------------------------------------------------
 '    *  Office 2003/2007/2010/2013 version  *     |
 '-------------------------------------------------
-'   (c) mossSOFT / Sascha Trowitzsch rev. 08/2010 |
+'   (c) mossSOFT / Sascha Trowitzsch rev. 06/2013 |
 '-------------------------------------------------|
 
 ' Reference to library "OLE Automation" (stdole) needed!

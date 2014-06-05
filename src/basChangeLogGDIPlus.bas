@@ -1,26 +1,6 @@
 Option Compare Database
 Option Explicit
 
-Private Const gstrVERSION_GDIPlus As String = "0.0.7"
-Private Const gstrDATE_GDIPlus As String = "June 4, 2014"
-Public Const gstrPROJECT_GDIPlus As String = "GDIPlusDemo2013"
-'
-
-Public Function getMyVersion() As String
-    On Error GoTo 0
-    getMyVersion = gstrVERSION_GDIPlus
-End Function
-
-Public Function getMyDate() As String
-    On Error GoTo 0
-    getMyDate = gstrDATE_GDIPlus
-End Function
-
-Public Function getMyProject() As String
-    On Error GoTo 0
-    getMyProject = gstrPROJECT_GDIPlus
-End Function
-
 Public Sub GDIPlusDemo2013_Export()
 
     Dim THE_SOURCE_FOLDER As String
@@ -58,7 +38,9 @@ End Sub
 '=============================================================================================================================
 
 
-'20140604 - v007 - Fixed error in GDIPlus from Sascha
+'20140605 - v008 - Include basDemoVersion, move constants from change log
+    ' GDIPlusDemo2013_fixed.zip (v007) includes solution for drag and drop error
+'20140604 - v007 - Fixed button picture load error in GDIPlus from Sascha
 '20140529 - v006 - Windows 8 DLL File Information - GdiPlus.dll
     ' Ref: http://www.nirsoft.net/dll_information/windows8/gdiplus_dll.html
     ' Credit: mossSOFT, Entwicklung und Beratung, Sascha Alexander Trowitzsch
