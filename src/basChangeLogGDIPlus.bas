@@ -40,6 +40,8 @@ End Sub
 
 '20140605 - v008 - Include basDemoVersion, move constants from change log
     ' GDIPlusDemo2013_fixed.zip (v007) includes solution for drag and drop error
+    ' Add reference to MSCOMCTL.OCX, compile, remove reference - fixes ActiveX
+    ' registration problem in the forms.
 '20140604 - v007 - Fixed button picture load error in GDIPlus from Sascha
 '20140529 - v006 - Windows 8 DLL File Information - GdiPlus.dll
     ' Ref: http://www.nirsoft.net/dll_information/windows8/gdiplus_dll.html
