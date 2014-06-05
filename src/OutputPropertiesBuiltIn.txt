@@ -1,6 +1,6 @@
 Name: Name
 Type: dbMemo
-Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_fixed_tested.accdb
+Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_v008_20140605.accdb
 Inherited: False;
 ---
 Name: Connect
@@ -150,7 +150,7 @@ Inherited: False;
 ---
 Name: UseAppIconForFrmRpt
 Type: dbBoolean
-Value: False
+Value: True
 Inherited: False;
 ---
 Name: AllowDatasheetSchema
@@ -215,7 +215,7 @@ Inherited: False;
 ---
 Name: Property Sheet Label Width
 Type: dbLong
-Value: 2625
+Value: 3435
 Inherited: False;
 ---
 Name: Show Navigation Pane Search Bar
@@ -231,6 +231,11 @@ Inherited: False;
 Name: WebDesignMode
 Type: dbByte
 Value: 0
+Inherited: False;
+---
+Name: AppIcon
+Type: dbText
+Value: C:\ae\aeGDIPlusDemo\adaept_logo_16x16.ico
 Inherited: False;
 ---
 Name: Perform Name AutoCorrect

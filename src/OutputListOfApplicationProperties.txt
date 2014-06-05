@@ -1,4 +1,4 @@
-Name: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_fixed_tested.accdb, 12, False
+Name: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_v008_20140605.accdb, 12, False
 Connect: , 12, False
 Transactions: True, 1, False
 Updatable: True, 1, False
@@ -29,7 +29,7 @@ AllowFullMenus: True, 1, False
 AllowBuiltInToolbars: True, 1, False
 AllowToolbarChanges: True, 1, False
 AllowSpecialKeys: True, 1, False
-UseAppIconForFrmRpt: False, 1, False
+UseAppIconForFrmRpt: True, 1, False
 AllowDatasheetSchema: False, 1, False
 Show Values Limit: 1000, 4, False
 Show Values in Indexed: 1, 4, False
@@ -42,9 +42,10 @@ NavPane Closed: 0, 4, False
 NavPane Width: 215, 4, False
 NavPane View By: 0, 4, False
 NavPane Sort By: 0, 4, False
-Property Sheet Label Width: 2625, 4, False
+Property Sheet Label Width: 3435, 4, False
 Show Navigation Pane Search Bar: 1, 4, False
 Theme Resource Name: Office Theme, 10, False
 WebDesignMode: 0, 2, False
+AppIcon: C:\ae\aeGDIPlusDemo\adaept_logo_16x16.ico, 10, False
 Perform Name AutoCorrect: 0, 4, False
 CustomRibbonID: GDIPlusDemo2013, 10, False

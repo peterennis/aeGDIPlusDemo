@@ -22,7 +22,7 @@ Begin Form
         0xb950e554028ee340
     End
     GUID = Begin
-        0x5ea28804a2d0524e963b868579a7fd93
+        0x79b8bc31381e2c46a7ca6fea4202a375
     End
     RecordSource ="tblOLE"
     Caption ="Bilder aus OLE-BLOBs"

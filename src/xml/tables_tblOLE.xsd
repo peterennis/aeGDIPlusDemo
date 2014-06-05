@@ -11,7 +11,7 @@
   <xsd:element name="tblOLE">
     <xsd:annotation>
       <xsd:appinfo>
-        <od:index index-name="ID" index-key="ImageName " primary="no" unique="no" clustered="no" order="asc"></od:index>
+        <od:index index-name="ID" index-key="ImageName " primary="no" unique="yes" clustered="no" order="asc"></od:index>
         <od:index index-name="ID1" index-key="ID " primary="no" unique="no" clustered="no" order="asc"></od:index>
         <od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"></od:index>
       </xsd:appinfo>

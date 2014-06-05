@@ -30,7 +30,7 @@ Currentdb.Execute strSQL
 strSQL="CREATE TABLE [tblOLE] ([ID] Counter,[ImageName] Text (255),[BLOB] OLE Object )"
 Currentdb.Execute strSQL
 
-strSQL="CREATE INDEX [ID] ON [tblOLE] ([BLOB]) "
+strSQL="CREATE UNIQUE INDEX [ID] ON [tblOLE] ([BLOB]) "
 Currentdb.Execute strSQL
 
 strSQL="CREATE INDEX [ID1] ON [tblOLE] ([BLOB]) "
