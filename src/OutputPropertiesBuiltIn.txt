@@ -110,7 +110,7 @@ Inherited: False;
 ---
 Name: AppTitle
 Type: dbText
-Value: GDIPlusDemo2013
+Value: GDayClass
 Inherited: False;
 ---
 Name: StartUpShowDBWindow

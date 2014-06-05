@@ -21,7 +21,7 @@ UseMDIMode: 0, 2, False
 ShowDocumentTabs: True, 1, False
 Picture Property Storage Format: 0, 4, False
 CheckTruncatedNumFields: 1, 4, False
-AppTitle: GDIPlusDemo2013, 10, False
+AppTitle: GDayClass, 10, False
 StartUpShowDBWindow: True, 1, False
 StartUpShowStatusBar: True, 1, False
 AllowShortcutMenus: True, 1, False

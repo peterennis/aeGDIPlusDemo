@@ -1,5 +1,5 @@
 >>>Standard Options
-              2000          AppTitle                    GDIPlusDemo2013
+              2000          AppTitle                    GDayClass
               2000          AppIcon                     C:\ae\aeGDIPlusDemo\adaept_logo_16x16.ico
               2000          AllowFullMenus              True
               2000          AllowShortcutMenus          True
