@@ -26,7 +26,7 @@ REM /***************************************************************************
 
 REM Support for multiple database files within the one directory
 REM Simply unREM the correct LOC to decompile that database file
-SET DBfile="GDIPlusDemo*.accdb"
+SET DBfile="GDayClass*.accdb"
 SET AccessPath="C:\Program Files (x86)\Microsoft Office\Office14\MSACCESS.EXE"
 
 ECHO.
