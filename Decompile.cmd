@@ -1,32 +1,33 @@
 @ECHO OFF
-REM /************************************************************************************/
-REM /* FILENAME       :  DECOMPILE.CMD                                                  */
-REM /* TYPE           :  Windows NT Command Script                                      */
-REM /* DESCRIPTION    :  This module drives the Access DB Decompile process             */
-REM /*                                                                                  */
-REM /* AUTHOR         :  Michael D Lueck                                                */
-REM /*                   mlueck@lueckdatasystems.com                                    */
-REM /*                                                                                  */
-REM /* NEEDS          :                                                                 */
-REM /*                                                                                  */
-REM /* USAGE          :                                                                 */
-REM /*                                                                                  */
-REM /* REVISION HISTORY                                                                 */
-REM /*                                                                                  */
-REM /* DATE       REVISED BY DESCRIPTION OF CHANGE                                      */
-REM /* ---------- ---------- -------------------------------------------------------    */
-REM /* 10/28/2011 MDL        Initial Creation                                           */
-REM /* 11/02/2011 MDL        Updated to parameterize and also display the pre/post size */
-REM /* 12/27/2011 MDL        Updated to parse out the filesize and do the compare       */
-REM /* 07/03/2012 MDL        Update to make UserID independent                          */
-REM /* 01/21/2013 MDL        Pre request of April15Hater, updated to make safe for DB   */
-REM /*                       filenames containing space characters                      */
-REM /* 05/29/2014 PFE        Modified for GDIPlusDemo2013 for testing                   */
-REM /************************************************************************************/
+REM /***************************************************************************************/
+REM /* FILENAME       :  DECOMPILE.CMD                                                     */
+REM /* TYPE           :  Windows NT Command Script                                         */
+REM /* DESCRIPTION    :  This module drives the Access DB Decompile process                */
+REM /*                                                                                     */
+REM /* AUTHOR         :  Michael D Lueck                                                   */
+REM /*                   mlueck@lueckdatasystems.com                                       */
+REM /*                                                                                     */
+REM /* NEEDS          :                                                                    */
+REM /*                                                                                     */
+REM /* USAGE          : http://www.access-programmers.co.uk/forums/showthread.php?t=219948 */
+REM /*                                                                                     */
+REM /* REVISION HISTORY                                                                    */
+REM /*                                                                                     */
+REM /* DATE       REVISED BY DESCRIPTION OF CHANGE                                         */
+REM /* ---------- ---------- ------------------------------------------------------------  */
+REM /* 10/28/2011 MDL        Initial Creation                                              */
+REM /* 11/02/2011 MDL        Updated to parameterize and also display the pre/post size    */
+REM /* 12/27/2011 MDL        Updated to parse out the filesize and do the compare          */
+REM /* 07/03/2012 MDL        Update to make UserID independent                             */
+REM /* 01/21/2013 MDL        Pre request of April15Hater, updated to make safe for DB      */
+REM /*                       filenames containing space characters                         */
+REM /* 06/06/2014 PFE        Modified to show Access path and no auto close                */
+REM /***************************************************************************************/
 
 REM Support for multiple database files within the one directory
 REM Simply unREM the correct LOC to decompile that database file
-SET DBfile=GDIPlusDemo2013_v006_20140528.accdb
+SET DBfile="GDIPlusDemo*.accdb"
+SET AccessPath="C:\Program Files (x86)\Microsoft Office\Office14\MSACCESS.EXE"
 
 ECHO.
 ECHO This script will Decompile the %DBfile% database.
@@ -38,6 +39,9 @@ ECHO.
 ECHO Please remember to hold down the shift key to prevent Access from running
 ECHO the autoexec macro if there is one in the database being decompiled.
 ECHO.
+ECHO DBfile=%DBfile%
+ECHO AccessPath=%AccessPath%
+ECHO.
 PAUSE
 
 :RunDecompile
@@ -47,7 +51,7 @@ FOR /F "delims=" %%A IN (' dir  /a-d/b "%DBfile%" ') DO (
 )
 ECHO File Size pre-decompile:  %DBfilesizepre%
 
-"C:\Program Files\Microsoft Office\Office15\MSACCESS.EXE" /decompile "%DBfilefullyqualified%"
+%AccessPath% /decompile "%DBfilefullyqualified%"
 
 FOR /F "delims=" %%A IN (' dir  /a-d/b "%DBfile%" ') DO (
   SET DBfilesizepost=%%~zA
@@ -62,3 +66,5 @@ GOTO RunDecompile
 
 :End
 ECHO Decompile Completed!
+ECHO Press any key to finish ...
+PAUSE > nul
