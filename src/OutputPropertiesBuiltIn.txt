@@ -1,6 +1,6 @@
 Name: Name
 Type: dbMemo
-Value: C:\ae\aeGDIPlusDemo\GDIPlusDemo2013_v009_20140606.accdb
+Value: C:\ae\aegdiplusdemo\GDayClassDemo.accdb
 Inherited: False;
 ---
 Name: Connect
@@ -51,7 +51,7 @@ Inherited: False;
 Name: Connection
 Type: 
 Value: 
-Inherited: False;3251,Operation is not supported for this type of object.
+Inherited: False; 3251, 'Operation is not supported for this type of object.'
 ---
 Name: ANSI Query Mode
 Type: dbLong
@@ -80,7 +80,7 @@ Inherited: False;
 ---
 Name: ProjVer
 Type: dbInteger
-Value: 119
+Value: 140
 Inherited: False;
 ---
 Name: HasOfflineLists

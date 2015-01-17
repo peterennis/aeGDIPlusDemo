@@ -143,8 +143,8 @@ Private Declare Function GetModuleHandle Lib "kernel32.dll" Alias "GetModuleHand
 Private Declare Function GetProcAddress Lib "kernel32.dll" (ByVal hModule As Long, ByVal lpProcName As String) As Long
 
 'Timer API:
-Private Declare Function SetTimer Lib "user32" (ByVal hwnd As Long, ByVal nIDEvent As Long, ByVal uElapse As Long, ByVal lpTimerFunc As Long) As Long
-Private Declare Function KillTimer Lib "user32" (ByVal hwnd As Long, ByVal nIDEvent As Long) As Long
+Private Declare Function SetTimer Lib "user32" (ByVal hWnd As Long, ByVal nIDEvent As Long, ByVal uElapse As Long, ByVal lpTimerFunc As Long) As Long
+Private Declare Function KillTimer Lib "user32" (ByVal hWnd As Long, ByVal nIDEvent As Long) As Long
 
 
 'OLE-Stream functions :
@@ -341,7 +341,7 @@ Private Sub AutoShutDown()
 End Sub
 
 'Callback for AutoShutDown
-Private Sub TimerProc(ByVal hwnd As Long, ByVal uMsg As Long, ByVal idEvent As Long, ByVal dwTime As Long)
+Private Sub TimerProc(ByVal hWnd As Long, ByVal uMsg As Long, ByVal idEvent As Long, ByVal dwTime As Long)
     Debug.Print "GDI+ AutoShutDown", idEvent
     If lTimer <> 0 Then
         If KillTimer(0&, lTimer) Then lTimer = 0

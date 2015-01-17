@@ -1,30 +1,30 @@
 >==> The Project References >==>
               vbaProj.Name = GDayClass
               vbaProj.Type = '100'
-              Access version = 14.0
-              ADO (ActiveX Data Object) version = 6.1
-              DAO (DbEngine)  version = 14.0
+              Access version = 15.0
+              ADO (ActiveX Data Object) version = 6.3
+              DAO (DbEngine)  version = 15.0
               DAO (CodeDb)    version = 12.0
               DAO (CurrentDb) version = 12.0
               <@_@>
                    References:
                             VBA           Visual Basic For Applications
-                                          C:\PROGRA~2\COMMON~1\MICROS~1\VBA\VBA7\VBE7.DLL
+                                          C:\PROGRA~1\COMMON~1\MICROS~1\VBA\VBA7.1\VBE7.DLL
                                           {000204EF-0000-0000-C000-000000000046}
-                            Access        Microsoft Access 14.0 Object Library
-                                          C:\Program Files (x86)\Microsoft Office\Office14\MSACC.OLB
+                            Access        Microsoft Access 15.0 Object Library
+                                          C:\Program Files\Microsoft Office\Office15\MSACC.OLB
                                           {4AFFC9A0-5F99-101B-AF4E-00AA003F0F07}
                             stdole        OLE Automation
-                                          C:\Windows\SysWOW64\stdole2.tlb
+                                          C:\Windows\System32\stdole2.tlb
                                           {00020430-0000-0000-C000-000000000046}
-                            DAO           Microsoft Office 14.0 Access database engine Object Library
-                                          C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE14\ACEDAO.DLL
+                            DAO           Microsoft Office 15.0 Access database engine Object Library
+                                          C:\Program Files\Common Files\Microsoft Shared\OFFICE15\ACEDAO.DLL
                                           {4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}
                             MSForms       Microsoft Forms 2.0 Object Library
-                                          C:\Windows\SysWOW64\FM20.DLL
+                                          C:\Windows\system32\FM20.DLL
                                           {0D452EE1-E08F-101A-852E-02608C4D0BB4}
-                            Office        Microsoft Office 14.0 Object Library
-                                          C:\Program Files (x86)\Common Files\Microsoft Shared\OFFICE14\MSO.DLL
+                            Office        Microsoft Office 15.0 Object Library
+                                          C:\Program Files\Common Files\Microsoft Shared\OFFICE15\MSO.DLL
                                           {2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}
               <*_*>
 <==<

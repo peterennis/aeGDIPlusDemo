@@ -1,7 +1,7 @@
 Option Compare Database
 Option Explicit
 
-Public Sub GDayClass_Export()
+Public Function GDayClass_Export(Optional ByVal varDebug As Variant) As Boolean
 
     Dim THE_SOURCE_FOLDER As String
     Dim THE_XML_FOLDER As String
@@ -10,17 +10,22 @@ Public Sub GDayClass_Export()
     THE_XML_FOLDER = "C:\ae\aeGDIPlusDemo\src\xml\"
 
     On Error GoTo PROC_ERR
-    'aegitClassTest varSrcFldr:=THE_SOURCE_FOLDER, varXmlFldr:=THE_XML_FOLDER
-    aegitClassTest varDebug:="Debugit", varSrcFldr:=THE_SOURCE_FOLDER, varXmlFldr:=THE_XML_FOLDER
+
+    If Not IsMissing(varDebug) Then
+        '''aegitClassTest varDebug:="varDebug"
+        aegitClassTest varDebug:="varDebug", varSrcFldr:=THE_SOURCE_FOLDER, varXmlFldr:=THE_XML_FOLDER
+    Else
+        aegitClassTest varSrcFldr:=THE_SOURCE_FOLDER, varXmlFldr:=THE_XML_FOLDER
+    End If
 
 PROC_EXIT:
-    Exit Sub
+    Exit Function
 
 PROC_ERR:
     MsgBox "Erl=" & Erl & " Error " & Err.Number & " (" & Err.Description & ") in procedure GDayClass_Export"
     Resume Next
 
-End Sub
+End Function
 
 '=============================================================================================================================
 ' Tasks:
@@ -38,6 +43,8 @@ End Sub
 '=============================================================================================================================
 
 
+'20150116 - v011 - Move repo from bitbucket private to github public
+    ' Import latest aegit export class and use one name for the demo file
 '20140606 - v009 - GDay
     ' GDIPlus Day - Start of GDIPlus class library development for O2013+ only
     ' 2014/06/04 - "Concerning your other questions:
