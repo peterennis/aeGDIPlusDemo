@@ -6,7 +6,7 @@
               AllPermissions               1048319 
               Container     Tables
               DateCreated   8/23/2009 12:11:46 AM 
-              LastUpdated   5/23/2014 4:28:55 PM 
+              LastUpdated   1/16/2015 5:18:55 PM 
               Orientation    0 
               OrderByOn     False
               DefaultView    2 
@@ -24,6 +24,7 @@
               AlternateBackShade           100 
               DatasheetGridlinesThemeColorIndex         -1 
               DatasheetForeThemeColorIndex              -1 
+              PublishToWeb   1 
 >>>tblLanguage
               Name          tblLanguage
               Owner         admin

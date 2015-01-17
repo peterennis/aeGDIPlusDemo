@@ -1,10 +1,10 @@
 ----------------
 TABLE: tblImages
 ----------------
-FIELD NAME     FIELD TYPE    SIZE    DESCRIPTION
-===========    ==========    ====    ===========
-ID             AutoNumber    4                  
-Image          Attachment    4                  
+FIELD NAME     FIELD TYPE    SIZE    DESCRIPTION                 
+===========    ==========    ====    ============================
+ID             AutoNumber    4                                   
+Image          Attachment    4       image embedded as attachment
 
 
 ------------------
