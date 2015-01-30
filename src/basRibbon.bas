@@ -35,3 +35,16 @@ Public Function fuBtnAction(ByVal rcontrol As IRibbonControl) As Boolean
             MsgBox "Bad fuBtnAction Case!"
     End Select
 End Function
+
+Public Sub fuLang(ByVal rcontrol As IRibbonControl, ByRef label)
+    On Error GoTo 0
+    ' Callback label
+    Select Case rcontrol.ID
+        Case "tab1"
+            label = "GDIPlus 2013 Ribbon Demo"
+        Case "btn1"
+        Case "btn2"
+        Case Else
+            MsgBox "Bad Language!"
+    End Select
+End Sub

@@ -45,6 +45,7 @@ End Function
 
 '20150116 - v011 - Move repo from bitbucket private to github public
     ' Import latest aegit export class and use one name for the demo file
+    ' Ref: http://stackoverflow.com/questions/20828561/how-to-convert-a-text-field-in-an-access-table-to-a-rich-text-memo-using-VBA
 '20140606 - v009 - GDay
     ' GDIPlus Day - Start of GDIPlus class library development for O2013+ only
     ' 2014/06/04 - "Concerning your other questions:
@@ -53,7 +54,6 @@ End Function
     ' If this project is in a ready state you can give me the link and I'd like to take a look at it or do the german translation parts."
     ' Cheers
     ' Sascha
-    '
 '20140605 - v008 - Include basDemoVersion, move constants from change log
     ' GDIPlusDemo2013_fixed.zip (v007) includes solution for drag and drop error
     ' Add reference to MSCOMCTL.OCX, compile, remove reference - fixes ActiveX

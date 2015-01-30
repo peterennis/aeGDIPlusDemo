@@ -47,4 +47,4 @@ Theme Resource Name: Office Theme, 10, False;
 WebDesignMode: 0, 2, False;
 AppIcon: C:\ae\aeGDIPlusDemo\adaept_logo_16x16.ico, 10, False;
 Perform Name AutoCorrect: 0, 4, False;
-CustomRibbonID: GDIPlusDemo2013, 10, False;
+CustomRibbonID: GDIPlusDemo2013I18N, 10, False;

@@ -245,6 +245,6 @@ Inherited: False;
 ---
 Name: CustomRibbonID
 Type: dbText
-Value: GDIPlusDemo2013
+Value: GDIPlusDemo2013I18N
 Inherited: False;
 ---
