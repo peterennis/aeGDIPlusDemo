@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema">
+  <s:Schema id="RowsetSchema">
+    <s:ElementType name="row" content="eltOnly" rs:updatable="true">
+      <s:AttributeType name="ID" rs:number="1" rs:maydefer="true" rs:writeunknown="true" rs:basetable="USysRibbons" rs:basecolumn="ID" rs:autoincrement="true">
+        <s:datatype dt:type="int" dt:maxLength="4" rs:precision="10" rs:fixedlength="true"></s:datatype>
+      </s:AttributeType>
+      <s:AttributeType name="RibbonName" rs:number="2" rs:nullable="true" rs:maydefer="true" rs:write="true" rs:basetable="USysRibbons" rs:basecolumn="RibbonName">
+        <s:datatype dt:type="string" dt:maxLength="255"></s:datatype>
+      </s:AttributeType>
+      <s:AttributeType name="RibbonXML" rs:number="3" rs:nullable="true" rs:maydefer="true" rs:write="true" rs:basetable="USysRibbons" rs:basecolumn="RibbonXML">
+        <s:datatype dt:type="string" dt:maxLength="536870910" rs:long="true"></s:datatype>
+      </s:AttributeType>
+      <s:extends type="rs:rowbase"></s:extends>
+    </s:ElementType>
+  </s:Schema>
+  <rs:data>
+    <z:row ID="1" RibbonName="GDIPlusDemo2013" RibbonXML="&lt;customUI xmlns=&quot;http://schemas.microsoft.com/office/2006/01/customui&quot; onLoad=&quot;fuLoad&quot;&gt;&#xA;  &lt;ribbon startFromScratch=&quot;false&quot;&gt;&#xA;    &lt;tabs&gt;&#xA;      &lt;tab id=&quot;tab1&quot; label=&quot;GDIPlusDemo2013&quot;&gt; &#xA;        &lt;group id=&quot;grp1&quot; label=&quot;Formulare&quot;&gt; &#xA;          &lt;button id=&quot;btn1&quot; size=&quot;large&quot; label=&quot;Anlagefeld-Formular&quot; getImage=&quot;fuImage&quot; onAction=&quot;fuBtnAction&quot;/&gt;&#xA;          &lt;button id=&quot;btn2&quot; size=&quot;large&quot; label=&quot;OLE-Feld-Formular&quot; getImage=&quot;fuImage&quot; onAction=&quot;fuBtnAction&quot;/&gt;&#xA;        &lt;/group&gt;&#xA;      &lt;/tab&gt;&#xA;    &lt;/tabs&gt;&#xA;  &lt;/ribbon&gt;&#xA;&lt;/customUI&gt;"></z:row>
+    <z:row ID="2" RibbonName="GDIPlusDemo2013I18N" RibbonXML="&lt;customUI xmlns=&quot;http://schemas.microsoft.com/office/2006/01/customui&quot; onLoad=&quot;fuLoad&quot;&gt;&#xA;  &lt;ribbon startFromScratch=&quot;false&quot;&gt;&#xA;    &lt;tabs&gt;&#xA;      &lt;tab id=&quot;tab1&quot; getLabel=&quot;fuLang&quot;&gt; &#xA;        &lt;group id=&quot;grp1&quot; label=&quot;=fuLang('de:Formulare')&quot;&gt;&#xA;          &lt;button id=&quot;btn1&quot; size=&quot;large&quot; label=&quot;Anlagefeld-Formular&quot; getImage=&quot;fuImage&quot; onAction=&quot;fuBtnAction&quot;/&gt;&#xA;          &lt;button id=&quot;btn2&quot; size=&quot;large&quot; label=&quot;OLE-Feld-Formular&quot; getImage=&quot;fuImage&quot; onAction=&quot;fuBtnAction&quot;/&gt;&#xA;        &lt;/group&gt;&#xA;      &lt;/tab&gt;&#xA;    &lt;/tabs&gt;&#xA;  &lt;/ribbon&gt;&#xA;&lt;/customUI&gt;"></z:row>
+  </rs:data>
+</xml>
+
