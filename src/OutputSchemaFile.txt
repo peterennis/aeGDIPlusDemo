@@ -16,7 +16,7 @@ Currentdb.Execute strSQL
 
 'Local Table
 
-strSQL="CREATE TABLE [tblLanguage] ([ID] Text (255),[DE] Text (255),[EN] Text (255) )"
+strSQL="CREATE TABLE [tblLanguage] ([ID] Long,[DE] Text (255),[EN] Text (255) )"
 Currentdb.Execute strSQL
 
 strSQL="CREATE INDEX [ID] ON [tblLanguage] ([EN]) "

@@ -3,6 +3,10 @@ Option Explicit
 
 Public oRibbon As IRibbonUI
 
+Private Const aeLANG As String = "de"
+'Private Const aeLANG As String = "en"
+'
+
 Public Sub fuLoad(ByVal ribbon As IRibbonUI)
     On Error GoTo 0
     Set oRibbon = ribbon
@@ -41,7 +45,7 @@ Public Sub fuLang(ByVal rcontrol As IRibbonControl, ByRef label)
     ' Callback label
     Select Case rcontrol.ID
         Case "tab1"
-            label = "GDIPlus 2013 Ribbon Demo"
+            label = DLookup(aeLANG, "tblLanguage", "ID = 1")      '"GDIPlus 2013 Ribbon Demo"
         Case "btn1"
         Case "btn2"
         Case Else

@@ -1,39 +1,39 @@
 ----------------
 TABLE: tblImages
 ----------------
-FIELD NAME     FIELD TYPE    SIZE    DESCRIPTION                 
-===========    ==========    ====    ============================
-ID             AutoNumber    4                                   
-Image          Attachment    4       image embedded as attachment
+FIELD NAME     FIELD TYPE      SIZE    DESCRIPTION                 
+===========    ============    ====    ============================
+ID             AutoNumber      4                                   
+Image          Attachment      4       image embedded as attachment
 
 
 ------------------
 TABLE: tblLanguage
 ------------------
-FIELD NAME     FIELD TYPE    SIZE    DESCRIPTION
-===========    ==========    ====    ===========
-ID             Text          255                
-DE             Text          255                
-EN             Text          255                
+FIELD NAME     FIELD TYPE      SIZE    DESCRIPTION
+===========    ============    ====    ===========
+ID             Long Integer    4                  
+DE             Text            255                
+EN             Text            255                
 
 
 -------------
 TABLE: tblOLE
 -------------
-FIELD NAME     FIELD TYPE    SIZE    DESCRIPTION
-===========    ==========    ====    ===========
-ID             AutoNumber    4                  
-ImageName      Text          255                
-BLOB           OLE Object    0                  
+FIELD NAME     FIELD TYPE      SIZE    DESCRIPTION
+===========    ============    ====    ===========
+ID             AutoNumber      4                  
+ImageName      Text            255                
+BLOB           OLE Object      0                  
 
 
 ------------------
 TABLE: USysRibbons
 ------------------
-FIELD NAME     FIELD TYPE    SIZE    DESCRIPTION
-===========    ==========    ====    ===========
-ID             AutoNumber    4                  
-RibbonName     Text          255                
-RibbonXML      Memo          0                  
+FIELD NAME     FIELD TYPE      SIZE    DESCRIPTION
+===========    ============    ====    ===========
+ID             AutoNumber      4                  
+RibbonName     Text            255                
+RibbonXML      Memo            0                  
 
 
