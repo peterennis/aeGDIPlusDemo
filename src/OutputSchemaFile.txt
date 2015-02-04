@@ -16,13 +16,13 @@ Currentdb.Execute strSQL
 
 'Local Table
 
-strSQL="CREATE TABLE [tblLanguage] ([LangId] Long,[DE] Text (255),[EN] Text (255),[FR] Text (255),[IT] Text (255),[JA] Text (255),[KO] Text (255),[NL] Text (255),[PL] Text (255),[PO] Text (255),[RO] Text (255),[RU] Text (255),[SA] Text (255),[SV] Text (255),[ZH] Text (255) )"
+strSQL="CREATE TABLE [tblLanguage] ([LangId] Long,[de] Text (255),[en] Text (255),[fr] Text (255),[it] Text (255),[ja] Text (255),[ko] Text (255),[nl] Text (255),[pl] Text (255),[po] Text (255),[ro] Text (255),[ru] Text (255),[sa] Text (255),[sv] Text (255),[zh] Text (255) )"
 Currentdb.Execute strSQL
 
-strSQL="CREATE INDEX [ID] ON [tblLanguage] ([ZH]) "
+strSQL="CREATE INDEX [LangId] ON [tblLanguage] ([zh]) "
 Currentdb.Execute strSQL
 
-strSQL="CREATE UNIQUE INDEX [PrimaryKey] ON [tblLanguage] ([ZH])  WITH PRIMARY DISALLOW NULL "
+strSQL="CREATE UNIQUE INDEX [PrimaryKey] ON [tblLanguage] ([zh])  WITH PRIMARY DISALLOW NULL "
 Currentdb.Execute strSQL
 
 'Local Table

@@ -36,7 +36,7 @@
 |                    |                                |   <ribbon startFromScratch="false">                                                                                                                  |
 |                    |                                |     <tabs>                                                                                                                                           |
 |                    |                                |       <tab id="tab1" getLabel="fuLang">                                                                                                              |
-|                    |                                |         <group id="grp1" label="=fuLang('de:Formulare')">                                                                                            |
+|                    |                                |         <group id="grp1" getLabel="fuLang">                                                                                                          |
 |                    |                                |           <button id="btn1" size="large" label="Anlagefeld-Formular" getImage="fuImage"                                                              |
 |                    |                                |             onAction="fuBtnAction"/>                                                                                                                 |
 |                    |                                |           <button id="btn2" size="large" label="OLE-Feld-Formular" getImage="fuImage"                                                                |

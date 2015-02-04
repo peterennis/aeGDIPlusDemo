@@ -3,8 +3,8 @@ Option Explicit
 
 Public oRibbon As IRibbonUI
 
-Private Const aeLANG As String = "de"
-'Private Const aeLANG As String = "en"
+Private Const aeLANG As String = "DE"
+'Private Const aeLANG As String = "EN"
 '
 
 Public Sub fuLoad(ByVal ribbon As IRibbonUI)
@@ -46,6 +46,8 @@ Public Sub fuLang(ByVal rcontrol As IRibbonControl, ByRef label)
     Select Case rcontrol.ID
         Case "tab1"
             label = DLookup(aeLANG, "tblLanguage", "LangId = 1")      '"GDIPlus 2013 Ribbon Demo"
+        Case "grp1"
+            label = DLookup(aeLANG, "tblLanguage", "LangId = 2")      '"Formula"
         Case "btn1"
         Case "btn2"
         Case Else

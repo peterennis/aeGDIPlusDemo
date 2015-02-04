@@ -11,105 +11,105 @@
   <xsd:element name="tblLanguage">
     <xsd:annotation>
       <xsd:appinfo>
-        <od:index index-name="ID" index-key="LangId " primary="no" unique="no" clustered="no" order="asc"></od:index>
+        <od:index index-name="LangId" index-key="LangId " primary="no" unique="no" clustered="no" order="asc"></od:index>
         <od:index index-name="PrimaryKey" index-key="LangId " primary="yes" unique="yes" clustered="no" order="asc"></od:index>
       </xsd:appinfo>
     </xsd:annotation>
     <xsd:complexType>
       <xsd:sequence>
         <xsd:element name="LangId" minOccurs="1" od:jetType="longinteger" od:sqlSType="int" od:nonNullable="yes" type="xsd:int"></xsd:element>
-        <xsd:element name="DE" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="de" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="EN" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="en" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="FR" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="fr" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="IT" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="it" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="JA" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="ja" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="KO" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="ko" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="NL" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="nl" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="PL" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="pl" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="PO" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="po" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="RO" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="ro" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="RU" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="ru" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="SA" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="sa" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="SV" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="sv" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>
             </xsd:restriction>
           </xsd:simpleType>
         </xsd:element>
-        <xsd:element name="ZH" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+        <xsd:element name="zh" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
           <xsd:simpleType>
             <xsd:restriction base="xsd:string">
               <xsd:maxLength value="255"></xsd:maxLength>

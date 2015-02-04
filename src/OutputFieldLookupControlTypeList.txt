@@ -3,20 +3,20 @@ tblImages
               Image          126          
 tblLanguage
               LangId         109          TextBox
-              DE             109          TextBox
-              EN             109          TextBox
-              FR             109          TextBox
-              IT             109          TextBox
-              JA             109          TextBox
-              KO             109          TextBox
-              NL             109          TextBox
-              PL             109          TextBox
-              PO             109          TextBox
-              RO             109          TextBox
-              RU             109          TextBox
-              SA             109          TextBox
-              SV             109          TextBox
-              ZH             109          TextBox
+              de             109          TextBox
+              en             109          TextBox
+              fr             109          TextBox
+              it             109          TextBox
+              ja             109          TextBox
+              ko             109          TextBox
+              nl             109          TextBox
+              pl             109          TextBox
+              po             109          TextBox
+              ro             109          TextBox
+              ru             109          TextBox
+              sa             109          TextBox
+              sv             109          TextBox
+              zh             109          TextBox
 tblOLE
               ID             109          TextBox
               ImageName      109          TextBox
