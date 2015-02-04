@@ -45,7 +45,7 @@ Public Sub fuLang(ByVal rcontrol As IRibbonControl, ByRef label)
     ' Callback label
     Select Case rcontrol.ID
         Case "tab1"
-            label = DLookup(aeLANG, "tblLanguage", "ID = 1")      '"GDIPlus 2013 Ribbon Demo"
+            label = DLookup(aeLANG, "tblLanguage", "LangId = 1")      '"GDIPlus 2013 Ribbon Demo"
         Case "btn1"
         Case "btn2"
         Case Else

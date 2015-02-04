@@ -12,9 +12,21 @@ TABLE: tblLanguage
 ------------------
 FIELD NAME     FIELD TYPE      SIZE    DESCRIPTION
 ===========    ============    ====    ===========
-ID             Long Integer    4                  
+LangId         Long Integer    4                  
 DE             Text            255                
 EN             Text            255                
+FR             Text            255                
+IT             Text            255                
+JA             Text            255                
+KO             Text            255                
+NL             Text            255                
+PL             Text            255                
+PO             Text            255                
+RO             Text            255                
+RU             Text            255                
+SA             Text            255                
+SV             Text            255                
+ZH             Text            255                
 
 
 -------------
