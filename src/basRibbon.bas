@@ -47,8 +47,10 @@ Public Sub fuLang(ByVal rcontrol As IRibbonControl, ByRef label)
         Case "tab1"
             label = DLookup(aeLANG, "tblLanguage", "LangId = 1")      '"GDIPlus 2013 Ribbon Demo"
         Case "grp1"
-            label = DLookup(aeLANG, "tblLanguage", "LangId = 2")      '"Formula"
+            label = DLookup(aeLANG, "tblLanguage", "LangId = 2")      '"Forms"
+        Case "btn0"
         Case "btn1"
+            label = DLookup(aeLANG, "tblLanguage", "LangId = 3")      '"???"
         Case "btn2"
         Case Else
             MsgBox "Bad Language!"
