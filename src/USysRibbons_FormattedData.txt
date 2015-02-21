@@ -39,7 +39,7 @@
 |                    |                                |         <group id="grp1" getLabel="fuLang">                                                                                                          |
 |                    |                                |           <button id="btn1" size="large" getLabel="fuLang" getImage="fuImage"                                                                        |
 |                    |                                |             onAction="fuBtnAction"/>                                                                                                                 |
-|                    |                                |           <button id="btn2" size="large" label="OLE-Feld-Formular" getImage="fuImage"                                                                |
+|                    |                                |           <button id="btn2" size="large" getLabel="fuLang" getImage="fuImage"                                                                        |
 |                    |                                |             onAction="fuBtnAction"/>                                                                                                                 |
 |                    |                                |         </group>                                                                                                                                     |
 |                    |                                |       </tab>                                                                                                                                         |
