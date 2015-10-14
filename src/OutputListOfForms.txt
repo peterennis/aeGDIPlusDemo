@@ -1,0 +1,4 @@
+"Name","Attribute"
+"frmClassImages","Visible"
+"frmImages","Visible"
+"frmImagesOLE","Visible"

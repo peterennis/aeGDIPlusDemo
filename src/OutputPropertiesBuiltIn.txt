@@ -1,6 +1,6 @@
 Name: Name
 Type: dbMemo
-Value: C:\ae\aegdiplusdemo\GDayClassDemo.accdb
+Value: C:\ae\aeGDIPlusDemo\GDayClassDemo.accdb
 Inherited: False;
 ---
 Name: Connect
@@ -49,7 +49,7 @@ Value:
 Inherited: False;
 ---
 Name: Connection
-Type: 
+Type: Unknown typeNum
 Value: 
 Inherited: False; 3251, 'Operation is not supported for this type of object.'
 ---
@@ -80,7 +80,7 @@ Inherited: False;
 ---
 Name: ProjVer
 Type: dbInteger
-Value: 140
+Value: 119
 Inherited: False;
 ---
 Name: HasOfflineLists
@@ -235,7 +235,7 @@ Inherited: False;
 ---
 Name: AppIcon
 Type: dbText
-Value: C:\ae\aeGDIPlusDemo\adaept_logo_16x16.ico
+Value: C:\ae\aeGDIPlusDemo\aeicon.ico
 Inherited: False;
 ---
 Name: Perform Name AutoCorrect

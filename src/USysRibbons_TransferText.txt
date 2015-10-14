@@ -1,4 +1,3 @@
-"ID","RibbonName","RibbonXML"
 1,"GDIPlusDemo2013","<customUI xmlns=""http://schemas.microsoft.com/office/2006/01/customui"" onLoad=""fuLoad"">
   <ribbon startFromScratch=""false"">
     <tabs>

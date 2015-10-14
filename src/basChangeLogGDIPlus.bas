@@ -3,19 +3,19 @@ Option Explicit
 
 Public Function GDayClass_Export(Optional ByVal varDebug As Variant) As Boolean
 
-    Dim THE_SOURCE_FOLDER As String
-    Dim THE_XML_FOLDER As String
-    
-    THE_SOURCE_FOLDER = "C:\ae\aeGDIPlusDemo\src\"
-    THE_XML_FOLDER = "C:\ae\aeGDIPlusDemo\src\xml\"
-
     On Error GoTo PROC_ERR
 
+    Dim THE_SOURCE_FOLDER As String
+    THE_SOURCE_FOLDER = "C:\ae\aeGDIPlusDemo\src\"
+    Dim THE_XML_FOLDER As String
+    THE_XML_FOLDER = "C:\ae\aeGDIPlusDemo\src\xml\"
+    Dim THE_XML_DATA_FOLDER As String
+    THE_XML_DATA_FOLDER = "C:\ae\aeGDIPlusDemo\src\xmldata\"
+
     If Not IsMissing(varDebug) Then
-        '''aegitClassTest varDebug:="varDebug"
-        aegitClassTest varDebug:="varDebug", varSrcFldr:=THE_SOURCE_FOLDER, varXmlFldr:=THE_XML_FOLDER
+        aegitClassTest varDebug:="varDebug", varSrcFldr:=THE_SOURCE_FOLDER, varXmlFldr:=THE_XML_FOLDER, varXmlDataFldr:=THE_XML_DATA_FOLDER
     Else
-        aegitClassTest varSrcFldr:=THE_SOURCE_FOLDER, varXmlFldr:=THE_XML_FOLDER
+        aegitClassTest varSrcFldr:=THE_SOURCE_FOLDER, varXmlFldr:=THE_XML_FOLDER, varXmlDataFldr:=THE_XML_DATA_FOLDER
     End If
 
 PROC_EXIT:

@@ -5,8 +5,8 @@
               Permissions    1048575 
               AllPermissions               1048575 
               Container     Databases
-              DateCreated   8/23/2009 12:08:57 AM 
-              LastUpdated   8/23/2009 12:08:57 AM 
+              DateCreated   DateCreated
+              LastUpdated   LastUpdated
               Title         OGLDemo
               Author        Sascha
               Company        
@@ -17,7 +17,7 @@
               Permissions    1048575 
               AllPermissions               1048575 
               Container     Databases
-              DateCreated   8/23/2009 12:08:57 AM 
-              LastUpdated   8/23/2009 12:08:57 AM 
+              DateCreated   DateCreated
+              LastUpdated   LastUpdated
               ReplicateProject            True
               DisplayAllViewsOnSharePointSite            1 
