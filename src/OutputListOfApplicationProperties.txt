@@ -38,7 +38,7 @@ Auto Compact: 0, 4, False;
 Track Name AutoCorrect Info: 0, 4, False;
 DesignWithData: False, 1, False;
 NavPane Closed: 0, 4, False;
-NavPane Width: 215, 4, False;
+NavPane Width: 274, 4, False;
 NavPane View By: 0, 4, False;
 NavPane Sort By: 0, 4, False;
 Property Sheet Label Width: 3435, 4, False;

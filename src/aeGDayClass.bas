@@ -257,9 +257,64 @@ Private lclsTimer0 As aeTimerClass
 ' This may cause instableties or even crashes due to memory leaks in gdiplus!
 ' -----------------------------------------------------------------------------------------
 
-Public Property Get aeArrayFromPicture(ByVal objPic As StdPicture, pic As aePicFileType) As Byte()
+Private Sub Class_Initialize()
+    Debug.Print "Class_Initialize"
+End Sub
+
+Private Sub Class_Terminate()
+    ShutDownGDIP
+    Debug.Print "Class_Terminate"
+End Sub
+
+Public Property Get aeArrayFromPicture(ByVal objPic As StdPicture, ByVal pic As aePicFileType) As Byte()
     On Error GoTo 0
     aeArrayFromPicture = ArrayFromPicture(objPic, pic)
+End Property
+
+Public Property Get aeAttachmentToPicture(ByVal strTable As String, ByVal strAttachmentField As String, ByVal strImage As String) As Variant
+    On Error GoTo 0
+    aeAttachmentToPicture = AttachmentToPicture(strTable, strAttachmentField, strImage)
+End Property
+
+Public Property Get aeTSizeX() As Variant
+    On Error GoTo 0
+    Dim Xfactor As TSize
+    aeTSizeX = Xfactor.X
+End Property
+
+Public Property Get aeTSizeY() As Variant
+    On Error GoTo 0
+    Dim Yfactor As TSize
+    aeTSizeY = Yfactor.Y
+End Property
+
+Public Property Get GetDimensionsGDIP_X(Image As StdPicture) As Long
+    On Error GoTo 0
+    Dim XY As TSize
+    XY = GetDimensionsGDIP(Image)
+    GetDimensionsGDIP_X = XY.X
+End Property
+
+Public Property Get GetDimensionsGDIP_Y(Image As StdPicture) As Long
+    On Error GoTo 0
+    Dim XY As TSize
+    XY = GetDimensionsGDIP(Image)
+    GetDimensionsGDIP_Y = XY.Y
+End Property
+
+Public Property Get aeOLEFieldToPicture(ByVal strTable As String, ByVal strNameField As String, ByVal strName As String, ByVal strOLEField As String) As Variant
+    On Error GoTo 0
+    aeOLEFieldToPicture = OLEFieldToPicture(strTable, strNameField, strName, strOLEField)
+End Property
+
+Public Property Get aeResampleGDIP(ByVal Image As StdPicture, ByVal Width As Long, ByVal Height As Long) As Variant
+    On Error GoTo 0
+    aeResampleGDIP = ResampleGDIP(Image, Width, Height)
+End Property
+
+Public Property Get aeLoadPictureGDIP(sFileName As String) As Variant
+    On Error GoTo 0
+    aeLoadPictureGDIP = LoadPictureGDIP(sFileName)
 End Property
 
 Private Function GetGDIPVersion() As Boolean
@@ -478,11 +533,12 @@ Private Function CropImage(ByVal Image As StdPicture, _
 End Function
 
 ' Retrieve Width and Height of a pictures in Pixel with GDIP
-' Return value as user/defined type TSize (X/Y als Long)
+' Return value as user/defined type TSize (X/Y as Long)
 Private Function GetDimensionsGDIP(ByVal Image As StdPicture) As TSize
     Dim lRes As Long
     Dim lBitmap As Long
-    Dim X As Long, Y As Long
+    Dim X As Long
+    Dim Y As Long
 
     If Not InitGDIP Then Exit Function
     If Image Is Nothing Then Exit Function
@@ -508,7 +564,7 @@ End Function
 ' Quality: 0...100; (works only with pictypeJPG!)
 ' Returns TRUE if successful
 Private Function SavePicGDIPlus(ByVal Image As StdPicture, sFile As String, _
-                        PicType As PicFileType, Optional Quality As Long = 80) As Boolean
+                        PicType As aePicFileType, Optional Quality As Long = 80) As Boolean
     Dim lBitmap As Long
     Dim TEncoder As GUID
     Dim ret As Long
@@ -518,17 +574,17 @@ Private Function SavePicGDIPlus(ByVal Image As StdPicture, sFile As String, _
     If Not InitGDIP Then Exit Function
 
     If bUseOGL Then
-        SavePicGDIPlus = SavePicGDIPlus_O(Image, sFile, pictypeBMP, Quality)
+        SavePicGDIPlus = SavePicGDIPlus_O(Image, sFile, aePicTypeBMP, Quality)
     Else
         If GdipCreateBitmapFromHBITMAP(Image.Handle, 0, lBitmap) = 0 Then
             Select Case PicType
-            Case pictypeBMP: sType = "{557CF400-1A04-11D3-9A73-0000F81EF32E}"
-            Case pictypeGIF: sType = "{557CF402-1A04-11D3-9A73-0000F81EF32E}"
-            Case pictypePNG: sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
-            Case pictypeJPG: sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
+            Case aePicTypeBMP: sType = "{557CF400-1A04-11D3-9A73-0000F81EF32E}"
+            Case aePicTypeGIF: sType = "{557CF402-1A04-11D3-9A73-0000F81EF32E}"
+            Case aePicTypePNG: sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
+            Case aePicTypeJPG: sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
             End Select
             CLSIDFromString StrPtr(sType), TEncoder
-            If PicType = pictypeJPG Then
+            If PicType = aePicTypeJPG Then
                 TParams.count = 1
                 With TParams.Parameter    ' Quality
                     CLSIDFromString StrPtr("{1D5BE4B5-FA4A-452D-9CDD-5DB35105E7EB}"), .UUID
@@ -538,8 +594,8 @@ Private Function SavePicGDIPlus(ByVal Image As StdPicture, sFile As String, _
                 End With
             Else
                 ' Different numbers of parameter between GDI+ 1.0 and GDI+ 1.1 on GIFs!!
-                If (PicType = pictypeGIF) Then TParams.count = 1 Else TParams.count = 0
-                If (PicType = pictypePNG) And IsGDI11 Then TParams.count = 1
+                If (PicType = aePicTypeGIF) Then TParams.count = 1 Else TParams.count = 0
+                If (PicType = aePicTypePNG) And IsGDI11 Then TParams.count = 1
             End If
             ' Save GDIP-Image to file :
             ret = GdipSaveImageToFile(lBitmap, StrPtr(sFile), TEncoder, TParams)
@@ -555,7 +611,7 @@ End Function
 ' This procedure is similar to the above (see Parameter), the different is,
 ' that nothing is stored as a file, but a conversion is executed
 ' using a OLE-Stream-Object to an Byte-Array .
-Private Function ArrayFromPicture(ByVal Image As Object, PicType As PicFileType, Optional Quality As Long = 80) As Byte()
+Private Function ArrayFromPicture(ByVal Image As Object, PicType As aePicFileType, Optional Quality As Long = 80) As Byte()
     Dim lBitmap As Long
     Dim TEncoder As GUID
     Dim ret As Long
@@ -566,18 +622,18 @@ Private Function ArrayFromPicture(ByVal Image As Object, PicType As PicFileType,
     If Not InitGDIP Then Exit Function
 
     If bUseOGL Then
-        ArrayFromPicture = ArrayFromPicture_O(Image, pictypeBMP, Quality)
+        ArrayFromPicture = ArrayFromPicture_O(Image, aePicTypeBMP, Quality)
     Else
         If GdipCreateBitmapFromHBITMAP(Image.Handle, 0, lBitmap) = 0 Then
             Select Case PicType    ' Choose GDIP-Format-Encoders CLSID:
-            Case pictypeBMP: sType = "{557CF400-1A04-11D3-9A73-0000F81EF32E}"
-            Case pictypeGIF: sType = "{557CF402-1A04-11D3-9A73-0000F81EF32E}"
-            Case pictypePNG: sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
-            Case pictypeJPG: sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
+            Case aePicTypeBMP: sType = "{557CF400-1A04-11D3-9A73-0000F81EF32E}"
+            Case aePicTypeGIF: sType = "{557CF402-1A04-11D3-9A73-0000F81EF32E}"
+            Case aePicTypePNG: sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
+            Case aePicTypeJPG: sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
             End Select
             CLSIDFromString StrPtr(sType), TEncoder
 
-            If PicType = pictypeJPG Then    ' If JPG, then set additional parameter to apply quality level
+            If PicType = aePicTypeJPG Then    ' If JPG, then set additional parameter to apply quality level
                 TParams.count = 1
                 With TParams.Parameter      ' Quality
                     CLSIDFromString StrPtr("{1D5BE4B5-FA4A-452D-9CDD-5DB35105E7EB}"), .UUID
@@ -587,9 +643,9 @@ Private Function ArrayFromPicture(ByVal Image As Object, PicType As PicFileType,
                 End With
             Else
                 ' Different number of parameters between GDI+ 1.0 and GDI+ 1.1 on GIFs!!
-                If (PicType = pictypeGIF) Then TParams.count = 1 Else TParams.count = 0
+                If (PicType = aePicTypeGIF) Then TParams.count = 1 Else TParams.count = 0
                 ' For PNGs and in case of GDIPlus1.1 there are two parameters required (bugfix) :
-                If (PicType = pictypePNG) And IsGDI11 Then TParams.count = 1
+                If (PicType = aePicTypePNG) And IsGDI11 Then TParams.count = 1
             End If
 
             ret = CreateStreamOnHGlobal(0&, 1, IStm)    'Create stream
@@ -926,7 +982,7 @@ Private Function GetDimensionsGDIP_O(ByVal Image As StdPicture) As TSize
 End Function
 
 Private Function SavePicGDIPlus_O(ByVal Image As StdPicture, sFile As String, _
-                        PicType As PicFileType, Optional Quality As Long = 80) As Boolean
+                        PicType As aePicFileType, Optional Quality As Long = 80) As Boolean
     Dim lBitmap As Long
     Dim TEncoder As GUID
     Dim ret As Long
@@ -937,13 +993,13 @@ Private Function SavePicGDIPlus_O(ByVal Image As StdPicture, sFile As String, _
 
     If GdipCreateBitmapFromHBITMAP_O(Image.Handle, 0, lBitmap) = 0 Then
         Select Case PicType
-        Case pictypeBMP: sType = "{557CF400-1A04-11D3-9A73-0000F81EF32E}"
-        Case pictypeGIF: sType = "{557CF402-1A04-11D3-9A73-0000F81EF32E}"
-        Case pictypePNG: sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
-        Case pictypeJPG: sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
+        Case aePicTypeBMP: sType = "{557CF400-1A04-11D3-9A73-0000F81EF32E}"
+        Case aePicTypeGIF: sType = "{557CF402-1A04-11D3-9A73-0000F81EF32E}"
+        Case aePicTypePNG: sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
+        Case aePicTypeJPG: sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
         End Select
         CLSIDFromString StrPtr(sType), TEncoder
-        If PicType = pictypeJPG Then
+        If PicType = aePicTypeJPG Then
             TParams.count = 1
             With TParams.Parameter
                 CLSIDFromString StrPtr("{1D5BE4B5-FA4A-452D-9CDD-5DB35105E7EB}"), .UUID
@@ -952,8 +1008,8 @@ Private Function SavePicGDIPlus_O(ByVal Image As StdPicture, sFile As String, _
                 .Value = VarPtr(CLng(Quality))
             End With
         Else
-            If (PicType = pictypeGIF) Then TParams.count = 1 Else TParams.count = 0
-            If (PicType = pictypePNG) And IsGDI11 Then TParams.count = 1
+            If (PicType = aePicTypeGIF) Then TParams.count = 1 Else TParams.count = 0
+            If (PicType = aePicTypePNG) And IsGDI11 Then TParams.count = 1
         End If
         ret = GdipSaveImageToFile_O(lBitmap, StrPtr(sFile), TEncoder, TParams)
         GdipDisposeImage_O lBitmap
@@ -963,7 +1019,7 @@ Private Function SavePicGDIPlus_O(ByVal Image As StdPicture, sFile As String, _
 
 End Function
 
-Private Function ArrayFromPicture_O(ByVal Image As Object, PicType As PicFileType, Optional Quality As Long = 80) As Byte()
+Private Function ArrayFromPicture_O(ByVal Image As Object, PicType As aePicFileType, Optional Quality As Long = 80) As Byte()
     Dim lBitmap As Long
     Dim TEncoder As GUID
     Dim ret As Long
@@ -975,14 +1031,14 @@ Private Function ArrayFromPicture_O(ByVal Image As Object, PicType As PicFileTyp
 
     If GdipCreateBitmapFromHBITMAP_O(Image.Handle, 0, lBitmap) = 0 Then
         Select Case PicType
-        Case pictypeBMP: sType = "{557CF400-1A04-11D3-9A73-0000F81EF32E}"
-        Case pictypeGIF: sType = "{557CF402-1A04-11D3-9A73-0000F81EF32E}"
-        Case pictypePNG: sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
-        Case pictypeJPG: sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
+        Case aePicTypeBMP: sType = "{557CF400-1A04-11D3-9A73-0000F81EF32E}"
+        Case aePicTypeGIF: sType = "{557CF402-1A04-11D3-9A73-0000F81EF32E}"
+        Case aePicTypePNG: sType = "{557CF406-1A04-11D3-9A73-0000F81EF32E}"
+        Case aePicTypeJPG: sType = "{557CF401-1A04-11D3-9A73-0000F81EF32E}"
         End Select
         CLSIDFromString StrPtr(sType), TEncoder
 
-        If PicType = pictypeJPG Then
+        If PicType = aePicTypeJPG Then
             TParams.count = 1
             With TParams.Parameter
                 CLSIDFromString StrPtr("{1D5BE4B5-FA4A-452D-9CDD-5DB35105E7EB}"), .UUID
@@ -991,8 +1047,8 @@ Private Function ArrayFromPicture_O(ByVal Image As Object, PicType As PicFileTyp
                 .Value = VarPtr(CLng(Quality))
             End With
         Else
-            If (PicType = pictypeGIF) Then TParams.count = 1 Else TParams.count = 0
-            If (PicType = pictypePNG) And IsGDI11 Then TParams.count = 1
+            If (PicType = aePicTypeGIF) Then TParams.count = 1 Else TParams.count = 0
+            If (PicType = aePicTypePNG) And IsGDI11 Then TParams.count = 1
         End If
 
         ret = CreateStreamOnHGlobal(0&, 1, IStm)

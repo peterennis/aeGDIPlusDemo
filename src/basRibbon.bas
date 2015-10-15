@@ -5,6 +5,10 @@ Public oRibbon As IRibbonUI
 
 Private Const aeLANG As String = "DE"
 'Private Const aeLANG As String = "EN"
+Private Const IMAGE_TABLE_NAME As String = "tblImages"
+Public Const OLE_IMAGE_TABLE_NAME As String = "tblOLE"
+Private Const LANGUAGE_TABLE_NAME As String = "tblLanguage"
+Private pixClass As aeGDayClass
 '
 
 Public Sub fuLoad(ByVal ribbon As IRibbonUI)
@@ -12,31 +16,32 @@ Public Sub fuLoad(ByVal ribbon As IRibbonUI)
     Set oRibbon = ribbon
 End Sub
 
-Public Function fuImage(ByVal rcontrol As IRibbonControl, ByRef pic As Variant) As Boolean
+Public Function SetImage(ByVal rcontrol As IRibbonControl, ByRef pic As Variant) As Boolean
     On Error GoTo 0
+    Set pixClass = New aeGDayClass
     Select Case rcontrol.ID
         Case "btn1"
-            Set pic = AttachmentToPicture("tblImages", "Image", "photo_sceneryA32.png")
+            Set pic = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", "photo_sceneryA32.png")
         Case "btn2"
-            Set pic = AttachmentToPicture("tblImages", "Image", "gear_refresh32.png")
+            Set pic = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", "gear_refresh32.png")
         Case Else
-            MsgBox "Bad fuImage Case!"
+            MsgBox "Bad SetImage Case!"
     End Select
 End Function
 
-Public Function fuBtnAction(ByVal rcontrol As IRibbonControl) As Boolean
+Public Function BtnAction(ByVal rcontrol As IRibbonControl) As Boolean
     On Error GoTo 0
     Select Case rcontrol.ID
         Case "btn1"
-            DoCmd.OpenForm "frmImages"
+            DoCmd.OpenForm "frmClassImages"
             DoEvents
-            Forms("frmImages").SetFocus
+            Forms("frmClassImages").SetFocus
         Case "btn2"
-            DoCmd.OpenForm "frmImagesOLE"
+            DoCmd.OpenForm "frmClassImagesOLE"
             DoEvents
-            Forms("frmImagesOLE").SetFocus
+            Forms("frmClassImagesOLE").SetFocus
         Case Else
-            MsgBox "Bad fuBtnAction Case!"
+            MsgBox "Bad BtnAction Case!"
     End Select
 End Function
 
@@ -45,12 +50,12 @@ Public Sub fuLang(ByVal rcontrol As IRibbonControl, ByRef label)
     ' Callback label
     Select Case rcontrol.ID
         Case "tab1"
-            label = DLookup(aeLANG, "tblLanguage", "LangId = 1")      '"GDIPlus 2013 Ribbon Demo"
+            label = DLookup(aeLANG, LANGUAGE_TABLE_NAME, "LangId = 1")      '"GDIPlus 2013 Ribbon Demo"
         Case "grp1"
-            label = DLookup(aeLANG, "tblLanguage", "LangId = 2")      '"Forms"
+            label = DLookup(aeLANG, LANGUAGE_TABLE_NAME, "LangId = 2")      '"Forms"
         Case "btn0"
         Case "btn1"
-            label = DLookup(aeLANG, "tblLanguage", "LangId = 3")      '"???"
+            label = DLookup(aeLANG, LANGUAGE_TABLE_NAME, "LangId = 3")      '"???"
         Case "btn2"
         Case Else
             MsgBox "Bad Language!"
