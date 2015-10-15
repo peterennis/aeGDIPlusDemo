@@ -5,7 +5,7 @@ Public oRibbon As IRibbonUI
 
 Private Const aeLANG As String = "DE"
 'Private Const aeLANG As String = "EN"
-Private Const IMAGE_TABLE_NAME As String = "tblImages"
+Public Const IMAGE_TABLE_NAME As String = "tblImages"
 Public Const OLE_IMAGE_TABLE_NAME As String = "tblOLE"
 Private Const LANGUAGE_TABLE_NAME As String = "tblLanguage"
 Private pixClass As aeGDayClass
@@ -21,9 +21,9 @@ Public Function SetImage(ByVal rcontrol As IRibbonControl, ByRef pic As Variant)
     Set pixClass = New aeGDayClass
     Select Case rcontrol.ID
         Case "btn1"
-            Set pic = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", "photo_sceneryA32.png")
+            Set pic.Handle = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", "photo_sceneryA32.png")
         Case "btn2"
-            Set pic = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", "gear_refresh32.png")
+            Set pic.Handle = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", "gear_refresh32.png")
         Case Else
             MsgBox "Bad SetImage Case!"
     End Select

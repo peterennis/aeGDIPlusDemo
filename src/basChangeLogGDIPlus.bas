@@ -43,6 +43,7 @@ End Function
 '=============================================================================================================================
 
 
+'20151015 - v015 - Fixes for GDay class and get first picture to load
 '20150116 - v011 - Move repo from bitbucket private to github public
     ' Import latest aegit export class and use one name for the demo file
     ' Ref: http://stackoverflow.com/questions/20828561/how-to-convert-a-text-field-in-an-access-table-to-a-rich-text-memo-using-VBA

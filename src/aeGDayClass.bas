@@ -247,11 +247,11 @@ Private Declare Function GdipBitmapUnlockBits Lib "gdiplus" (ByVal BITMAP As Lon
 
 ' -----------------------------------------------------------------------------------------
 ' Global module variables:
-Private lGDIP As Long           'GDIPLus object instance
-Private bSharedLoad As Boolean  'Is gdiplus.dll or ogl.dll already loaded by Access? (In this case do not FreeLibrary module)
-Private bUseOGL As Boolean      'If True use ogl.dll, otherwise gdiplus.dll
-Private IsGDI11 As Boolean      'Is GDIPLUS version 1.1 or 1.0? (1.1 supports effects like Sharpen etc.)
-Private lTimer As Long          'Timer Handle for AutoShutdown
+Private lGDIP As Long           ' GDIPLus object instance
+Private bSharedLoad As Boolean  ' Is gdiplus.dll or ogl.dll already loaded by Access? (In this case do not FreeLibrary module)
+Private bUseOGL As Boolean      ' If True use ogl.dll, otherwise gdiplus.dll
+Private IsGDI11 As Boolean      ' Is GDIPLUS version 1.1 or 1.0? (1.1 supports effects like Sharpen etc.)
+Private lTimer As Long          ' Timer Handle for AutoShutdown
 Private lclsTimer0 As aeTimerClass
 ' Be sure to have error handlers in all your VBA procedures since unhandled errors clear the above variables
 ' This may cause instableties or even crashes due to memory leaks in gdiplus!
@@ -271,9 +271,10 @@ Public Property Get aeArrayFromPicture(ByVal objPic As StdPicture, ByVal pic As 
     aeArrayFromPicture = ArrayFromPicture(objPic, pic)
 End Property
 
-Public Property Get aeAttachmentToPicture(ByVal strTable As String, ByVal strAttachmentField As String, ByVal strImage As String) As Variant
+Public Property Get aeAttachmentToPicture(ByVal strTable As String, ByVal strAttachmentField As String, ByVal strImage As String) As StdPicture
     On Error GoTo 0
-    aeAttachmentToPicture = AttachmentToPicture(strTable, strAttachmentField, strImage)
+    ' Ref: *** http://stackoverflow.com/questions/5092662/set-property-of-vba-class-with-object-reference
+    Set aeAttachmentToPicture = AttachmentToPicture(strTable, strAttachmentField, strImage)
 End Property
 
 Public Property Get aeTSizeX() As Variant
