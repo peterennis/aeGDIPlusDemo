@@ -29,10 +29,16 @@ End Function
 
 '=============================================================================================================================
 ' Tasks:
+' %010 -
+' %009 -
+' %008 -
+' %007 -
+' %006 -
 ' %005 -
 ' %004 -
-' %003 -
-' %002 -
+' %003 - Invalid procedure call or argument in NoBOM when exporting
+' %002 - Drop a picture on frmClassImages and it is not shown immediatley, added to the middle of the list? form synch problem?
+'           It actually appeared as a second picture in one of the images table records.
 ' %001 - GdiPlus leaks - Ref: http://blogs.msdn.com/b/dsui_team/archive/2013/04/23/debugging-a-gdi-resource-leak.aspx
 ' Issues:
 ' #005 -

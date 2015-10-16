@@ -41,7 +41,7 @@ NavPane Closed: 0, 4, False;
 NavPane Width: 274, 4, False;
 NavPane View By: 0, 4, False;
 NavPane Sort By: 0, 4, False;
-Property Sheet Label Width: 3435, 4, False;
+Property Sheet Label Width: 2445, 4, False;
 Show Navigation Pane Search Bar: 1, 4, False;
 Theme Resource Name: Office Theme, 10, False;
 WebDesignMode: 0, 2, False;

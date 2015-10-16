@@ -308,14 +308,14 @@ Public Property Get aeOLEFieldToPicture(ByVal strTable As String, ByVal strNameF
     aeOLEFieldToPicture = OLEFieldToPicture(strTable, strNameField, strName, strOLEField)
 End Property
 
-Public Property Get aeResampleGDIP(ByVal Image As StdPicture, ByVal Width As Long, ByVal Height As Long) As Variant
+Public Property Get aeResampleGDIP(ByVal Image As StdPicture, ByVal Width As Long, ByVal Height As Long) As StdPicture
     On Error GoTo 0
-    aeResampleGDIP = ResampleGDIP(Image, Width, Height)
+    Set aeResampleGDIP = ResampleGDIP(Image, Width, Height)
 End Property
 
-Public Property Get aeLoadPictureGDIP(sFileName As String) As Variant
+Public Property Get aeLoadPictureGDIP(sFileName As String) As StdPicture
     On Error GoTo 0
-    aeLoadPictureGDIP = LoadPictureGDIP(sFileName)
+    Set aeLoadPictureGDIP = LoadPictureGDIP(sFileName)
 End Property
 
 Private Function GetGDIPVersion() As Boolean
@@ -687,7 +687,7 @@ Private Function OLEFieldToPicture(ByVal strTable As String, _
                                   ByVal strOLEField As String) As StdPicture
     On Error GoTo 0
 
-    Dim rst As Recordset2
+    Dim rst As DAO.Recordset2
     Set rst = CurrentDb.OpenRecordset("SELECT " & strOLEField & " FROM " & strTable & " WHERE " & strNameField & "='" & strName & "'", dbOpenDynaset)
 
     If Not rst.EOF Then
@@ -734,7 +734,7 @@ Private Function PicFromField(ByVal picField As DAO.Field, Optional FlattenColor
     Dim arrBin() As Byte
     Dim LSize As Long
 
-    On Error GoTo Fehler
+    On Error GoTo PROC_ERR
 
     LSize = picField.FieldSize
     If LSize > 0 Then
@@ -742,13 +742,13 @@ Private Function PicFromField(ByVal picField As DAO.Field, Optional FlattenColor
         Set PicFromField = ArrayToPicture(arrBin, FlattenColor)
     End If
 
-Ende:
+PROC_EXIT:
     Erase arrBin
     Exit Function
 
-Fehler:
+PROC_ERR:
     MsgBox Err.Description, vbCritical
-    Resume Ende
+    Resume PROC_EXIT
 End Function
 
 ' Create an OLE-Picture from Byte-Array PicBin()
