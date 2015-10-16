@@ -2,7 +2,7 @@ Option Compare Database
 Option Explicit
 
 Private Const gstrVERSION_GDIPlus As String = "0.1.6"
-Private Const gstrDATE_GDIPlus As String = "October 15, 2015"
+Private Const gstrDATE_GDIPlus As String = "October 16, 2015"
 Public Const gstrPROJECT_GDIPlus As String = "GDayClass"
 '
 
@@ -45,18 +45,18 @@ Public Sub ListAttachments(ByVal strTableName As String, ByVal strFieldName As S
     i = 1
     Do While Not rst.EOF
 
-        ' Get the recordset for the Attachments field
+        ' Get the Recordset for the Attachments field
         Set rsA = fld.Value
 
         ' Print all attachments in the field
         If i = 1 Then
-            Debug.Print , "rsA.Fields.count = " & rsA.Fields.count
-            Debug.Print , rsA.Fields(0).Name, rsA.Fields(1).Name, rsA.Fields(2).Name, rsA.Fields(3).Name, rsA.Fields(4).Name, rsA.Fields(5).Name
+            Debug.Print , "Count of Attachment Fields: rsA.Fields.count = " & rsA.Fields.count
+            Debug.Print , "Names of Attachment Fields: ", rsA.Fields(0).Name & ", " & rsA.Fields(1).Name & ", " & rsA.Fields(2).Name & ", " & rsA.Fields(3).Name & ", " & rsA.Fields(4).Name & ", " & rsA.Fields(5).Name
         End If
         i = i + 1
         j = 1
         Do While Not rsA.EOF
-            Debug.Print , j, rsA("FileType"), rsA("FileName")
+            Debug.Print , rst("ID"), j, rsA("FileType"), rsA("FileName")
             j = j + 1
 
             ' Next attachment
