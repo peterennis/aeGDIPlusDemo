@@ -21,9 +21,9 @@ Public Function SetImage(ByVal rcontrol As IRibbonControl, ByRef pic As Variant)
     Set pixClass = New aeGDayClass
     Select Case rcontrol.ID
         Case "btn1"
-            Set pic.Handle = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", "photo_sceneryA32.png")
+            Set pic = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", "photo_sceneryA32.png")
         Case "btn2"
-            Set pic.Handle = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", "gear_refresh32.png")
+            Set pic = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", "gear_refresh32.png")
         Case Else
             MsgBox "Bad SetImage Case!"
     End Select
@@ -50,12 +50,12 @@ Public Sub fuLang(ByVal rcontrol As IRibbonControl, ByRef label)
     ' Callback label
     Select Case rcontrol.ID
         Case "tab1"
-            label = DLookup(aeLANG, LANGUAGE_TABLE_NAME, "LangId = 1")      '"GDIPlus 2013 Ribbon Demo"
+            label = DLookup(aeLANG, LANGUAGE_TABLE_NAME, "LangId = 1")      ' "GDIPlus Ribbon Demo"
         Case "grp1"
-            label = DLookup(aeLANG, LANGUAGE_TABLE_NAME, "LangId = 2")      '"Forms"
+            label = DLookup(aeLANG, LANGUAGE_TABLE_NAME, "LangId = 2")      ' "Forms"
         Case "btn0"
         Case "btn1"
-            label = DLookup(aeLANG, LANGUAGE_TABLE_NAME, "LangId = 3")      '"???"
+            label = DLookup(aeLANG, LANGUAGE_TABLE_NAME, "LangId = 3")      ' "???"
         Case "btn2"
         Case Else
             MsgBox "Bad Language!"

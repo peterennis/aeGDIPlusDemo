@@ -6,10 +6,10 @@
 |                    |                                |     <tabs>                                                                                                                                           |
 |                    |                                |       <tab id="tab1" label="GDIPlusDemo2013">                                                                                                        |
 |                    |                                |         <group id="grp1" label="Formulare">                                                                                                          |
-|                    |                                |           <button id="btn1" size="large" label="Anlagefeld-Formular" getImage="fuImage"                                                              |
-|                    |                                |             onAction="fuBtnAction"/>                                                                                                                 |
-|                    |                                |           <button id="btn2" size="large" label="OLE-Feld-Formular" getImage="fuImage"                                                                |
-|                    |                                |             onAction="fuBtnAction"/>                                                                                                                 |
+|                    |                                |           <button id="btn1" size="large" label="Anlagefeld-Formular" getImage="SetImage"                                                             |
+|                    |                                |             onAction="BtnAction"/>                                                                                                                   |
+|                    |                                |           <button id="btn2" size="large" label="OLE-Feld-Formular" getImage="SetImage"                                                               |
+|                    |                                |             onAction="BtnAction"/>                                                                                                                   |
 |                    |                                |         </group>                                                                                                                                     |
 |                    |                                |       </tab>                                                                                                                                         |
 |                    |                                |     </tabs>                                                                                                                                          |
@@ -37,10 +37,10 @@
 |                    |                                |     <tabs>                                                                                                                                           |
 |                    |                                |       <tab id="tab1" getLabel="fuLang">                                                                                                              |
 |                    |                                |         <group id="grp1" getLabel="fuLang">                                                                                                          |
-|                    |                                |           <button id="btn1" size="large" getLabel="fuLang" getImage="fuImage"                                                                        |
-|                    |                                |             onAction="fuBtnAction"/>                                                                                                                 |
-|                    |                                |           <button id="btn2" size="large" getLabel="fuLang" getImage="fuImage"                                                                        |
-|                    |                                |             onAction="fuBtnAction"/>                                                                                                                 |
+|                    |                                |           <button id="btn1" size="large" getLabel="fuLang" getImage="SetImage"                                                                       |
+|                    |                                |             onAction="BtnAction"/>                                                                                                                   |
+|                    |                                |           <button id="btn2" size="large" getLabel="fuLang" getImage="SetImage"                                                                       |
+|                    |                                |             onAction="BtnAction"/>                                                                                                                   |
 |                    |                                |         </group>                                                                                                                                     |
 |                    |                                |       </tab>                                                                                                                                         |
 |                    |                                |     </tabs>                                                                                                                                          |
