@@ -289,23 +289,23 @@ Public Property Get aeTSizeY() As Variant
     aeTSizeY = Yfactor.Y
 End Property
 
-Public Property Get GetDimensionsGDIP_X(Image As StdPicture) As Long
+Public Property Get GetDimensionsGDIP_X(ByVal Image As StdPicture) As Long
     On Error GoTo 0
     Dim XY As TSize
     XY = GetDimensionsGDIP(Image)
     GetDimensionsGDIP_X = XY.X
 End Property
 
-Public Property Get GetDimensionsGDIP_Y(Image As StdPicture) As Long
+Public Property Get GetDimensionsGDIP_Y(ByVal Image As StdPicture) As Long
     On Error GoTo 0
     Dim XY As TSize
     XY = GetDimensionsGDIP(Image)
     GetDimensionsGDIP_Y = XY.Y
 End Property
 
-Public Property Get aeOLEFieldToPicture(ByVal strTable As String, ByVal strNameField As String, ByVal strName As String, ByVal strOLEField As String) As Variant
+Public Property Get aeOLEFieldToPicture(ByVal strTable As String, ByVal strNameField As String, ByVal strName As String, ByVal strOLEField As String) As StdPicture
     On Error GoTo 0
-    aeOLEFieldToPicture = OLEFieldToPicture(strTable, strNameField, strName, strOLEField)
+    Set aeOLEFieldToPicture = OLEFieldToPicture(strTable, strNameField, strName, strOLEField)
 End Property
 
 Public Property Get aeResampleGDIP(ByVal Image As StdPicture, ByVal Width As Long, ByVal Height As Long) As StdPicture
@@ -313,7 +313,7 @@ Public Property Get aeResampleGDIP(ByVal Image As StdPicture, ByVal Width As Lon
     Set aeResampleGDIP = ResampleGDIP(Image, Width, Height)
 End Property
 
-Public Property Get aeLoadPictureGDIP(sFileName As String) As StdPicture
+Public Property Get aeLoadPictureGDIP(ByVal sFileName As String) As StdPicture
     On Error GoTo 0
     Set aeLoadPictureGDIP = LoadPictureGDIP(sFileName)
 End Property
@@ -411,16 +411,16 @@ Private Sub AutoShutDown()
     End If
 End Sub
 
-' Callback for AutoShutDown
-Private Sub MyTimerProc(ByVal hWnd As Long, ByVal uMsg As Long, ByVal idEvent As Long, ByVal dwTime As Long)
-    Debug.Print "Sub MyTimerProc"
-    Debug.Print , "GDI+ AutoShutDown", "idEvent = " & idEvent
-    Debug.Print , "lTimer = " & lTimer
-    If lTimer <> 0 Then
-        If KillTimer(0&, lTimer) Then lTimer = 0
-    End If
-    ShutDownGDIP
-End Sub
+'' Callback for AutoShutDown
+'Private Sub MyTimerProc(ByVal hWnd As Long, ByVal uMsg As Long, ByVal idEvent As Long, ByVal dwTime As Long)
+'    Debug.Print "Sub MyTimerProc"
+'    Debug.Print , "GDI+ AutoShutDown", "idEvent = " & idEvent
+'    Debug.Print , "lTimer = " & lTimer
+'    If lTimer <> 0 Then
+'        If KillTimer(0&, lTimer) Then lTimer = 0
+'    End If
+'    ShutDownGDIP
+'End Sub
 
 Private Function UsesOGL() As Boolean
     If Not InitGDIP Then Exit Function
@@ -430,7 +430,7 @@ End Function
 ' Load image file with GDIP
 ' It's equivalent to the method LoadPicture() in OLE-Automation library (stdole2.tlb)
 ' Allowed format: bmp, gif, jp(e)g, tif, png, wmf, emf, ico
-Private Function LoadPictureGDIP(sFileName As String) As StdPicture
+Private Function LoadPictureGDIP(ByVal sFileName As String) As StdPicture
     Dim hBmp As Long
     Dim hPic As Long
 
@@ -687,7 +687,7 @@ Private Function OLEFieldToPicture(ByVal strTable As String, _
                                   ByVal strOLEField As String) As StdPicture
     On Error GoTo 0
 
-    Dim rst As DAO.Recordset2
+    Dim rst As DAO.Recordset
     Set rst = CurrentDb.OpenRecordset("SELECT " & strOLEField & " FROM " & strTable & " WHERE " & strNameField & "='" & strName & "'", dbOpenDynaset)
 
     If Not rst.EOF Then
@@ -703,7 +703,7 @@ End Function
 ' strAttachmentField:    Name of the attachment column in the table
 ' strImage:              Name of the image to search in the attachment records
 ' ? AttachmentToPicture("ribbonimages","imageblob","cloudy.png").Width
-Private Function AttachmentToPicture(strTable As String, strAttachmentField As String, strImage As String) As StdPicture
+Private Function AttachmentToPicture(ByVal strTable As String, ByVal strAttachmentField As String, ByVal strImage As String) As StdPicture
     Dim strSQL As String
     Dim bin() As Byte
     Dim nOffset As Long
@@ -1076,7 +1076,7 @@ Private Function ArrayFromPicture_O(ByVal Image As Object, PicType As aePicFileT
 
 End Function
 
-Private Function AttachmentToPicture_O(strTable As String, strAttachmentField As String, strImage As String) As StdPicture
+Private Function AttachmentToPicture_O(ByVal strTable As String, ByVal strAttachmentField As String, ByVal strImage As String) As StdPicture
     Dim strSQL As String
     Dim bin() As Byte
     Dim nOffset As Long
