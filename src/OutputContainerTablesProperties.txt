@@ -35,7 +35,7 @@
               DateCreated   DateCreated
               LastUpdated   LastUpdated
               Orientation    0 
-              OrderByOn     False
+              OrderByOn     True
               DefaultView    2 
               GUID          AD-CB-FE-E0-33-97-46-AA
               DisplayViewsOnSharePointSite               1 
@@ -52,6 +52,7 @@
               DatasheetGridlinesThemeColorIndex          3 
               DatasheetForeThemeColorIndex               0 
               PublishToWeb   1 
+              OrderBy       [tblLanguage].[LangId]
 >>>tblOLE
               Name          tblOLE
               Owner         admin
@@ -107,3 +108,12 @@
               DatasheetGridlinesThemeColorIndex         -1 
               DatasheetForeThemeColorIndex              -1 
               PublishToWeb   1 
+              DatasheetFontName           Consolas
+              DatasheetFontHeight          11 
+              DatasheetFontWeight          400 
+              DatasheetFontItalic         False
+              DatasheetFontUnderline      False
+              TabularCharSet               0 
+              TabularFamily  49 
+              DatasheetForeColor           0 
+              DatasheetForeColor12         0 

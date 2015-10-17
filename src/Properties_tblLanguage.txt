@@ -5,13 +5,13 @@
 |-- Connect >> 
 |-- Attributes >> 0
 |-- SourceTableName >> 
-|-- RecordCount >> 4
+|-- RecordCount >> 6
 |-- ValidationRule >> 
 |-- ValidationText >> 
 |-- ConflictTable >> 
 |-- ReplicaFilter >> 
 |-- Orientation >> 0
-|-- OrderByOn >> False
+|-- OrderByOn >> True
 |-- DefaultView >> 2
 |-- GUID >> GUID
 |-- DisplayViewsOnSharePointSite >> 1
@@ -28,6 +28,7 @@
 |-- DatasheetGridlinesThemeColorIndex >> 3
 |-- DatasheetForeThemeColorIndex >> 0
 |-- PublishToWeb >> 1
+|-- OrderBy >> [tblLanguage].[LangId]
 --------------------------------------------------
 |-- LangId (Field in tblLanguage)
 |------ Attributes >> 1

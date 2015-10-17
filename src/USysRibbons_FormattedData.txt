@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 |         ID         |           RibbonName           |                                                                      RibbonXML                                                                       |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|                  1 | GDIPlusDemo2013                | <customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="fuLoad">                                                              |
+|                  1 | GDIPlusDemo2013                | <customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="LoadRibbon">                                                          |
 |                    |                                |   <ribbon startFromScratch="false">                                                                                                                  |
 |                    |                                |     <tabs>                                                                                                                                           |
 |                    |                                |       <tab id="tab1" label="GDIPlusDemo2013">                                                                                                        |
@@ -32,22 +32,22 @@
 |                    |                                |                                                                                                                                                      |
 |                    |                                |                                                                                                                                                      |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|                  2 | GDIPlusDemo2013I18N            | <customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="fuLoad">                                                              |
+|                  2 | GDIPlusDemo2013I18N            | <customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="LoadRibbon">                                                          |
 |                    |                                |   <ribbon startFromScratch="false">                                                                                                                  |
 |                    |                                |     <tabs>                                                                                                                                           |
-|                    |                                |       <tab id="tab1" getLabel="fuLang">                                                                                                              |
-|                    |                                |         <group id="grp1" getLabel="fuLang">                                                                                                          |
-|                    |                                |           <button id="btn1" size="large" getLabel="fuLang" getImage="SetImage"                                                                       |
+|                    |                                |       <tab id="tab1" getLabel="SetLanguage">                                                                                                         |
+|                    |                                |         <group id="grp1" getLabel="SetLanguage">                                                                                                     |
+|                    |                                |           <button id="btn0" size="large" getLabel="SetLanguage" getImage="SetImage"                                                                  |
 |                    |                                |             onAction="BtnAction"/>                                                                                                                   |
-|                    |                                |           <button id="btn2" size="large" getLabel="fuLang" getImage="SetImage"                                                                       |
+|                    |                                |           <button id="btn1" size="large" getLabel="SetLanguage" getImage="SetImage"                                                                  |
+|                    |                                |             onAction="BtnAction"/>                                                                                                                   |
+|                    |                                |           <button id="btn2" size="large" getLabel="SetLanguage" getImage="SetImage"                                                                  |
 |                    |                                |             onAction="BtnAction"/>                                                                                                                   |
 |                    |                                |         </group>                                                                                                                                     |
 |                    |                                |       </tab>                                                                                                                                         |
 |                    |                                |     </tabs>                                                                                                                                          |
 |                    |                                |   </ribbon>                                                                                                                                          |
 |                    |                                | </customUI>                                                                                                                                          |
-|                    |                                |                                                                                                                                                      |
-|                    |                                |                                                                                                                                                      |
 |                    |                                |                                                                                                                                                      |
 |                    |                                |                                                                                                                                                      |
 |                    |                                |                                                                                                                                                      |

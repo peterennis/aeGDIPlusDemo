@@ -29,6 +29,15 @@
 |-- DatasheetGridlinesThemeColorIndex >> -1
 |-- DatasheetForeThemeColorIndex >> -1
 |-- PublishToWeb >> 1
+|-- DatasheetFontName >> Consolas
+|-- DatasheetFontHeight >> 11
+|-- DatasheetFontWeight >> 400
+|-- DatasheetFontItalic >> False
+|-- DatasheetFontUnderline >> False
+|-- TabularCharSet >> 0
+|-- TabularFamily >> 49
+|-- DatasheetForeColor >> 0
+|-- DatasheetForeColor12 >> 0
 --------------------------------------------------
 |-- ID (Field in USysRibbons)
 |------ Attributes >> 17
