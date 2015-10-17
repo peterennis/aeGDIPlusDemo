@@ -13,7 +13,6 @@
 |-- Orientation >> 0
 |-- OrderByOn >> False
 |-- DefaultView >> 2
-|-- GUID >> GUID
 |-- DisplayViewsOnSharePointSite >> 1
 |-- TotalsRow >> False
 |-- FilterOnLoad >> False
@@ -28,6 +27,8 @@
 |-- DatasheetGridlinesThemeColorIndex >> -1
 |-- DatasheetForeThemeColorIndex >> -1
 |-- PublishToWeb >> 1
+|-- GUID >> GUID
+|-- ReadOnlyWhenDisconnected >> False
 --------------------------------------------------
 |-- ID (Field in tblImages)
 |------ Attributes >> 17
@@ -51,15 +52,15 @@
 |------ ColumnHidden >> False
 |------ TextAlign >> 0
 |------ AggregateType >> -1
-|------ GUID >> GUID
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- Image (Field in tblImages)
 |------ Attributes >> 1
-|------ CollatingOrder >> 1
+|------ CollatingOrder >> 2
 |------ Type >> 101
 |------ Name >> Image
-|------ OrdinalPosition >> 2
+|------ OrdinalPosition >> 1
 |------ Size >> 4
 |------ SourceField >> Image
 |------ SourceTable >> tblImages
@@ -77,7 +78,7 @@
 |------ ColumnHidden >> False
 |------ DisplayControl >> 126
 |------ AggregateType >> -1
-|------ GUID >> GUID
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
 |------ Description >> image embedded as attachment
+|------ GUID >> GUID

@@ -13,7 +13,6 @@
 |-- Orientation >> 0
 |-- OrderByOn >> False
 |-- DefaultView >> 2
-|-- GUID >> GUID
 |-- DisplayViewsOnSharePointSite >> 1
 |-- TotalsRow >> False
 |-- FilterOnLoad >> False
@@ -28,6 +27,8 @@
 |-- DatasheetGridlinesThemeColorIndex >> -1
 |-- DatasheetForeThemeColorIndex >> -1
 |-- PublishToWeb >> 1
+|-- GUID >> GUID
+|-- ReadOnlyWhenDisconnected >> False
 --------------------------------------------------
 |-- ID (Field in tblOLE)
 |------ Attributes >> 17
@@ -47,13 +48,13 @@
 |------ AppendOnly >> False
 |------ Expression >> 
 |------ ColumnWidth >> -1
-|------ ColumnOrder >> 1
+|------ ColumnOrder >> 0
 |------ ColumnHidden >> False
 |------ TextAlign >> 0
 |------ AggregateType >> -1
-|------ GUID >> GUID
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- ImageName (Field in tblOLE)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -80,9 +81,9 @@
 |------ UnicodeCompression >> True
 |------ TextAlign >> 0
 |------ AggregateType >> -1
-|------ GUID >> GUID
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- BLOB (Field in tblOLE)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -105,6 +106,6 @@
 |------ ColumnHidden >> False
 |------ TextAlign >> 0
 |------ AggregateType >> -1
-|------ GUID >> GUID
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID

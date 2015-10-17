@@ -1,5 +1,5 @@
 >==> The Project References >==>
-              vbaProj.Name = GDayClass
+              vbaProj.Name = Database1
               vbaProj.Type = '100'
               Access version = 14.0
               ADO (ActiveX Data Object) version = 6.3
@@ -20,9 +20,6 @@
                             DAO           Microsoft Office 14.0 Access database engine Object Library
                                           C:\Program Files\Common Files\Microsoft Shared\OFFICE14\ACEDAO.DLL
                                           {4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}
-                            MSForms       Microsoft Forms 2.0 Object Library
-                                          C:\Windows\system32\FM20.DLL
-                                          {0D452EE1-E08F-101A-852E-02608C4D0BB4}
                             Office        Microsoft Office 14.0 Object Library
                                           C:\Program Files\Common Files\Microsoft Shared\OFFICE14\MSO.DLL
                                           {2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}

@@ -7,9 +7,8 @@
               Container     Databases
               DateCreated   DateCreated
               LastUpdated   LastUpdated
-              Title         OGLDemo
-              Author        Sascha
-              Company        
+              Title         Database1
+              Author        adaept
 >>>UserDefined
               Name          UserDefined
               Owner         admin
@@ -20,4 +19,3 @@
               DateCreated   DateCreated
               LastUpdated   LastUpdated
               ReplicateProject            True
-              DisplayAllViewsOnSharePointSite            1 

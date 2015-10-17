@@ -10,7 +10,6 @@
               Orientation    0 
               OrderByOn     False
               DefaultView    2 
-              GUID          5B-D6-9E-9D-A3-4A-4B-9E
               DisplayViewsOnSharePointSite               1 
               TotalsRow     False
               FilterOnLoad  False
@@ -25,6 +24,8 @@
               DatasheetGridlinesThemeColorIndex         -1 
               DatasheetForeThemeColorIndex              -1 
               PublishToWeb   1 
+              GUID          9F-52-03-DE-F9-F9-48-BA
+              ReadOnlyWhenDisconnected    False
 >>>tblLanguage
               Name          tblLanguage
               Owner         admin
@@ -35,9 +36,8 @@
               DateCreated   DateCreated
               LastUpdated   LastUpdated
               Orientation    0 
-              OrderByOn     True
+              OrderByOn     False
               DefaultView    2 
-              GUID          AD-CB-FE-E0-33-97-46-AA
               DisplayViewsOnSharePointSite               1 
               TotalsRow     False
               FilterOnLoad  False
@@ -52,7 +52,8 @@
               DatasheetGridlinesThemeColorIndex          3 
               DatasheetForeThemeColorIndex               0 
               PublishToWeb   1 
-              OrderBy       [tblLanguage].[LangId]
+              GUID          DF-98-A0-A2-B4-53-48-B3
+              ReadOnlyWhenDisconnected    False
 >>>tblOLE
               Name          tblOLE
               Owner         admin
@@ -65,7 +66,6 @@
               Orientation    0 
               OrderByOn     False
               DefaultView    2 
-              GUID          3F-BE-FC-E8-DA-96-46-90
               DisplayViewsOnSharePointSite               1 
               TotalsRow     False
               FilterOnLoad  False
@@ -80,6 +80,8 @@
               DatasheetGridlinesThemeColorIndex         -1 
               DatasheetForeThemeColorIndex              -1 
               PublishToWeb   1 
+              GUID          DB-5A-62-27-73-63-46-BA
+              ReadOnlyWhenDisconnected    False
 >>>USysRibbons
               Name          USysRibbons
               Owner         admin
@@ -92,7 +94,6 @@
               Orientation    0 
               OrderByOn     False
               DefaultView    2 
-              GUID          D1-E6-4C-CE-8B-27-4B-B4
               DisplayViewsOnSharePointSite               1 
               TotalsRow     False
               FilterOnLoad  False

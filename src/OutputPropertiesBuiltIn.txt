@@ -63,6 +63,21 @@ Type: dbLong
 Value: 1
 Inherited: False;
 ---
+Name: Use Microsoft Access 2007 compatible cache
+Type: dbLong
+Value: 0
+Inherited: False;
+---
+Name: Clear Cache on Close
+Type: dbLong
+Value: 0
+Inherited: False;
+---
+Name: Never Cache
+Type: dbLong
+Value: 0
+Inherited: False;
+---
 Name: AccessVersion
 Type: dbText
 Value: 09.50
@@ -73,19 +88,9 @@ Type: dbLong
 Value: 0
 Inherited: False;
 ---
-Name: Build
+Name: Show Navigation Pane Search Bar
 Type: dbLong
-Value: 24
-Inherited: False;
----
-Name: ProjVer
-Type: dbInteger
-Value: 119
-Inherited: False;
----
-Name: HasOfflineLists
-Type: dbInteger
-Value: 70
+Value: 1
 Inherited: False;
 ---
 Name: UseMDIMode
@@ -103,14 +108,49 @@ Type: dbLong
 Value: 0
 Inherited: False;
 ---
+Name: WebDesignMode
+Type: dbByte
+Value: 0
+Inherited: False;
+---
 Name: CheckTruncatedNumFields
 Type: dbLong
 Value: 1
 Inherited: False;
 ---
-Name: AppTitle
+Name: Theme Resource Name
 Type: dbText
-Value: GDayClass
+Value: Office Theme
+Inherited: False;
+---
+Name: ProjVer
+Type: dbInteger
+Value: 119
+Inherited: False;
+---
+Name: HasOfflineLists
+Type: dbInteger
+Value: 70
+Inherited: False;
+---
+Name: NavPane Closed
+Type: dbLong
+Value: 0
+Inherited: False;
+---
+Name: NavPane Width
+Type: dbLong
+Value: 215
+Inherited: False;
+---
+Name: NavPane View By
+Type: dbLong
+Value: 0
+Inherited: False;
+---
+Name: NavPane Sort By
+Type: dbLong
+Value: 1
 Inherited: False;
 ---
 Name: StartUpShowDBWindow
@@ -148,12 +188,22 @@ Type: dbBoolean
 Value: True
 Inherited: False;
 ---
+Name: AppIcon
+Type: dbText
+Value: C:\ae\aeGDIPlusDemo\aeicon.ico
+Inherited: False;
+---
 Name: UseAppIconForFrmRpt
 Type: dbBoolean
 Value: True
 Inherited: False;
 ---
 Name: AllowDatasheetSchema
+Type: dbBoolean
+Value: False
+Inherited: False;
+---
+Name: DesignWithData
 Type: dbBoolean
 Value: False
 Inherited: False;
@@ -183,62 +233,12 @@ Type: dbLong
 Value: 0
 Inherited: False;
 ---
-Name: Track Name AutoCorrect Info
-Type: dbLong
-Value: 0
-Inherited: False;
----
-Name: DesignWithData
-Type: dbBoolean
-Value: False
-Inherited: False;
----
-Name: NavPane Closed
-Type: dbLong
-Value: 0
-Inherited: False;
----
-Name: NavPane Width
-Type: dbLong
-Value: 274
-Inherited: False;
----
-Name: NavPane View By
-Type: dbLong
-Value: 0
-Inherited: False;
----
-Name: NavPane Sort By
-Type: dbLong
-Value: 0
-Inherited: False;
----
-Name: Property Sheet Label Width
-Type: dbLong
-Value: 2445
-Inherited: False;
----
-Name: Show Navigation Pane Search Bar
-Type: dbLong
-Value: 1
-Inherited: False;
----
-Name: Theme Resource Name
-Type: dbText
-Value: Office Theme
-Inherited: False;
----
-Name: WebDesignMode
-Type: dbByte
-Value: 0
-Inherited: False;
----
-Name: AppIcon
-Type: dbText
-Value: C:\ae\aeGDIPlusDemo\aeicon.ico
-Inherited: False;
----
 Name: Perform Name AutoCorrect
+Type: dbLong
+Value: 0
+Inherited: False;
+---
+Name: Track Name AutoCorrect Info
 Type: dbLong
 Value: 0
 Inherited: False;
@@ -246,5 +246,10 @@ Inherited: False;
 Name: CustomRibbonID
 Type: dbText
 Value: GDIPlusDemo2013I18N
+Inherited: False;
+---
+Name: AppTitle
+Type: dbText
+Value: GDayClass
 Inherited: False;
 ---

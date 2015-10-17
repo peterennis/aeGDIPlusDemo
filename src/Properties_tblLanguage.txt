@@ -11,9 +11,8 @@
 |-- ConflictTable >> 
 |-- ReplicaFilter >> 
 |-- Orientation >> 0
-|-- OrderByOn >> True
+|-- OrderByOn >> False
 |-- DefaultView >> 2
-|-- GUID >> GUID
 |-- DisplayViewsOnSharePointSite >> 1
 |-- TotalsRow >> False
 |-- FilterOnLoad >> False
@@ -28,7 +27,8 @@
 |-- DatasheetGridlinesThemeColorIndex >> 3
 |-- DatasheetForeThemeColorIndex >> 0
 |-- PublishToWeb >> 1
-|-- OrderBy >> [tblLanguage].[LangId]
+|-- GUID >> GUID
+|-- ReadOnlyWhenDisconnected >> False
 --------------------------------------------------
 |-- LangId (Field in tblLanguage)
 |------ Attributes >> 1
@@ -40,7 +40,7 @@
 |------ SourceField >> LangId
 |------ SourceTable >> tblLanguage
 |------ DataUpdatable >> False
-|------ DefaultValue >> 0
+|------ DefaultValue >> 
 |------ ValidationRule >> 
 |------ ValidationText >> 
 |------ Required >> True
@@ -48,7 +48,7 @@
 |------ AppendOnly >> False
 |------ Expression >> 
 |------ ColumnWidth >> -1
-|------ ColumnOrder >> 1
+|------ ColumnOrder >> 0
 |------ ColumnHidden >> False
 |------ DecimalPlaces >> 255
 |------ DisplayControl >> 109
@@ -56,6 +56,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- de (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -84,6 +85,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- en (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -112,6 +114,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- fr (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -140,6 +143,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- it (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -168,6 +172,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- ja (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -196,6 +201,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- ko (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -224,6 +230,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- nl (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -252,6 +259,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- pl (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -280,6 +288,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- po (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -308,6 +317,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- ro (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -336,6 +346,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- ru (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -364,6 +375,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- sa (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -392,6 +404,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- sv (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -420,6 +433,7 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID
 |-- zh (Field in tblLanguage)
 |------ Attributes >> 2
 |------ CollatingOrder >> 1033
@@ -448,3 +462,4 @@
 |------ AggregateType >> -1
 |------ ResultType >> 0
 |------ CurrencyLCID >> 0
+|------ GUID >> GUID

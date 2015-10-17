@@ -35,7 +35,6 @@ End Function
 ' %007 -
 ' %006 -
 ' %005 -
-' %004 - VBA IDE selection dropdown of Form shows Detailbereich - from original German demo
 ' %003 - Invalid procedure call or argument in NoBOM when exporting
 ' %002 - Drop a picture on frmClassImages and it is not shown immediatley, added to the middle of the list? form synch problem?
 '           It actually appeared as a second picture in one of the images table records.
@@ -49,6 +48,8 @@ End Function
 '=============================================================================================================================
 
 
+'20151016 - v016
+    ' FIXED - %004 - VBA IDE selection dropdown of Form shows Detailbereich - from original German demo. Import to new db and recreate forms.
 '20151015 - v015 - Fixes for GDay class and get first picture to load
 '20150116 - v011 - Move repo from bitbucket private to github public
     ' Import latest aegit export class and use one name for the demo file
