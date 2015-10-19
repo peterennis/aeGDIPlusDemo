@@ -1,5 +1,5 @@
 >==> The Project References >==>
-              vbaProj.Name = Database1
+              vbaProj.Name = GDayClassDemo
               vbaProj.Type = '100'
               Access version = 14.0
               ADO (ActiveX Data Object) version = 6.3

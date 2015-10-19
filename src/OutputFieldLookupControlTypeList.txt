@@ -1,5 +1,5 @@
 tblImages
-              ID             0            
+              id             0            
               Image          126          
 tblLanguage
               LangId         109          TextBox

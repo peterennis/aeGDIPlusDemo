@@ -30,14 +30,14 @@
 |-- GUID >> GUID
 |-- ReadOnlyWhenDisconnected >> False
 --------------------------------------------------
-|-- ID (Field in tblImages)
+|-- id (Field in tblImages)
 |------ Attributes >> 17
 |------ CollatingOrder >> 1033
 |------ Type >> 4
-|------ Name >> ID
+|------ Name >> id
 |------ OrdinalPosition >> 0
 |------ Size >> 4
-|------ SourceField >> ID
+|------ SourceField >> id
 |------ SourceTable >> tblImages
 |------ DataUpdatable >> False
 |------ DefaultValue >> 

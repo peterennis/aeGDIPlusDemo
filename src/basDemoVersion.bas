@@ -1,8 +1,8 @@
 Option Compare Database
 Option Explicit
 
-Private Const gstrVERSION_GDIPlus As String = "0.1.6"
-Private Const gstrDATE_GDIPlus As String = "October 16, 2015"
+Private Const gstrVERSION_GDIPlus As String = "0.1.7"
+Private Const gstrDATE_GDIPlus As String = "October 18, 2015"
 Public Const gstrPROJECT_GDIPlus As String = "GDayClass"
 '
 
@@ -22,22 +22,23 @@ Public Function getMyProject() As String
 End Function
 
 Public Sub GoListAttachments()
-    ListAttachments "tblImages", "Image"
+    On Error GoTo 0
+    OutputListAttachments "tblImages", "Image"
 End Sub
 
-Public Sub ListAttachments(ByVal strTableName As String, ByVal strFieldName As String)
+Public Sub OutputListAttachments(ByVal strTableName As String, ByVal strFieldName As String)
 ' Ref: https://msdn.microsoft.com/en-us/library/office/ff197737.aspx
     Dim dbs As DAO.Database
-    Dim rst As DAO.Recordset2
-    Dim rsA As DAO.Recordset2
-    Dim fld As DAO.Field2
+    Dim rst As DAO.Recordset        ' Parent is Recordset
+    Dim rsA As DAO.Recordset2       ' Child (Attachment) is Recordset2
+    Dim fldA As DAO.Field           ' Attachment field of the parent Recordset
     Dim i As Integer
     Dim j As Integer
 
-    ' Get the database, recordset, and attachment field
+    ' Get the database, recordsets, and attachment fields
     Set dbs = CurrentDb
     Set rst = dbs.OpenRecordset(strTableName)
-    Set fld = rst(strFieldName)
+    Set fldA = rst(strFieldName)
 
     Debug.Print "ListAttachments"
 
@@ -46,12 +47,14 @@ Public Sub ListAttachments(ByVal strTableName As String, ByVal strFieldName As S
     Do While Not rst.EOF
 
         ' Get the Recordset for the Attachments field
-        Set rsA = fld.Value
+        Set rsA = fldA.Value
 
         ' Print all attachments in the field
         If i = 1 Then
             Debug.Print , "Count of Attachment Fields: rsA.Fields.count = " & rsA.Fields.count
-            Debug.Print , "Names of Attachment Fields: ", rsA.Fields(0).Name & ", " & rsA.Fields(1).Name & ", " & rsA.Fields(2).Name & ", " & rsA.Fields(3).Name & ", " & rsA.Fields(4).Name & ", " & rsA.Fields(5).Name
+            Debug.Print , "Names of Attachment Fields: " & rsA.Fields(0).Name & ", " & rsA.Fields(1).Name & ", " & rsA.Fields(2).Name & ", " & rsA.Fields(3).Name & ", " & rsA.Fields(4).Name & ", " & rsA.Fields(5).Name
+            Debug.Print , rst.Fields(0).Name, j, rsA.Fields(4).Name, rsA.Fields(2).Name
+            Debug.Print , String(80, "=")
         End If
         i = i + 1
         j = 1
@@ -69,12 +72,18 @@ Public Sub ListAttachments(ByVal strTableName As String, ByVal strFieldName As S
         rst.MoveNext
     Loop
         
+PROC_EXIT:
     rst.Close
     dbs.Close
 
-    Set fld = Nothing
+    Set fldA = Nothing
     Set rsA = Nothing
     Set rst = Nothing
     Set dbs = Nothing
+    Exit Sub
+
+PROC_ERR:
+    MsgBox "Erl=" & Erl & " Error " & Err.Number & " (" & Err.Description & ") in procedure OutputListAttachments"
+    Resume PROC_EXIT
 
 End Sub

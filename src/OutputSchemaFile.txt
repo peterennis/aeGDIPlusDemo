@@ -5,7 +5,7 @@ On Error GoTo ErrorTrap
 
 'Local Table
 
-strSQL="CREATE TABLE [tblImages] ([ID] Counter,[Image] Attachment )"
+strSQL="CREATE TABLE [tblImages] ([id] Counter,[Image] Attachment )"
 Currentdb.Execute strSQL
 
 strSQL="CREATE INDEX [ID] ON [tblImages] ([Image]) "
