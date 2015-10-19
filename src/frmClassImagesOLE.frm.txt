@@ -1,0 +1,491 @@
+ÿþVersion =20
+VersionRequired =20
+PublishOption =1
+Begin Form
+    RecordSelectors = NotDefault
+    DividingLines = NotDefault
+    AllowDesignChanges = NotDefault
+    DefaultView =0
+    PictureAlignment =2
+    DatasheetGridlinesBehavior =3
+    GridX =24
+    GridY =24
+    Width =8640
+    DatasheetFontHeight =11
+    Left =4365
+    Top =1200
+    Right =15030
+    Bottom =10815
+    DatasheetGridlinesColor =14806254
+    OnUnload ="[Event Procedure]"
+    RecSrcDt = Begin
+        0xa84a6e17b7a6e440
+    End
+    GUID = Begin
+        0x85395528c4f30b4cbb311860f7dfe1de
+    End
+    RecordSource ="tblOLE"
+    Caption ="Bilder aus OLE-BLOBs"
+    OnCurrent ="[Event Procedure]"
+    DatasheetFontName ="Calibri"
+    PrtMip = Begin
+    End
+    PrtDevMode = Begin
+    End
+    PrtDevNames = Begin
+    End
+    FilterOnLoad =0
+    ShowPageMargins =0
+    DisplayOnSharePointSite =1
+    DatasheetAlternateBackColor =15921906
+    DatasheetGridlinesColor12 =0
+    FitToScreen =1
+    DatasheetBackThemeColorIndex =1
+    BorderThemeColorIndex =3
+    ThemeFontIndex =1
+    ForeThemeColorIndex =0
+    AlternateBackThemeColorIndex =1
+    AlternateBackShade =95.0
+    PrtDevModeW = Begin
+    End
+    PrtDevNamesW = Begin
+    End
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin Label
+            BackStyle =0
+            FontSize =11
+            FontName ="Calibri"
+            ThemeFontIndex =1
+            BackThemeColorIndex =1
+            BorderThemeColorIndex =0
+            BorderTint =50.0
+            ForeThemeColorIndex =0
+            ForeTint =50.0
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin TextBox
+            AddColon = NotDefault
+            FELineBreak = NotDefault
+            BorderLineStyle =0
+            LabelX =-1800
+            FontSize =11
+            FontName ="Calibri"
+            AsianLineBreak =1
+            BackThemeColorIndex =1
+            BorderThemeColorIndex =1
+            BorderShade =65.0
+            ThemeFontIndex =1
+            ForeThemeColorIndex =0
+            ForeTint =75.0
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin CustomControl
+            OldBorderStyle =1
+            BackThemeColorIndex =1
+            BorderThemeColorIndex =1
+            BorderShade =65.0
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
+        Begin Section
+            Height =7560
+            Name ="Detail"
+            GUID = Begin
+                0xe8916f3a80a6f74db34d9f81f911bc51
+            End
+            AutoHeight =1
+            AlternateBackColor =15921906
+            AlternateBackThemeColorIndex =1
+            AlternateBackShade =95.0
+            BackThemeColorIndex =1
+            Begin
+                Begin CustomControl
+                    Enabled = NotDefault
+                    TabStop = NotDefault
+                    SizeMode =1
+                    OldBorderStyle =0
+                    OverlapFlags =85
+                    Left =4515
+                    Top =675
+                    Width =3402
+                    Height =3402
+                    AutoActivate =1
+                    Name ="ctlImg2"
+                    OleData = Begin
+                    End
+                    OLEClass ="Microsoft Forms 2.0"
+                    Class ="Forms.Image.1"
+                    GUID = Begin
+                        0xab7c40f8dc8afe4c973c0dff8b60a90f
+                    End
+
+                    LayoutCachedLeft =4515
+                    LayoutCachedTop =675
+                    LayoutCachedWidth =7917
+                    LayoutCachedHeight =4077
+                    BorderThemeColorIndex =-1
+                    BorderShade =100.0
+                    GridlineThemeColorIndex =-1
+                    GridlineShade =100.0
+                End
+                Begin CustomControl
+                    Enabled = NotDefault
+                    TabStop = NotDefault
+                    SizeMode =1
+                    OldBorderStyle =0
+                    OverlapFlags =93
+                    Left =540
+                    Top =675
+                    Width =3402
+                    Height =3402
+                    AutoActivate =1
+                    TabIndex =1
+                    Name ="ctlImg"
+                    OleData = Begin
+                    End
+                    OLEClass ="Microsoft Forms 2.0"
+                    Class ="Forms.Image.1"
+                    GUID = Begin
+                        0x3945481bbe7ca548be81b10a42862b83
+                    End
+
+                    LayoutCachedLeft =540
+                    LayoutCachedTop =675
+                    LayoutCachedWidth =3942
+                    LayoutCachedHeight =4077
+                    BorderThemeColorIndex =-1
+                    BorderShade =100.0
+                    GridlineThemeColorIndex =-1
+                    GridlineShade =100.0
+                End
+                Begin CustomControl
+                    Enabled = NotDefault
+                    SizeMode =1
+                    OldBorderStyle =0
+                    OverlapFlags =247
+                    Left =540
+                    Top =675
+                    Width =3405
+                    Height =3405
+                    AutoActivate =1
+                    TabIndex =2
+                    Name ="ctlList"
+                    OleData = Begin
+                    End
+                    OLEClass ="ListViewCtrl"
+                    Class ="MSComctlLib.ListViewCtrl.2"
+                    GUID = Begin
+                        0x531983634da65941983c071b03c713f3
+                    End
+
+                    LayoutCachedLeft =540
+                    LayoutCachedTop =675
+                    LayoutCachedWidth =3945
+                    LayoutCachedHeight =4080
+                    BorderThemeColorIndex =-1
+                    BorderShade =100.0
+                    GridlineThemeColorIndex =-1
+                    GridlineShade =100.0
+                End
+                Begin Label
+                    Visible = NotDefault
+                    OverlapFlags =85
+                    TextAlign =2
+                    Left =540
+                    Top =4140
+                    Width =3405
+                    Height =285
+                    Name ="lblDrop"
+                    Caption ="Eine Bilddatei ins Feld  ziehen"
+                    GUID = Begin
+                        0x4ff502bcad91c141a35a7536772c7929
+                    End
+                    LayoutCachedLeft =540
+                    LayoutCachedTop =4140
+                    LayoutCachedWidth =3945
+                    LayoutCachedHeight =4425
+                    ThemeFontIndex =-1
+                    BackThemeColorIndex =-1
+                    BorderThemeColorIndex =-1
+                    BorderTint =100.0
+                    ForeThemeColorIndex =-1
+                    ForeTint =100.0
+                    GridlineThemeColorIndex =-1
+                    GridlineShade =100.0
+                End
+                Begin Label
+                    OverlapFlags =85
+                    Left =540
+                    Top =360
+                    Width =3405
+                    Height =270
+                    Name ="lblInfo"
+                    Caption ="Größe"
+                    GUID = Begin
+                        0x8e7ecbee412c6746901276b6121d0e26
+                    End
+                    LayoutCachedLeft =540
+                    LayoutCachedTop =360
+                    LayoutCachedWidth =3945
+                    LayoutCachedHeight =630
+                    ThemeFontIndex =-1
+                    BackThemeColorIndex =-1
+                    BorderThemeColorIndex =-1
+                    BorderTint =100.0
+                    ForeThemeColorIndex =-1
+                    ForeTint =100.0
+                    GridlineThemeColorIndex =-1
+                    GridlineShade =100.0
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    OverlapFlags =87
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =5727
+                    Top =5760
+                    Width =2160
+                    Height =285
+                    TabIndex =3
+                    BorderColor =12632256
+                    Name ="txtVersion"
+                    ControlSource ="=getMyVersion()"
+                    GUID = Begin
+                        0xf1556f02726c3d46979208d3aef35fac
+                    End
+
+                    LayoutCachedLeft =5727
+                    LayoutCachedTop =5760
+                    LayoutCachedWidth =7887
+                    LayoutCachedHeight =6045
+                    BackThemeColorIndex =-1
+                    BorderThemeColorIndex =-1
+                    BorderShade =100.0
+                    ThemeFontIndex =-1
+                    ForeThemeColorIndex =-1
+                    ForeTint =100.0
+                    GridlineThemeColorIndex =-1
+                    GridlineShade =100.0
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =3
+                            Left =4722
+                            Top =5760
+                            Width =1005
+                            Height =285
+                            Name ="lblVersion"
+                            Caption ="Version: "
+                            GUID = Begin
+                                0x71c3f2e9b584f84198ff923dc29a50a5
+                            End
+                            LayoutCachedLeft =4722
+                            LayoutCachedTop =5760
+                            LayoutCachedWidth =5727
+                            LayoutCachedHeight =6045
+                            ThemeFontIndex =-1
+                            BackThemeColorIndex =-1
+                            BorderThemeColorIndex =-1
+                            BorderTint =100.0
+                            ForeThemeColorIndex =-1
+                            ForeTint =100.0
+                            GridlineThemeColorIndex =-1
+                            GridlineShade =100.0
+                        End
+                    End
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    OverlapFlags =87
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =5727
+                    Top =6192
+                    Width =2160
+                    Height =285
+                    TabIndex =4
+                    BorderColor =12632256
+                    Name ="txtDate"
+                    ControlSource ="=getMyDate()"
+                    GUID = Begin
+                        0x65ef8d28d715cb4ab71853ae3af6560a
+                    End
+
+                    LayoutCachedLeft =5727
+                    LayoutCachedTop =6192
+                    LayoutCachedWidth =7887
+                    LayoutCachedHeight =6477
+                    BackThemeColorIndex =-1
+                    BorderThemeColorIndex =-1
+                    BorderShade =100.0
+                    ThemeFontIndex =-1
+                    ForeThemeColorIndex =-1
+                    ForeTint =100.0
+                    GridlineThemeColorIndex =-1
+                    GridlineShade =100.0
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =3
+                            Left =4722
+                            Top =6192
+                            Width =1005
+                            Height =285
+                            Name ="lblDate"
+                            Caption ="Date: "
+                            GUID = Begin
+                                0xac1906df4ab7424096b744745d5d4858
+                            End
+                            LayoutCachedLeft =4722
+                            LayoutCachedTop =6192
+                            LayoutCachedWidth =5727
+                            LayoutCachedHeight =6477
+                            ThemeFontIndex =-1
+                            BackThemeColorIndex =-1
+                            BorderThemeColorIndex =-1
+                            BorderTint =100.0
+                            ForeThemeColorIndex =-1
+                            ForeTint =100.0
+                            GridlineThemeColorIndex =-1
+                            GridlineShade =100.0
+                        End
+                    End
+                End
+                Begin TextBox
+                    Enabled = NotDefault
+                    OverlapFlags =87
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =5727
+                    Top =6624
+                    Width =2160
+                    Height =285
+                    TabIndex =5
+                    BorderColor =12632256
+                    Name ="txtProject"
+                    ControlSource ="=getMyProject()"
+                    GUID = Begin
+                        0xb0bfe58402223f4d9dbbcab9ba99c8c6
+                    End
+
+                    LayoutCachedLeft =5727
+                    LayoutCachedTop =6624
+                    LayoutCachedWidth =7887
+                    LayoutCachedHeight =6909
+                    BackThemeColorIndex =-1
+                    BorderThemeColorIndex =-1
+                    BorderShade =100.0
+                    ThemeFontIndex =-1
+                    ForeThemeColorIndex =-1
+                    ForeTint =100.0
+                    GridlineThemeColorIndex =-1
+                    GridlineShade =100.0
+                    Begin
+                        Begin Label
+                            OverlapFlags =93
+                            TextAlign =3
+                            Left =4722
+                            Top =6624
+                            Width =1005
+                            Height =285
+                            Name ="lblProject"
+                            Caption ="Project: "
+                            GUID = Begin
+                                0x6b57ec208b2e4c4c97c8e220f4bf82c6
+                            End
+                            LayoutCachedLeft =4722
+                            LayoutCachedTop =6624
+                            LayoutCachedWidth =5727
+                            LayoutCachedHeight =6909
+                            ThemeFontIndex =-1
+                            BackThemeColorIndex =-1
+                            BorderThemeColorIndex =-1
+                            BorderTint =100.0
+                            ForeThemeColorIndex =-1
+                            ForeTint =100.0
+                            GridlineThemeColorIndex =-1
+                            GridlineShade =100.0
+                        End
+                    End
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Compare Database
+Option Explicit
+
+Private bNew As Boolean
+Public pixClassOLE As aeGDayClass
+
+Private Sub Form_Current()
+    On Error GoTo 0
+    Set pixClassOLE = New aeGDayClass
+    Dim PicSizeX As Long
+    Dim PicSizeY As Long
+
+    Debug.Print Me.Name
+    Debug.Print , "Form_Current", "bNew=" & bNew
+    If bNew Then Exit Sub
+
+    Set Me!ctlImg.Object.Picture = Nothing
+    Set Me!ctlImg2.Object.Picture = Nothing
+    Me!lblInfo.Caption = vbNullString
+
+    If Me.NewRecord Then
+        Me!ctlList.Visible = True
+        Me!lblDrop.Visible = True
+        Exit Sub
+    Else
+        Me!ctlList.Visible = False
+        Me!lblDrop.Visible = False
+    End If
+
+    Set Me!ctlImg.Object.Picture = pixClassOLE.aeOLEFieldToPicture(OLE_IMAGE_TABLE_NAME, "ImageName", Me!ImageName, "BLOB")
+    PicSizeX = pixClassOLE.GetDimensionsGDIP_X(Me!ctlImg.Object.Picture)
+    PicSizeY = pixClassOLE.GetDimensionsGDIP_Y(Me!ctlImg.Object.Picture)
+    Me!lblInfo.Caption = PicSizeX & " x " & PicSizeY
+    Set Me!ctlImg2.Object.Picture = pixClassOLE.aeResampleGDIP(Me!ctlImg.Object.Picture, 100, 100)
+
+End Sub
+
+Private Sub Form_Unload(ByRef Cancel As Integer)
+    On Error GoTo 0
+    ' ShutDownGDIP happens when the class terminates
+    Set pixClassOLE = Nothing
+End Sub
+
+Private Sub ctlList_OLEDragDrop(ByRef Data As Object, ByRef Effect As Long, _
+                                ByRef Button As Integer, ByRef Shift As Integer, _
+                                ByRef X As Single, ByRef Y As Single)
+    On Error GoTo 0
+    Dim oPic As StdPicture
+    Dim sFile As String
+
+    Debug.Print "frmClassImagesOLE"
+    Debug.Print , "ctlList_OLEDragDrop"
+
+    sFile = Data.Files(1)
+    Set oPic = pixClassOLE.aeLoadPictureGDIP(sFile)
+    If Not oPic Is Nothing Then
+        Me!ImageName = Mid$(sFile, InStrRev(sFile, "\") + 1)
+        Me!BLOB.Value = pixClassOLE.aeArrayFromPicture(oPic, aePicTypePNG)
+        Me.Dirty = False
+        Set oPic = Nothing
+        bNew = True
+        Me.Requery
+        bNew = False
+        DoCmd.GoToRecord acDataForm, Me.Name, acLast
+    Else
+        MsgBox "Ungültige Bilddatei"
+    End If
+
+End Sub
