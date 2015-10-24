@@ -1,8 +1,8 @@
 Option Compare Database
 Option Explicit
 
-Private Const gstrVERSION_GDIPlus As String = "0.1.7"
-Private Const gstrDATE_GDIPlus As String = "October 18, 2015"
+Private Const gstrVERSION_GDIPlus As String = "0.1.8"
+Private Const gstrDATE_GDIPlus As String = "October 23, 2015"
 Public Const gstrPROJECT_GDIPlus As String = "GDayClass"
 '
 
@@ -28,6 +28,9 @@ End Sub
 
 Public Sub OutputListAttachments(ByVal strTableName As String, ByVal strFieldName As String)
 ' Ref: https://msdn.microsoft.com/en-us/library/office/ff197737.aspx
+
+    On Error GoTo PROC_ERR
+
     Dim dbs As DAO.Database
     Dim rst As DAO.Recordset        ' Parent is Recordset
     Dim rsA As DAO.Recordset2       ' Child (Attachment) is Recordset2
@@ -84,6 +87,60 @@ PROC_EXIT:
 
 PROC_ERR:
     MsgBox "Erl=" & Erl & " Error " & Err.Number & " (" & Err.Description & ") in procedure OutputListAttachments"
+    Resume PROC_EXIT
+
+End Sub
+
+Public Sub AddAttachment(ByVal intRecord As Integer, ByVal strSQL As String, _
+                            ByVal strAttachmentFile As String, ByVal strAttachmentField As String)
+' e.g. AddAttachment 10, "Select * From tblImages Where id = ", ".\piximg\tiger.png", "Image"
+' Ref: https://msdn.microsoft.com/en-us/library/office/ff820966.aspx
+
+    On Error GoTo PROC_ERR
+
+    Dim dbs As DAO.Database
+    Dim ParentRecordset As DAO.Recordset
+    Dim AttachmentRecordset As DAO.Recordset2
+    Dim strRecord As String
+
+    ' SQL to instantiate parent recordset
+    strRecord = ""
+    Debug.Print "1", "strRecord = " & strRecord
+    strRecord = strRecord & strSQL
+    Debug.Print "2", "strRecord = " & strRecord
+    strRecord = strRecord & intRecord
+    Debug.Print "3", "strRecord = " & strRecord
+    Debug.Print "4", strRecord
+
+    Set dbs = CurrentDb
+    Set ParentRecordset = dbs.OpenRecordset(strRecord)
+    ParentRecordset.Edit
+
+    ' Instantiate attachment child recordset
+    Debug.Print "5", "strAttachmentField = " & strAttachmentField
+    Set AttachmentRecordset = ParentRecordset.Fields(strAttachmentField).Value
+
+    ' Add attachment
+    AttachmentRecordset.AddNew
+    AttachmentRecordset.Fields("FileData").LoadFromFile strAttachmentFile
+    AttachmentRecordset.Update
+
+    ' Update parent recordset
+    ParentRecordset.Update
+
+PROC_EXIT:
+    ' Cleanup
+    Set AttachmentRecordset = Nothing
+    Set ParentRecordset = Nothing
+    Set dbs = Nothing
+    Exit Sub
+
+PROC_ERR:
+    If Err = 3820 Then
+        MsgBox "File is already part of the multi-valued field!", vbCritical, "AddAttachment"
+    Else
+        MsgBox "Erl=" & Erl & " Error " & Err.Number & " (" & Err.Description & ") in procedure AddAttachment"
+    End If
     Resume PROC_EXIT
 
 End Sub

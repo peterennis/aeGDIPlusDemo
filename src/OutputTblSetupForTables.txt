@@ -5,6 +5,7 @@ FIELD NAME     FIELD TYPE      SIZE    DESCRIPTION
 ===========    ============    ====    ============================
 id             AutoNumber      4                                   
 Image          Attachment      4       image embedded as attachment
+Category       Text            255                                 
 
 
 ------------------

@@ -8,6 +8,8 @@
 "Module","basChangeLogGDIPlus","DateCreated"
 "Module","basDemoVersion","DateCreated"
 "Module","basRibbon","DateCreated"
+"Query","qryImagesAll","DateCreated"
+"Query","qryImagesAll_91B40D38DE4F49C7AF02D5DD586DA89A","DateCreated"
 "Query","zzzqryCatalogUserCreatedObjects","DateCreated"
 "Table","f_844162B19EC14A05856938250B049F07_Data","DateCreated"
 "Table","f_B3F3E6534EDF43DAB51A415073998F83_Image","DateCreated"

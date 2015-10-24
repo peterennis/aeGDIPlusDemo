@@ -1,0 +1,5 @@
+<<<qryImagesAll>>>
+SELECT tblImages.id, tblImages.Image, tblImages.Image.FileData, tblImages.Image.FileName AS ImageName, tblImages.Image.FileType, tblImages.Category
+FROM tblImages
+WHERE (((tblImages.id)>9));
+

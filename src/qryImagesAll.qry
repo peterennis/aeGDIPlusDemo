@@ -1,0 +1,81 @@
+Operation =1
+Option =0
+Where ="(((tblImages.id)>9))"
+Begin InputTables
+    Name ="tblImages"
+End
+Begin OutputColumns
+    Expression ="tblImages.id"
+    Expression ="tblImages.Image"
+    Expression ="tblImages.Image.FileData"
+    Alias ="ImageName"
+    Expression ="tblImages.Image.FileName"
+    Expression ="tblImages.Image.FileType"
+    Expression ="tblImages.Category"
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="0"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+dbBinary "GUID" = Begin
+    0x39b54df234c58749b4d19aafb61fb811
+End
+dbBoolean "FilterOnLoad" ="0"
+dbBoolean "OrderByOnLoad" ="-1"
+dbBoolean "TotalsRow" ="0"
+dbByte "PublishToWeb" ="1"
+Begin
+    Begin
+        dbText "Name" ="tblImages.ID"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="[tblImages].[ID]"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="[tblImages].[Image]"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="[ImageName]"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="tblImages.Image.FileData"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="tblImages.Image.FileType"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="tblImages.Category"
+        dbLong "AggregateType" ="-1"
+    End
+End
+Begin
+    State =0
+    Left =0
+    Top =40
+    Right =1549
+    Bottom =876
+    Left =-1
+    Top =-1
+    Right =1517
+    Bottom =518
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =48
+        Top =12
+        Right =192
+        Bottom =180
+        Top =0
+        Name ="tblImages"
+        Name =""
+    End
+End

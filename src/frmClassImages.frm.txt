@@ -8,25 +8,23 @@ Begin Form
     DefaultView =0
     PictureAlignment =2
     DatasheetGridlinesBehavior =3
-    GridX =24
-    GridY =24
-    Width =8640
+    GridY =10
+    Width =12384
     DatasheetFontHeight =11
-    ItemSuffix =2
-    Left =3480
-    Top =990
-    Right =16260
-    Bottom =10710
+    ItemSuffix =9
+    Left =3585
+    Top =1005
+    Right =16230
+    Bottom =8550
     DatasheetGridlinesColor =14806254
     OnUnload ="[Event Procedure]"
     RecSrcDt = Begin
-        0xc2753cd7b6a6e440
+        0xc9c6be2e57a7e440
     End
     GUID = Begin
-        0x242f2b8a9807c6478b028b2e12fa5341
+        0xdb49aa28b674a949a5ce7c98e164e36e
     End
-    RecordSource ="SELECT tblImages.ID, tblImages.Image, tblImages.Image.FileName AS ImageName FROM"
-        " tblImages WHERE (((tblImages.ID)>9));"
+    RecordSource ="qryImagesAll"
     Caption ="Bilder aus Anlagefeldern"
     OnCurrent ="[Event Procedure]"
     OnOpen ="[Event Procedure]"
@@ -113,6 +111,23 @@ Begin Form
             GridlineThemeColorIndex =1
             GridlineShade =65.0
         End
+        Begin ComboBox
+            AddColon = NotDefault
+            BorderLineStyle =0
+            LabelX =-1800
+            FontSize =11
+            FontName ="Calibri"
+            AllowValueListEdits =1
+            InheritValueList =1
+            ThemeFontIndex =1
+            BackThemeColorIndex =1
+            BorderThemeColorIndex =1
+            BorderShade =65.0
+            ForeThemeColorIndex =2
+            ForeShade =50.0
+            GridlineThemeColorIndex =1
+            GridlineShade =65.0
+        End
         Begin CustomControl
             OldBorderStyle =1
             BackThemeColorIndex =1
@@ -139,10 +154,10 @@ Begin Form
                     SizeMode =1
                     OldBorderStyle =0
                     OverlapFlags =85
-                    Left =4695
-                    Top =675
-                    Width =3402
-                    Height =3402
+                    Left =4605
+                    Top =870
+                    Width =3432
+                    Height =3447
                     AutoActivate =1
                     Name ="ctlImg2"
                     OleData = Begin
@@ -153,10 +168,10 @@ Begin Form
                         0x84e590f7b0568041a903f98c65005313
                     End
 
-                    LayoutCachedLeft =4695
-                    LayoutCachedTop =675
-                    LayoutCachedWidth =8097
-                    LayoutCachedHeight =4077
+                    LayoutCachedLeft =4605
+                    LayoutCachedTop =870
+                    LayoutCachedWidth =8037
+                    LayoutCachedHeight =4317
                     BorderThemeColorIndex =-1
                     BorderShade =100.0
                     GridlineThemeColorIndex =-1
@@ -169,9 +184,9 @@ Begin Form
                     OldBorderStyle =0
                     OverlapFlags =93
                     Left =720
-                    Top =675
-                    Width =3402
-                    Height =3402
+                    Top =870
+                    Width =3462
+                    Height =3447
                     AutoActivate =1
                     TabIndex =1
                     Name ="ctlImg"
@@ -184,9 +199,9 @@ Begin Form
                     End
 
                     LayoutCachedLeft =720
-                    LayoutCachedTop =675
-                    LayoutCachedWidth =4122
-                    LayoutCachedHeight =4077
+                    LayoutCachedTop =870
+                    LayoutCachedWidth =4182
+                    LayoutCachedHeight =4317
                     BorderThemeColorIndex =-1
                     BorderShade =100.0
                     GridlineThemeColorIndex =-1
@@ -196,11 +211,11 @@ Begin Form
                     Enabled = NotDefault
                     SizeMode =1
                     OldBorderStyle =0
-                    OverlapFlags =247
-                    Left =720
-                    Top =675
-                    Width =3405
-                    Height =3405
+                    OverlapFlags =93
+                    Left =8490
+                    Top =870
+                    Width =3465
+                    Height =3450
                     AutoActivate =1
                     TabIndex =2
                     Name ="ctlList"
@@ -212,10 +227,10 @@ Begin Form
                         0xc3177c531a456c4ead1a8b2867d73738
                     End
 
-                    LayoutCachedLeft =720
-                    LayoutCachedTop =675
-                    LayoutCachedWidth =4125
-                    LayoutCachedHeight =4080
+                    LayoutCachedLeft =8490
+                    LayoutCachedTop =870
+                    LayoutCachedWidth =11955
+                    LayoutCachedHeight =4320
                     BorderThemeColorIndex =-1
                     BorderShade =100.0
                     GridlineThemeColorIndex =-1
@@ -223,21 +238,21 @@ Begin Form
                 End
                 Begin Label
                     Visible = NotDefault
-                    OverlapFlags =85
+                    OverlapFlags =93
                     TextAlign =2
-                    Left =720
-                    Top =4140
-                    Width =3405
+                    Left =8490
+                    Top =4470
+                    Width =3465
                     Height =285
                     Name ="lblDrop"
                     Caption ="Eine Bilddatei ins Feld  ziehen"
                     GUID = Begin
                         0xcfce05a3c1349d4bb88e156db6f53e5f
                     End
-                    LayoutCachedLeft =720
-                    LayoutCachedTop =4140
-                    LayoutCachedWidth =4125
-                    LayoutCachedHeight =4425
+                    LayoutCachedLeft =8490
+                    LayoutCachedTop =4470
+                    LayoutCachedWidth =11955
+                    LayoutCachedHeight =4755
                     ThemeFontIndex =-1
                     BackThemeColorIndex =-1
                     BorderThemeColorIndex =-1
@@ -248,20 +263,20 @@ Begin Form
                     GridlineShade =100.0
                 End
                 Begin Label
-                    OverlapFlags =85
+                    OverlapFlags =119
                     Left =720
-                    Top =360
-                    Width =3405
-                    Height =270
+                    Top =570
+                    Width =3450
+                    Height =300
                     Name ="lblInfo"
                     Caption ="Size"
                     GUID = Begin
                         0x2db00ab6d89daa4bb9b2559abb58ae74
                     End
                     LayoutCachedLeft =720
-                    LayoutCachedTop =360
-                    LayoutCachedWidth =4125
-                    LayoutCachedHeight =630
+                    LayoutCachedTop =570
+                    LayoutCachedWidth =4170
+                    LayoutCachedHeight =870
                     ThemeFontIndex =-1
                     BackThemeColorIndex =-1
                     BorderThemeColorIndex =-1
@@ -274,10 +289,10 @@ Begin Form
                 Begin CommandButton
                     OverlapFlags =85
                     PictureType =1
-                    Left =735
-                    Top =4620
-                    Width =1275
-                    Height =435
+                    Left =864
+                    Top =4896
+                    Width =1296
+                    Height =432
                     TabIndex =3
                     ForeColor =-2147483630
                     Name ="cmd1"
@@ -286,10 +301,10 @@ Begin Form
                         0xf3a3cc614c0273459cefd850cac668c2
                     End
 
-                    LayoutCachedLeft =735
-                    LayoutCachedTop =4620
-                    LayoutCachedWidth =2010
-                    LayoutCachedHeight =5055
+                    LayoutCachedLeft =864
+                    LayoutCachedTop =4896
+                    LayoutCachedWidth =2160
+                    LayoutCachedHeight =5328
                     PictureCaptionArrangement =5
                     ForeThemeColorIndex =-1
                     ForeTint =100.0
@@ -320,10 +335,10 @@ Begin Form
                 Begin CommandButton
                     OverlapFlags =85
                     PictureType =1
-                    Left =2765
-                    Top =4620
-                    Width =1275
-                    Height =435
+                    Left =2736
+                    Top =4896
+                    Width =1296
+                    Height =432
                     TabIndex =4
                     ForeColor =-2147483630
                     Name ="cmd2"
@@ -332,10 +347,10 @@ Begin Form
                         0xb74918743a363e41bbe3738482cb4170
                     End
 
-                    LayoutCachedLeft =2765
-                    LayoutCachedTop =4620
-                    LayoutCachedWidth =4040
-                    LayoutCachedHeight =5055
+                    LayoutCachedLeft =2736
+                    LayoutCachedTop =4896
+                    LayoutCachedWidth =4032
+                    LayoutCachedHeight =5328
                     PictureCaptionArrangement =5
                     ForeThemeColorIndex =-1
                     ForeTint =100.0
@@ -366,10 +381,10 @@ Begin Form
                 Begin CommandButton
                     OverlapFlags =85
                     PictureType =1
-                    Left =4795
-                    Top =4620
-                    Width =1275
-                    Height =435
+                    Left =4752
+                    Top =4896
+                    Width =1296
+                    Height =432
                     TabIndex =5
                     ForeColor =-2147483630
                     Name ="cmd3"
@@ -378,10 +393,10 @@ Begin Form
                         0xc731b1d6056faf4d982e46d1db8b5b48
                     End
 
-                    LayoutCachedLeft =4795
-                    LayoutCachedTop =4620
-                    LayoutCachedWidth =6070
-                    LayoutCachedHeight =5055
+                    LayoutCachedLeft =4752
+                    LayoutCachedTop =4896
+                    LayoutCachedWidth =6048
+                    LayoutCachedHeight =5328
                     PictureCaptionArrangement =5
                     ForeThemeColorIndex =-1
                     ForeTint =100.0
@@ -412,10 +427,10 @@ Begin Form
                 Begin CommandButton
                     OverlapFlags =85
                     PictureType =1
-                    Left =6825
-                    Top =4620
-                    Width =1275
-                    Height =435
+                    Left =6624
+                    Top =4896
+                    Width =1296
+                    Height =432
                     TabIndex =6
                     ForeColor =-2147483630
                     Name ="cmd4"
@@ -424,10 +439,10 @@ Begin Form
                         0x84ea454917f12d449d70b9427f48d775
                     End
 
-                    LayoutCachedLeft =6825
-                    LayoutCachedTop =4620
-                    LayoutCachedWidth =8100
-                    LayoutCachedHeight =5055
+                    LayoutCachedLeft =6624
+                    LayoutCachedTop =4896
+                    LayoutCachedWidth =7920
+                    LayoutCachedHeight =5328
                     PictureCaptionArrangement =5
                     ForeThemeColorIndex =-1
                     ForeTint =100.0
@@ -460,8 +475,8 @@ Begin Form
                     OverlapFlags =87
                     TextAlign =2
                     IMESentenceMode =3
-                    Left =5910
-                    Top =5760
+                    Left =5610
+                    Top =5910
                     Width =2160
                     Height =285
                     TabIndex =7
@@ -472,10 +487,10 @@ Begin Form
                         0xe69abc92cf8c8a4cb0684ad8452e158a
                     End
 
-                    LayoutCachedLeft =5910
-                    LayoutCachedTop =5760
-                    LayoutCachedWidth =8070
-                    LayoutCachedHeight =6045
+                    LayoutCachedLeft =5610
+                    LayoutCachedTop =5910
+                    LayoutCachedWidth =7770
+                    LayoutCachedHeight =6195
                     BackThemeColorIndex =-1
                     BorderThemeColorIndex =-1
                     BorderShade =100.0
@@ -488,8 +503,8 @@ Begin Form
                         Begin Label
                             OverlapFlags =93
                             TextAlign =3
-                            Left =4905
-                            Top =5760
+                            Left =4605
+                            Top =5910
                             Width =1005
                             Height =285
                             Name ="lblVersion"
@@ -497,10 +512,10 @@ Begin Form
                             GUID = Begin
                                 0x1a54aa823aa47a46860d8656bfbcd2c5
                             End
-                            LayoutCachedLeft =4905
-                            LayoutCachedTop =5760
-                            LayoutCachedWidth =5910
-                            LayoutCachedHeight =6045
+                            LayoutCachedLeft =4605
+                            LayoutCachedTop =5910
+                            LayoutCachedWidth =5610
+                            LayoutCachedHeight =6195
                             ThemeFontIndex =-1
                             BackThemeColorIndex =-1
                             BorderThemeColorIndex =-1
@@ -517,8 +532,8 @@ Begin Form
                     OverlapFlags =87
                     TextAlign =2
                     IMESentenceMode =3
-                    Left =5910
-                    Top =6192
+                    Left =5610
+                    Top =6342
                     Width =2160
                     Height =285
                     TabIndex =8
@@ -529,10 +544,10 @@ Begin Form
                         0x8c2b6cc4bbf4f543927bc568d5a1c9b1
                     End
 
-                    LayoutCachedLeft =5910
-                    LayoutCachedTop =6192
-                    LayoutCachedWidth =8070
-                    LayoutCachedHeight =6477
+                    LayoutCachedLeft =5610
+                    LayoutCachedTop =6342
+                    LayoutCachedWidth =7770
+                    LayoutCachedHeight =6627
                     BackThemeColorIndex =-1
                     BorderThemeColorIndex =-1
                     BorderShade =100.0
@@ -545,8 +560,8 @@ Begin Form
                         Begin Label
                             OverlapFlags =93
                             TextAlign =3
-                            Left =4905
-                            Top =6192
+                            Left =4605
+                            Top =6342
                             Width =1005
                             Height =285
                             Name ="lblDate"
@@ -554,10 +569,10 @@ Begin Form
                             GUID = Begin
                                 0x1d16a2cacfaaee4383d9e3e7ea8c904b
                             End
-                            LayoutCachedLeft =4905
-                            LayoutCachedTop =6192
-                            LayoutCachedWidth =5910
-                            LayoutCachedHeight =6477
+                            LayoutCachedLeft =4605
+                            LayoutCachedTop =6342
+                            LayoutCachedWidth =5610
+                            LayoutCachedHeight =6627
                             ThemeFontIndex =-1
                             BackThemeColorIndex =-1
                             BorderThemeColorIndex =-1
@@ -574,8 +589,8 @@ Begin Form
                     OverlapFlags =87
                     TextAlign =2
                     IMESentenceMode =3
-                    Left =5910
-                    Top =6624
+                    Left =5610
+                    Top =6774
                     Width =2160
                     Height =285
                     TabIndex =9
@@ -586,10 +601,10 @@ Begin Form
                         0xcda8e3b2084cb943bf6342e04f648a64
                     End
 
-                    LayoutCachedLeft =5910
-                    LayoutCachedTop =6624
-                    LayoutCachedWidth =8070
-                    LayoutCachedHeight =6909
+                    LayoutCachedLeft =5610
+                    LayoutCachedTop =6774
+                    LayoutCachedWidth =7770
+                    LayoutCachedHeight =7059
                     BackThemeColorIndex =-1
                     BorderThemeColorIndex =-1
                     BorderShade =100.0
@@ -602,8 +617,8 @@ Begin Form
                         Begin Label
                             OverlapFlags =93
                             TextAlign =3
-                            Left =4905
-                            Top =6624
+                            Left =4605
+                            Top =6774
                             Width =1005
                             Height =285
                             Name ="lblProject"
@@ -611,10 +626,10 @@ Begin Form
                             GUID = Begin
                                 0xd24844f4876eb14fac4c438da4e65c7f
                             End
-                            LayoutCachedLeft =4905
-                            LayoutCachedTop =6624
-                            LayoutCachedWidth =5910
-                            LayoutCachedHeight =6909
+                            LayoutCachedLeft =4605
+                            LayoutCachedTop =6774
+                            LayoutCachedWidth =5610
+                            LayoutCachedHeight =7059
                             ThemeFontIndex =-1
                             BackThemeColorIndex =-1
                             BorderThemeColorIndex =-1
@@ -625,6 +640,123 @@ Begin Form
                             GridlineShade =100.0
                         End
                     End
+                End
+                Begin TextBox
+                    OverlapFlags =93
+                    IMESentenceMode =3
+                    Left =720
+                    Top =150
+                    Width =3450
+                    Height =285
+                    TabIndex =10
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="txtCategory"
+                    ControlSource ="Category"
+                    GUID = Begin
+                        0xf3f58594609465469b5a8e6e6cf6a0d8
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =720
+                    LayoutCachedTop =150
+                    LayoutCachedWidth =4170
+                    LayoutCachedHeight =435
+                End
+                Begin ComboBox
+                    OverlapFlags =247
+                    IMESentenceMode =3
+                    ColumnCount =2
+                    ListWidth =1755
+                    Left =8496
+                    Top =576
+                    Width =3456
+                    Height =315
+                    TabIndex =11
+                    BorderColor =10921638
+                    ForeColor =4138256
+                    ColumnInfo ="\"\";\"\";\"\";\"\";\"10\";\"510\""
+                    GUID = Begin
+                        0x17906c30514afa47ae4ae9d945ed41bc
+                    End
+                    Name ="cboCategory"
+                    RowSourceType ="Table/Query"
+                    RowSource ="SELECT [tblImages].[id], [tblImages].[Category] FROM [tblImages]  where id > 10 "
+                        "ORDER BY [Category];"
+                    ColumnWidths ="0;1755"
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =8496
+                    LayoutCachedTop =576
+                    LayoutCachedWidth =11952
+                    LayoutCachedHeight =891
+                    Begin
+                        Begin Label
+                            OverlapFlags =85
+                            Left =8511
+                            Top =156
+                            Width =3450
+                            Height =275
+                            BorderColor =8355711
+                            ForeColor =8355711
+                            Name ="cboCategory_Label"
+                            Caption ="Category"
+                            GUID = Begin
+                                0x1675d40dff3787488f4f36b1f2d1378b
+                            End
+                            GridlineColor =10921638
+                            LayoutCachedLeft =8511
+                            LayoutCachedTop =156
+                            LayoutCachedWidth =11961
+                            LayoutCachedHeight =431
+                        End
+                    End
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =150
+                    Top =150
+                    Width =570
+                    Height =285
+                    TabIndex =12
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="txtId"
+                    ControlSource ="id"
+                    GUID = Begin
+                        0x9628faed8298bc43a50468e03705ff30
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =150
+                    LayoutCachedTop =150
+                    LayoutCachedWidth =720
+                    LayoutCachedHeight =435
+                End
+                Begin TextBox
+                    OverlapFlags =87
+                    TextAlign =2
+                    IMESentenceMode =3
+                    Left =8496
+                    Top =4752
+                    Width =3465
+                    Height =285
+                    TabIndex =13
+                    BorderColor =10921638
+                    ForeColor =4210752
+                    Name ="Text8"
+                    ControlSource ="id"
+                    GUID = Begin
+                        0x880464c78aae8e4c9490718087540503
+                    End
+                    GridlineColor =10921638
+
+                    LayoutCachedLeft =8496
+                    LayoutCachedTop =4752
+                    LayoutCachedWidth =11961
+                    LayoutCachedHeight =5037
                 End
             End
         End
@@ -670,9 +802,21 @@ Private Sub Form_Load()
 End Sub
 
 Private Sub Form_Current()
+
     On Error GoTo 0
     Dim PicSizeX As Long
     Dim PicSizeY As Long
+
+    If Me.NewRecord Then
+        Me.cboCategory.Visible = True
+        Me!ctlList.Visible = True
+        Me!lblDrop.Visible = True
+        Exit Sub
+    Else
+        Me.cboCategory.Visible = False
+        Me!ctlList.Visible = False
+        Me!lblDrop.Visible = False
+    End If
 
     Debug.Print Me.Name
     Debug.Print , "Form_Current", "bNew=" & bNew
@@ -682,20 +826,13 @@ Private Sub Form_Current()
     Set Me!ctlImg2.Object.Picture = Nothing
     Me!lblInfo.Caption = vbNullString
 
-    If Me.NewRecord Then
-        Me!ctlList.Visible = True
-        Me!lblDrop.Visible = True
-        Exit Sub
-    Else
-        Me!ctlList.Visible = False
-        Me!lblDrop.Visible = False
+    If Me.RecordSource = "qryImagesAll" Then
+        Set Me!ctlImg.Object.Picture = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", Me!ImageName)
+        PicSizeX = pixClass.GetDimensionsGDIP_X(Me!ctlImg.Object.Picture)
+        PicSizeY = pixClass.GetDimensionsGDIP_Y(Me!ctlImg.Object.Picture)
+        Me!lblInfo.Caption = PicSizeX & " x " & PicSizeY
+        Set Me!ctlImg2.Object.Picture = pixClass.aeResampleGDIP(Me!ctlImg.Object.Picture, 100, 100)
     End If
-
-    Set Me!ctlImg.Object.Picture = pixClass.aeAttachmentToPicture(IMAGE_TABLE_NAME, "Image", Me!ImageName)
-    PicSizeX = pixClass.GetDimensionsGDIP_X(Me!ctlImg.Object.Picture)
-    PicSizeY = pixClass.GetDimensionsGDIP_Y(Me!ctlImg.Object.Picture)
-    Me!lblInfo.Caption = PicSizeX & " x " & PicSizeY
-    Set Me!ctlImg2.Object.Picture = pixClass.aeResampleGDIP(Me!ctlImg.Object.Picture, 100, 100)
 
 End Sub
 
@@ -751,7 +888,7 @@ PROC_EXIT:
 
 PROC_ERR:
     If Err = 3820 Then
-        MsgBox "File is already part of the multi-valued field!", vbCritical
+        MsgBox "File is already part of the multi-valued field!", vbCritical, "ctlList_OLEDragDrop"
         Resume Next
     Else
         MsgBox "Erl=" & Erl & " Error " & Err.Number & " (" & Err.Description & ") in procedure ctlList_OLEDragDrop"

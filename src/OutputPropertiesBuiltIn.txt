@@ -190,7 +190,7 @@ Inherited: False;
 ---
 Name: AppIcon
 Type: dbText
-Value: C:\ae\aeGDIPlusDemo\aeicon.ico
+Value: C:\ae\aeGDIPlusDemo\pix\adaept64.ico
 Inherited: False;
 ---
 Name: UseAppIconForFrmRpt

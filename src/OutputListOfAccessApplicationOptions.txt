@@ -1,6 +1,6 @@
 >>>Standard Options
               2000          AppTitle                    GDayClass
-              2000          AppIcon                     C:\ae\aeGDIPlusDemo\aeicon.ico
+              2000          AppIcon                     C:\ae\aeGDIPlusDemo\pix\adaept64.ico
               2000          AllowFullMenus              True
               2000          AllowShortcutMenus          True
               2000          StartupShowDBWindow         True
