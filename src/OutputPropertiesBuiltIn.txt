@@ -125,7 +125,7 @@ Inherited: False;
 ---
 Name: ProjVer
 Type: dbInteger
-Value: 119
+Value: 140
 Inherited: False;
 ---
 Name: HasOfflineLists
@@ -140,7 +140,7 @@ Inherited: False;
 ---
 Name: NavPane Width
 Type: dbLong
-Value: 215
+Value: 239
 Inherited: False;
 ---
 Name: NavPane View By

@@ -321,7 +321,7 @@ End Property
 Private Function GetGDIPVersion() As Boolean
     Dim hMod As Long
     Select Case Application.Version
-    Case "11.0", "15.0" ' A2003, A2013
+    Case "11.0", "15.0", "16.0"  ' A2003, A2013, A2016
         bUseOGL = False
         hMod = GetModuleHandle("gdiplus.dll")
         If hMod = 0 Then
