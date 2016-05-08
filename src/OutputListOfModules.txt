@@ -1,0 +1,8 @@
+aebasChangeLog_aegit_expClass             False
+aebasTEST_aegit_expClass    False
+aeGDayClass   False
+aegit_expClass              False
+aeTimerClass  False
+basChangeLogGDIPlus         False
+basDemoVersion              False
+basRibbon     False

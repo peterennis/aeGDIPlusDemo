@@ -23,7 +23,7 @@ Picture Property Storage Format: 0, 4, False;
 WebDesignMode: 0, 2, False;
 CheckTruncatedNumFields: 1, 4, False;
 Theme Resource Name: Office Theme, 10, False;
-ProjVer: 140, 3, False;
+ProjVer: 119, 3, False;
 HasOfflineLists: 70, 3, False;
 NavPane Closed: 0, 4, False;
 NavPane Width: 239, 4, False;

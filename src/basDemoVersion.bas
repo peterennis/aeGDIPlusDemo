@@ -1,8 +1,8 @@
 Option Compare Database
 Option Explicit
 
-Private Const gstrVERSION_GDIPlus As String = "0.1.9"
-Private Const gstrDATE_GDIPlus As String = "November 22, 2015"
+Private Const gstrVERSION_GDIPlus As String = "0.2.0"
+Private Const gstrDATE_GDIPlus As String = "May 7, 2016"
 Public Const gstrPROJECT_GDIPlus As String = "GDayClass"
 '
 

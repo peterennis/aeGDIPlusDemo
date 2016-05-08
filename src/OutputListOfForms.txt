@@ -1,3 +1,2 @@
-"Name","Attribute"
-"frmClassImages","Visible"
-"frmClassImagesOLE","Visible"
+frmClassImages              False
+frmClassImagesOLE           False
